@@ -1,126 +1,172 @@
-# Gatsby + Netlify CMS Starter
+# Gatsby Starter Portfolio Minimal
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b654c94e-08a6-4b79-b443-7837581b1d8d/deploy-status)](https://app.netlify.com/sites/gatsby-starter-netlify-cms-ci/deploys)
+#### A modern one-page portfolio with a clean yet expressive design.
 
-**Note:** This starter uses [Gatsby v2](https://www.gatsbyjs.org/blog/2018-09-17-gatsby-v2/).
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Netlify Status](https://api.netlify.com/api/v1/badges/16b36180-0897-40c5-925c-fefa0232555c/deploy-status)](https://app.netlify.com/sites/gatsby-starter-portfolio-minimal/deploys)
 
-This repo contains an example business website that is built with [Gatsby](https://www.gatsbyjs.org/), and [Netlify CMS](https://www.netlifycms.org): **[Demo Link](https://gatsby-netlify-cms.netlify.com/)**.
+Portfolio Minimal is a Gatsby Starter. Starters are boilerplate projects that can be used to set up new sites effortless. With this starter, you can create a modern one-page portfolio within minutes.
 
-It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
+Just install the starter, add your content, and there you go!
+
+<a href="#sections">Sections</a> · <a href="#features">Features</a> · <a href="#how-to-start">How to Start</a> · <a href="#edit-content">Edit Content</a> · <a href="#edit-theme">Edit Theme</a> · <a href="#edit-page-structure">Edit Page Structure</a> · <a href="#feedback">Feedback</a>
+
+<a href="https://gatsby-starter-portfolio-minimal.netlify.app/" target="_blank"><strong>>> LIVE DEMO</strong></a>
+
+<a href="https://konstantin.digital/" target="_blank"><strong>>> LIVE DEMO (with Splash Screen)</strong></a>
+
+**New Features:** 🌛 Dark Mode · 🪟 Splash Screen
+
+---
+
+<img src="screenshot.png" alt="Gatsby Starter Portfolio Minimal Screenshot" width="600" />
+
+---
+
+## Sections
+
+The starter has predefined sections as well as a template that you can use to create new, custom sections.
+
+**The predefined sections are:**
+
+1. About me
+2. Interests/Skills
+3. Projects
+4. Contact me
+5. Medium articles
+
+---
 
 ## Features
 
-- A simple landing page with blog functionality built with Netlify CMS
-- Editable Pages: Landing, About, Product, Blog-Collection and Contact page with Netlify Form support
-- Create Blog posts from Netlify CMS
-- Tags: Separate page for posts under each tag
-- Basic directory organization
-- Uses Bulma for styling, but size is reduced by `purge-css-plugin`
-- Blazing fast loading times thanks to pre-rendered HTML and automatic chunk loading of JS files
-- Uses `gatsby-image` with Netlify-CMS preview support
-- Separate components for everything
-- Netlify deploy configuration
-- Netlify function support, see `lambda` folder
-- Perfect score on Lighthouse for SEO, Accessibility and Performance (wip:PWA)
-- ..and more
+#### 🌛 [NEW] Dark Mode - Based on user's preferences.
 
-## Prerequisites
+If the user's OS is set to using dark mode, the Gatsby Starter will automatically switch to a dark theme too.
 
-- Node (I recommend using v8.2.0 or higher)
-- [Gatsby CLI](https://www.gatsbyjs.org/docs/)
-- [Netlify CLI](https://github.com/netlify/cli)
+#### 🕹️ Quick and Easy Setup - Add content and deloy.
 
-## Getting Started (Recommended)
+Just install the starter, add your content, and deploy it! This starter works seamlessly with hosts like Netlify.
 
-Netlify CMS can run in any frontend web environment, but the quickest way to try it out is by running it on a pre-configured starter site with Netlify. The example here is the Kaldi coffee company template (adapted from [One Click Hugo CMS](https://github.com/netlify-templates/one-click-hugo-cms)). Use the button below to build and deploy your own copy of the repository:
+#### 📓 Content Integration via MDX - No external CMS needed.
 
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/gatsby-starter-netlify-cms&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
+MDX is a Markdown format that allows you to enrich your content with React components. This makes it fully customizable without external dependencies.
 
-After clicking that button, you’ll authenticate with GitHub and choose a repository name. Netlify will then automatically create a repository in your GitHub account with a copy of the files from the template. Next, it will build and deploy the new site on Netlify, bringing you to the site dashboard when the build is complete. Next, you’ll need to set up Netlify’s Identity service to authorize users to log in to the CMS.
+#### 🧰 Extendable Layout - Add more sections as you like.
 
-### Access Locally
+The starter includes predefined sections as well as a template for new, custom sections. Moreover, you can add new projects to the project section without additional coding.
 
-Pulldown a local copy of the Github repository Netlify created for you, with the name you specified in the previous step
-```
-$ git clone https://github.com/[GITHUB_USERNAME]/[REPO_NAME].git
-$ cd [REPO_NAME]
-$ yarn
-$ netlify dev # or ntl dev
-```
+#### 💅 Responsive Design - With freshening animations.
 
-This uses the new [Netlify Dev](https://www.netlify.com/products/dev/?utm_source=blog&utm_medium=netlifycms&utm_campaign=devex) CLI feature to serve any functions you have in the `lambda` folder.
+The starter is designed with a mobile-first approach and looks perfect on small and large breakpoints. Moreover, it has some nice and smooth animations.
 
-To test the CMS locally, you'll need to run a production build of the site:
+#### <img src="http://logok.org/wp-content/uploads/2015/10/Medium-logo-old.png" alt="Medium Icon" width="20" /> Medium Integration - Features latest articles.
 
-```
-$ npm run build
-$ netlify dev # or ntl dev
-```
+In case you are a writer on Medium, the starter has a easy to use Medium integration that allows you to feature your latest articles.
 
-### Media Libraries (installed, but optional)
+To see all features in action, have a look at the <a href="https://gatsby-starter-portfolio-minimal.netlify.app/" target="_blank"><strong>live demo</strong></a>.
 
-Media Libraries have been included in this starter as a default. If you are not planning to use `Uploadcare` or `Cloudinary` in your project, you **can** remove them from module import and registration in `src/cms/cms.js`. Here is an example of the lines to comment or remove them your project.
+---
 
-```javascript
-import CMS from 'netlify-cms-app'
-// import uploadcare from 'netlify-cms-media-library-uploadcare'
-// import cloudinary from 'netlify-cms-media-library-cloudinary'
+## How to Start
 
-import AboutPagePreview from './preview-templates/AboutPagePreview'
-import BlogPostPreview from './preview-templates/BlogPostPreview'
-import ProductPagePreview from './preview-templates/ProductPagePreview'
-import IndexPagePreview from './preview-templates/IndexPagePreview'
+With Portfolio Minimal, you get up and running in just a few minutes.
 
-// CMS.registerMediaLibrary(uploadcare);
-// CMS.registerMediaLibrary(cloudinary);
+1. **Install the Gatsby CLI.**
 
-CMS.registerPreviewTemplate('index', IndexPagePreview)
-CMS.registerPreviewTemplate('about', AboutPagePreview)
-CMS.registerPreviewTemplate('products', ProductPagePreview)
-CMS.registerPreviewTemplate('blog', BlogPostPreview)
-```
+   ```
+   npm install -g gatsby-cli
 
-Note: Don't forget to also remove them from `package.json` and `yarn.lock` / `package-lock.json` using `yarn` or `npm`. During the build netlify-cms-app will bundle the media libraries as well, having them removed will save you build time.
-Example:
-```
-yarn remove netlify-cms-media-library-uploadcare
-```
-OR
-```
-yarn remove netlify-cms-media-library-cloudinary
-```
-## Getting Started (Without Netlify)
+   ```
+
+2. **Create a new Gatsby site with the Portfolio Minimal starter.**
+
+   ```
+   gatsby new portfolio-minimal https://github.com/konstantinmuenster/gatsby-starter-portfolio-minimal
+   ```
+
+3. **Start the site in `develop` mode.**
+
+   ```
+   cd portfolio-minimal
+   gatsby develop
+   ```
+
+4. **Open the source code and start editing!**
+
+---
+
+## Edit Content
+
+After you installed the starter project, you most likely want to add your own content.
+
+### Edit configuration
+
+First, you want to edit the config file which stores the site's configuration (e.g. title, description) and social profiles.
 
 ```
-$ gatsby new [SITE_DIRECTORY_NAME] https://github.com/netlify-templates/gatsby-starter-netlify-cms/
-$ cd [SITE_DIRECTORY_NAME]
-$ npm run build
-$ npm run serve
+|-- config
+    |-- index.js
 ```
 
-### Setting up the CMS
+Navigate to the `index.js` file in the config folder, edit the configuration, save it, that's it!
 
-Follow the [Netlify CMS Quick Start Guide](https://www.netlifycms.org/docs/quick-start/#authentication) to set up authentication, and hosting.
+### Edit page content
 
-## Debugging
-
-Windows users might encounter `node-gyp` errors when trying to npm install.
-To resolve, make sure that you have both Python 2.7 and the Visual C++ build environment installed.
+Next, you can edit the content for each section you want to be displayed. By default, all sections are shown. If you want to remove certain sections from the site, check out <a href="#editing-page-structure">this part of the Readme</a>.
 
 ```
-npm config set python python2.7
-npm install --global --production windows-build-tools
+|-- content
+    |-- imprint
+    |-- index
+       |-- about
+       |-- contact
+       ...
+    ...
 ```
 
-[Full details here](https://www.npmjs.com/package/node-gyp 'NPM node-gyp page')
+You find all content in the content folder (surprisingly). For content integration, the project uses MDX, a Markdown format. If you haven't worked with Markdown or MDX before, check the Markdown syntax in <a href="https://www.gatsbyjs.org/docs/mdx/markdown-syntax/" target="_blank">Gatsby's docs</a>. They also provide <a href="https://www.gatsbyjs.org/docs/mdx/writing-pages/" target="_blank">further information about MDX</a>.
 
-MacOS users might also encounter some errors, for more info check [node-gyp](https://github.com/nodejs/node-gyp). We recommend using the latest stable node version.
+To get up and running, just edit the predefined data fields in each `mdx` file.
 
-## Purgecss
+---
 
-This plugin uses [gatsby-plugin-purgecss](https://www.gatsbyjs.org/packages/gatsby-plugin-purgecss/) and [bulma](https://bulma.io/). The bulma builds are usually ~170K but reduced 90% by purgecss.
+## Edit Theme
 
-# CONTRIBUTING
+You find the color and font settings in the configuration file, located at: `config/index.js`.
 
-Contributions are always welcome, no matter how large or small. Before contributing,
-please read the [code of conduct](CODE_OF_CONDUCT.md).
+> Note: The usage of the splash screen can be set for each page individually in the page content directory.
+
+---
+
+## Edit Page Structure
+
+To remove or reorder predefined sections, navigate to the `src/pages/index.js` file. This is the home page of your site.
+
+Each section (besides the Articles section) exists of an imported React component and a GraphQL query that is needed for data querying.
+
+**If you want to remove a section**, just delete the imported React component and query.
+
+**If you want to reorder your sections**, just reorder the React components inside the `<Layout />` component.
+
+### Add custom sections
+
+If you want to add your own custom sections, there is a section template you can use. You can find it in the following directory: `src/components/templates`
+
+---
+
+## Feedback
+
+Designing and building a portfolio from scratch can be tough. To inspire you and provide you a foundation to build upon, I've decided to publish [my personal website](https://konstantin.digital) as a Gatsby Starter. This boilerplate project should motivate you to build your own awesome portfolio with Gatsby.
+
+I always appreciate feedback, so share your thoughts and suggestions with me: [mail@konstantin.digital](mailto:mail@konstantin.digital)
+
+If you find any bugs or have feature suggestions, create a new issue or pull request 🙏
+
+Thanks a lot for using this starter! 💪
+
+---
+
+## License
+
+Distributed under the [MIT](http://showalicense.com/?fullname=Konstantin+M%C3%BCnster&year=2019#license-mit) license.
+
+See `LICENSE` for more information.
