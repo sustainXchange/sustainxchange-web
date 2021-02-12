@@ -6,7 +6,7 @@ const {
   siteIcon,
   siteUrl,
   colors,
-} = require(`./config`)
+} = require(`./config`);
 
 module.exports = {
   siteMetadata: {
@@ -19,27 +19,17 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
-    `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
-    // {
-    //   resolve: `gatsby-plugin-gtag`,
-    //   options: {
-    //     trackingId: `UA-XXXXXXXX-X`,
-    //     head: false,
-    //     anonymize: true,
-    //   },
-    // },
+    `@chakra-ui/gatsby-plugin`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: siteTitle,
         short_name: siteShortTitle,
         start_url: `/`,
-        background_color: colors.lightTheme.background,
-        theme_color: colors.lightTheme.primary,
         display: `minimal-ui`,
         icon: siteIcon, // This path is relative to the root of the site.
       },
@@ -79,4 +69,4 @@ module.exports = {
       },
     },
   ],
-}
+};

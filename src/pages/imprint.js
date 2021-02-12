@@ -1,52 +1,53 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { graphql } from "gatsby"
-import styled from "styled-components"
-import { MDXRenderer } from "gatsby-plugin-mdx"
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
 
-import GlobalStateProvider from "../context/provider"
-import ContentWrapper from "../styles/contentWrapper"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { seoTitleSuffix } from "../../config"
+import { MDXRenderer } from "gatsby-plugin-mdx";
 
-const StyledSection = styled.section`
-  width: 100%;
-  max-width: 62.5rem;
-  margin: 0 auto;
-  padding: 0 2.5rem;
-  height: auto;
-  background: ${({ theme }) => theme.colors.background};
-  h1 {
-    font-size: 1.5rem;
-  }
-  h2 {
-    font-size: 1.25rem;
-  }
-  h3 {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-`
+import GlobalStateProvider from "../context/provider";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import { seoTitleSuffix } from "../../config";
 
-const StyledContentWrapper = styled(ContentWrapper)`
-  && {
-    width: 100%;
-    max-width: 36rem;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-`
+import { Flex } from "@chakra-ui/react";
+
+// const StyledSection = styled.section`
+//   width: 100%;
+//   max-width: 62.5rem;
+//   margin: 0 auto;
+//   padding: 0 2.5rem;
+//   height: auto;
+//   background: ${({ theme }) => theme.colors.background};
+//   h1 {
+//     font-size: 1.5rem;
+//   }
+//   h2 {
+//     font-size: 1.25rem;
+//   }
+//   h3 {
+//     font-size: 1rem;
+//     margin-bottom: 1rem;
+//   }
+// `;
+
+// const StyledContentWrapper = styled(ContentWrapper)`
+//   && {
+//     width: 100%;
+//     max-width: 36rem;
+//     margin: 0;
+//     padding: 0;
+//     height: 100%;
+//   }
+// `;
 
 const Imprint = ({ data }) => {
-  const { body, frontmatter } = data.imprint.edges[0].node
-  const { title, seoTitle, useSeoTitleSuffix, useSplashScreen } = frontmatter
+  const { body, frontmatter } = data.imprint.edges[0].node;
+  const { title, seoTitle, useSeoTitleSuffix, useSplashScreen } = frontmatter;
 
   const globalState = {
     isIntroDone: useSplashScreen ? false : true,
     darkMode: false,
-  }
+  };
 
   return (
     <GlobalStateProvider initialState={globalState}>
@@ -59,16 +60,14 @@ const Imprint = ({ data }) => {
           }
           meta={[{ name: "robots", content: "noindex" }]}
         />
-        <StyledSection id={title}>
-          <StyledContentWrapper>
+        <Flex id={title}>
             <h1 data-testid="heading">{title}</h1>
             <MDXRenderer>{body}</MDXRenderer>
-          </StyledContentWrapper>
-        </StyledSection>
+        </Flex>
       </Layout>
     </GlobalStateProvider>
-  )
-}
+  );
+};
 
 Imprint.propTypes = {
   data: PropTypes.shape({
@@ -83,9 +82,9 @@ Imprint.propTypes = {
       ).isRequired,
     }).isRequired,
   }).isRequired,
-}
+};
 
-export default Imprint
+export default Imprint;
 
 export const pageQuery = graphql`
   {
@@ -103,4 +102,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

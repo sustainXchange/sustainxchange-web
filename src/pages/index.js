@@ -1,21 +1,23 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { graphql } from "gatsby"
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
 
-import GlobalStateProvider from "../context/provider"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Hero from "../components/sections/hero"
-import Articles from "../components/sections/articles"
-import About from "../components/sections/about"
-import Interests from "../components/sections/interests"
-import Projects from "../components/sections/projects"
-import Contact from "../components/sections/contact"
-import { seoTitleSuffix } from "../../config"
+import GlobalStateProvider from "../context/provider";
+import { ChakraProvider } from "@chakra-ui/react";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+// import Hero from "../components/sections/hero.old";
+// import Articles from "../components/sections/articles.js.old";
+// import About from "../components/sections/about.old";
+// import Interests from "../components/sections/interests.old";
+// import Projects from "../components/sections/projects.old";
+// import Contact from "../components/sections/contact.js.old";
+import { seoTitleSuffix } from "../../config";
+import { theme } from "../styles/theme";
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.index.edges[0].node
-  const { seoTitle, useSeoTitleSuffix, useSplashScreen } = frontmatter
+  const { frontmatter } = data.index.edges[0].node;
+  const { seoTitle, useSeoTitleSuffix, useSplashScreen } = frontmatter;
 
   const globalState = {
     // if useSplashScreen=false, we skip the intro by setting isIntroDone=true
@@ -23,35 +25,37 @@ const IndexPage = ({ data }) => {
     // darkMode is initially disabled, a hook inside the Layout component
     // will check the user's preferences and switch to dark mode if needed
     darkMode: false,
-  }
+  };
 
   return (
-    <GlobalStateProvider initialState={globalState}>
-      <Layout>
-        <SEO
-          title={
-            useSeoTitleSuffix
-              ? `${seoTitle} - ${seoTitleSuffix}`
-              : `${seoTitle}`
-          }
-        />
-        <Hero content={data.hero.edges} />
-        {/* Articles is populated via Medium RSS Feed fetch */}
-        <Articles />
-        <About content={data.about.edges} />
-        <Interests content={data.interests.edges} />
-        <Projects content={data.projects.edges} />
-        <Contact content={data.contact.edges} />
-      </Layout>
-    </GlobalStateProvider>
-  )
-}
+    <ChakraProvider resetCSS theme={theme} >
+      <GlobalStateProvider initialState={globalState}>
+        <Layout>
+          <SEO
+            title={
+              useSeoTitleSuffix
+                ? `${seoTitle} - ${seoTitleSuffix}`
+                : `${seoTitle}`
+            }
+          />
+          {/* <Hero content={data.hero.edges} /> */}
+          {/* Articles is populated via Medium RSS Feed fetch */}
+          {/* <Articles /> */}
+          {/* <About content={data.about.edges} /> */}
+          {/* <Interests content={data.interests.edges} /> */}
+          {/* <Projects content={data.projects.edges} /> */}
+          {/* <Contact content={data.contact.edges} /> */}
+        </Layout>
+      </GlobalStateProvider>
+    </ChakraProvider>
+  );
+};
 
 IndexPage.propTypes = {
   data: PropTypes.object.isRequired,
-}
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const pageQuery = graphql`
   {
@@ -181,4 +185,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
