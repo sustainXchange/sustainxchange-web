@@ -1,16 +1,16 @@
-import React from "react";
-import Header from "./header";
-import Footer from "./footer";
-import { Flex } from "@chakra-ui/react";
+import React from "react"
+import Header from "./header"
+import Footer from "./footer"
+import { Flex, VStack } from "@chakra-ui/react"
 
 const Layout = ({ children }) => {
   return (
-    <Flex variant="main">
+    <Flex direction="column">
       <Header />
-      <main id="main-content">{children}</main>
+      <VStack spacing="5rem">{children}</VStack>
       <Footer />
     </Flex>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

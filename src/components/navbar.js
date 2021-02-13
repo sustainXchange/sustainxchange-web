@@ -1,68 +1,38 @@
-import React from "react";
-import { Link } from "gatsby";
-import { HStack, Link } from "@chakra-ui/react";
-import { navLinks } from "../../config";
+import React from "react"
+import { Box, Link, Text, Stack } from "@chakra-ui/react"
 
-// const StyledNav = styled.nav`
-//   display: none;
-//   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     width: 31.25rem;
-//     background: ${({ theme }) => theme.colors.background};
-//     a {
-//       color: ${({ theme }) => theme.colors.primary};
-//     }
-//   }
-//   .nav-link {
-//     font-size: 1rem;
-//     font-weight: 700;
-//     text-align: center;
-//     position: relative;
-//     margin: 0 0 0 1.25rem;
-//     padding: 0;
-//     &::before {
-//       transition: 200ms ease-out;
-//       height: 0.1563rem;
-//       content: "";
-//       position: absolute;
-//       background-color: ${({ theme }) => theme.colors.primary};
-//       width: 0%;
-//       bottom: -0.125rem;
-//     }
-//     &:hover::before {
-//       width: 100%;
-//     }
-//   }
-//   .cta-btn {
-//     width: auto;
-//     height: auto;
-//     font-weight: 700;
-//     border-radius: ${({ theme }) => theme.borderRadius};
-//     border: 0.125rem solid ${({ theme }) => theme.colors.primary};
-//     background: ${({ theme }) => theme.colors.background};
-//     transition: 20ms ease-out;
-//     font-size: 1rem;
-//     padding: 0.5rem 1.5rem;
-//     margin: 0;
-//     &:hover {
-//       background: ${({ theme }) => theme.colors.primary};
-//       color: ${({ theme }) => theme.colors.background};
-//     }
-//   }
-// `
-
-const Navbar = () => {
-  const { menu, button } = navLinks;
+export const MenuToggle = ({ toggle, isOpen }) => {
   return (
-    <HStack>
-      {menu.map(({ name, url }, key) => {
-        return <Link href={url}>{name}</Link>;
-      })}
-      <Link href={button.url}>{button.name}</Link>
-    </HStack>
-  );
-};
+    <Box display={{ base: "block", md: "none" }} onClick={toggle}>
+      {isOpen ? "close" : "Open"}
+    </Box>
+  )
+}
 
-export default Navbar;
+const MenuItem = ({ children, to = "/", ...rest }) => {
+  return (
+    <Link href={to}>
+      <Text display="block" {...rest}>
+        {children}
+      </Text>
+    </Link>
+  )
+}
+
+export const Navigation = ({ isOpen }) => (
+  <Box
+    display={{ base: isOpen ? "block" : "none", md: "block" }}
+    flexBasis={{ base: "100%", md: "auto" }}
+  >
+    <Stack
+      spacing={8}
+      align="center"
+      justify={["center", "space-between", "flex-end", "flex-end"]}
+      direction={["column", "row", "row", "row"]}
+      pt={[4, 4, 0, 0]}
+    >
+      <MenuItem to="/">Home</MenuItem>
+      <MenuItem to="/how">How It Works</MenuItem>
+    </Stack>
+  </Box>
+)

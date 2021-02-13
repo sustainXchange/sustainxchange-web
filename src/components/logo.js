@@ -1,5 +1,12 @@
-import React from "react";
+import React from "react"
+import { Box, Text } from "@chakra-ui/react"
 
-const Logo = ({ size, color }) => <div>LOGO</div>;
-
-export default Logo;
+export default function Logo(props) {
+  return (
+    <Box {...props}>
+      <Text fontSize="lg" fontWeight="bold">
+        sustainXchange
+      </Text>
+    </Box>
+  )
+}

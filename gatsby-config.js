@@ -5,15 +5,15 @@ const {
   siteDescription,
   siteIcon,
   siteUrl,
-  colors,
-} = require(`./config`);
+  colors
+} = require(`./config`)
 
 module.exports = {
   siteMetadata: {
     author: author,
     title: siteTitle,
     description: siteDescription,
-    siteUrl: siteUrl,
+    siteUrl: siteUrl
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -22,7 +22,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify`,
     `@chakra-ui/gatsby-plugin`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -31,8 +30,8 @@ module.exports = {
         short_name: siteShortTitle,
         start_url: `/`,
         display: `minimal-ui`,
-        icon: siteIcon, // This path is relative to the root of the site.
-      },
+        icon: siteIcon // This path is relative to the root of the site.
+      }
     },
     {
       resolve: `gatsby-plugin-mdx`,
@@ -43,30 +42,35 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1000,
-              quality: 80,
-            },
-          },
-        ],
-      },
+              quality: 80
+            }
+          }
+        ]
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content`,
-        name: `content`,
-      },
+        name: `content`
+      }
     },
     {
-      resolve: `gatsby-plugin-eslint`,
+      resolve: "gatsby-plugin-eslint",
       options: {
-        test: /\.js$|\.jsx$/,
-        exclude: /(node_modules|.cache|public)/,
-        stages: [`develop`],
-        options: {
-          emitWarning: true,
-          failOnError: false,
-        },
-      },
+        stages: ["develop"],
+        extensions: ["js", "jsx"],
+        exclude: ["node_modules", ".cache", "public"]
+        // Any eslint-webpack-plugin options below
+      }
     },
-  ],
-};
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/
+        }
+      }
+    }
+  ]
+}
