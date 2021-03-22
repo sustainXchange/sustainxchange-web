@@ -1,0 +1,112 @@
+[
+  {
+    "firstName": "Amray",
+    "lastName": "Schwabe",
+    "taskforce": "board",
+    "bio": "",
+    "Position": "",
+    "Arbeitgeber": "",
+    "personalSDG": "",
+    "LinkedIn": "",
+    "weitere Websites": ""
+  },
+  {
+    "firstName": "Christopher",
+    "lastName": "Pridat",
+    "taskforce": "planning",
+    "bio": "",
+    "Position": "",
+    "Arbeitgeber": "",
+    "personalSDG": "",
+    "LinkedIn": "",
+    "weitere Websites": ""
+  },
+  {
+    "firstName": "Constantin",
+    "lastName": "Lindenmeyer",
+    "taskforce": "board",
+    "bio": "Constantin ist Gründungsmitglied und Vorsitzender von sustainXchange.",
+    "Position": "Head of Business Development & Strategy",
+    "Arbeitgeber": "Goldbeck solar",
+    "personalSDG": "SDG7 - der Zugang zu erneuerbare und günstiger bzw. erschwinglicher Energie muss ein Anrecht Aller sein. Nur so kann eine nachhaltige Entwicklung weltweit erfolgen. Alle 17 SDGs sind unglaublich wichtig, das Erreichen von SDG7 kann als Katalysator für viele Weitere dienen.",
+    "LinkedIn": "https://www.linkedin.com/in/constantin-lindenmeyer-b4691110a/",
+    "weitere Websites": "https://www.researchgate.net/profile/Constantin_Lindenmeyer"
+  },
+  {
+    "firstName": "Jana",
+    "lastName": "Birner",
+    "taskforce": "content",
+    "bio": "",
+    "Position": "Fellow",
+    "Arbeitgeber": "UNHCR",
+    "personalSDG": "SDG13 - Climate action",
+    "LinkedIn": "https://www.linkedin.com/in/janabirner",
+    "weitere Websites": ""
+  },
+  {
+    "firstName": "Jana",
+    "lastName": "Weber",
+    "taskforce": "finance",
+    "bio": "Jana ist Gründungsmitglied von sustainXchange, Mitbegründerin von CDI",
+    "Position": "Doktorandin, Co-founder",
+    "Arbeitgeber": "University of Cambridge, CDI (Chemical Data Intelligence) Ltd. Pte.",
+    "personalSDG": "",
+    "LinkedIn": "https://www.linkedin.com/in/jana-marie-weber-a260081b0/",
+    "weitere Websites": ""
+  },
+  {
+    "firstName": "Jasper",
+    "lastName": "Anders",
+    "taskforce": "board",
+    "bio": "",
+    "Position": "",
+    "Arbeitgeber": "",
+    "personalSDG": "",
+    "LinkedIn": "",
+    "weitere Websites": ""
+  },
+  {
+    "firstName": "Lukas Paul",
+    "lastName": "Korn",
+    "taskforce": "planning",
+    "bio": "Lukas ist Gründungsmitglied und Kassenprüfer von sustainXchange.",
+    "Position": "Wissenschaftlicher Mitarbeiter",
+    "Arbeitgeber": "Justus-Liebig-Universität Gießen",
+    "personalSDG": "SDG16 - Peace, justice and strong institutions",
+    "LinkedIn": "https://www.linkedin.com/in/lukas-paul-korn-82749861/",
+    "weitere Websites": ""
+  },
+  {
+    "firstName": "Maren",
+    "lastName": "Preuss",
+    "taskforce": "content",
+    "bio": "",
+    "Position": "",
+    "Arbeitgeber": "",
+    "personalSDG": "",
+    "LinkedIn": "",
+    "weitere Websites": ""
+  },
+  {
+    "firstName": "Peter",
+    "lastName": "Manshausen",
+    "taskforce": "content",
+    "bio": "",
+    "Position": "",
+    "Arbeitgeber": "",
+    "personalSDG": "",
+    "LinkedIn": "",
+    "weitere Websites": ""
+  },
+  {
+    "firstName": "Tim",
+    "lastName": "Deisemann",
+    "taskforce": "finance",
+    "bio": "",
+    "Position": "",
+    "Arbeitgeber": "",
+    "personalSDG": "",
+    "LinkedIn": "",
+    "weitere Websites": ""
+  }
+]

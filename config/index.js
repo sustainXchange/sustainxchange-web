@@ -1,6 +1,6 @@
 module.exports = {
   //-- SITE SETTINGS -----
-  author: "@konstantinmuenster",
+  author: "@jasperanders",
   siteTitle: "Gatsby Starter Portfolio Minimal",
   siteShortTitle: "Gatsby", // Used as logo text in header, footer, and splash screen
   siteDescription:

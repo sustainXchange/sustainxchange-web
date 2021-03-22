@@ -3,47 +3,39 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import GlobalStateProvider from "../context/provider"
-import { ChakraProvider } from "@chakra-ui/react"
+import { ChakraProvider, Divider, StackDivider } from "@chakra-ui/react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/sections/hero"
 import About from "../components/sections/about"
 import { seoTitleSuffix } from "../../config"
 import { theme } from "../styles/theme"
+import Event from "../components/sections/event"
+import News from "../components/sections/news"
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.index.edges[0].node
-  const { seoTitle, useSeoTitleSuffix, useSplashScreen } = frontmatter
-
-  const globalState = {
-    // if useSplashScreen=false, we skip the intro by setting isIntroDone=true
-    isIntroDone: useSplashScreen ? false : true,
-    // darkMode is initially disabled, a hook inside the Layout component
-    // will check the user's preferences and switch to dark mode if needed
-    darkMode: false
-  }
+  const { seoTitle, useSeoTitleSuffix } = frontmatter
 
   return (
-    <ChakraProvider resetCSS theme={theme}>
-      <GlobalStateProvider initialState={globalState}>
-        <Layout>
-          <SEO
-            title={
-              useSeoTitleSuffix
-                ? `${seoTitle} - ${seoTitleSuffix}`
-                : `${seoTitle}`
-            }
-          />
-          <Hero content={data.hero.edges} />
-          {/* Articles is populated via Medium RSS Feed fetch */}
-          {/* <Articles /> */}
-          <About content={data.about.edges} />
-          {/* <Interests content={data.interests.edges} /> */}
-          {/* <Projects content={data.projects.edges} /> */}
-          {/* <Contact content={data.contact.edges} /> */}
-        </Layout>
-      </GlobalStateProvider>
-    </ChakraProvider>
+    <>
+      <SEO
+        title={
+          useSeoTitleSuffix ? `${seoTitle} - ${seoTitleSuffix}` : `${seoTitle}`
+        }
+      />
+      <Hero content={data.hero.edges} />
+      <Event />
+      <Divider sx={{ borderTop: "0.5rem solid #444444", opacity: 1 }} />
+
+      <News />
+      {/* Articles is populated via Medium RSS Feed fetch */}
+      {/* <Articles /> */}
+      <About content={data.about.edges} />
+      {/* <Interests content={data.interests.edges} /> */}
+      {/* <Projects content={data.projects.edges} /> */}
+      {/* <Contact content={data.contact.edges} /> */}
+    </>
   )
 }
 

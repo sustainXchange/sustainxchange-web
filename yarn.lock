@@ -1734,6 +1734,21 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/dosis@^4.2.2":
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/dosis/-/dosis-4.2.2.tgz#99576e3c736e8578740959703d00482e0e856998"
+  integrity sha512-fb27qxuFjORlIfDIt7YWNpmJLWXfeY5kBvaKsMUqmvagO1ZvGGMQ9zZ2wdcEq6VvQO5S3suilLf9qpEjsF9ERw==
+
+"@fontsource/fira-code@^4.2.2":
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/fira-code/-/fira-code-4.2.2.tgz#4737070741f5a7fc40944c41215d26cd9ff56b80"
+  integrity sha512-Bhg7rQ/CUbedA6B6K6gS2GDEa5JJjQwSqq1KMz4wVMaXXL+igsLrr4VKKmdfExwlB6o7Ie8kScXg4camZmt7TQ==
+
+"@fontsource/playfair-display@^4.2.2":
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/playfair-display/-/playfair-display-4.2.2.tgz#a5792daaa48b8aa708d2711804248d4011d12283"
+  integrity sha512-Vx4oLVIPINMohHlTA50st2U1Ia+GHjR0CNJ3Fp1B1UBRyhuOF4H67ZXo8iSaqB5Qy073iVUSzsccGUoNSHfQhg==
+
 "@graphql-tools/batch-execute@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@graphql-tools/batch-execute/-/batch-execute-7.0.0.tgz#e79d11bd5b39f29172f6ec2eafa71103c6a6c85b"
