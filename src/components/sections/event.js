@@ -37,23 +37,23 @@ const Event = () => {
   return (
     <Box
       borderTop="base"
-      borderLeft={[0, "base"]}
-      borderRight={[0, "base"]}
-      borderBottom="base"
+      borderLeft={[0, 0, 0, "base"]}
+      borderRight={[0, 0, 0, "base"]}
+      borderBottom={[0, 0, 0, "base"]}
       padding="0.5rem"
       transform={[
-        "translate(0, 10%)",
-        "translate(0, 10%)",
-        "translate(0, 10%)",
-        "translate(40%, 10%)"
+        "translate(0, 0)",
+        "translate(0, 0)",
+        "translate(0, 0)",
+        "translate(0, 30%)"
       ]}
       background="white"
       p="2rem"
-      boxShadow="2xl"
+      shadow="2xl"
     >
       <Container maxW="2xl" p={0}>
         <Flex
-          flexDir={["column", "column", "row"]}
+          flexDir={["column", "column", "column", "row"]}
           alignItems="center"
           justifyContent="space-between"
         >

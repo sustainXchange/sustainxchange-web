@@ -17,10 +17,10 @@ const Header = () => {
       align="center"
       justify="space-between"
       wrap="wrap"
-      mb={8}
       p={8}
       px={16}
       bg={["primary.500", "primary.500", "transparent", "transparent"]}
+      shadow="md"
     >
       {/* <Helmet /> */}
       <Link to="/" aria-label="home">

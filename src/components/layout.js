@@ -19,7 +19,7 @@ const Layout = ({ element }) => {
       <GlobalStateProvider initialState={globalState}>
         <Flex direction="column">
           <Header />
-          <VStack width="100vw">{element}</VStack>
+          <VStack>{element}</VStack>
           <Footer />
         </Flex>
       </GlobalStateProvider>

@@ -3,7 +3,14 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import GlobalStateProvider from "../context/provider"
-import { ChakraProvider, Divider, StackDivider } from "@chakra-ui/react"
+import {
+  Box,
+  ChakraProvider,
+  Divider,
+  Flex,
+  Spacer,
+  StackDivider
+} from "@chakra-ui/react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/sections/hero"
@@ -12,6 +19,7 @@ import { seoTitleSuffix } from "../../config"
 import { theme } from "../styles/theme"
 import Event from "../components/sections/event"
 import News from "../components/sections/news"
+import BackgroundImage from "gatsby-background-image"
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.index.edges[0].node
@@ -24,17 +32,36 @@ const IndexPage = ({ data }) => {
           useSeoTitleSuffix ? `${seoTitle} - ${seoTitleSuffix}` : `${seoTitle}`
         }
       />
-      <Hero content={data.hero.edges} />
-      <Event />
-      <Divider sx={{ borderTop: "0.5rem solid #444444", opacity: 1 }} />
-
-      <News />
-      {/* Articles is populated via Medium RSS Feed fetch */}
-      {/* <Articles /> */}
-      <About content={data.about.edges} />
-      {/* <Interests content={data.interests.edges} /> */}
-      {/* <Projects content={data.projects.edges} /> */}
-      {/* <Contact content={data.contact.edges} /> */}
+      {/* <Flex  direction={["column", "column", "column", "row"]}> */}
+      {/* <BackgroundImage
+        fluid={data.hero.edges[0].node.frontmatter.image.childImageSharp.fluid}
+        sx={{ width: "100%" }}
+      > */}
+      <Flex
+        justifyContent="space-around"
+        direction={["column", "column", "column", "row"]}
+        alignSelf="stretch"
+      >
+        <Hero content={data.hero.edges} />
+        <Event />
+      </Flex>
+      {/* </BackgroundImage> */}
+      <Divider
+        mt="0 !important"
+        sx={{
+          borderTop: "0.5rem solid #444444",
+          opacity: 1
+        }}
+      />
+      <Box mt="10rem !important">
+        <News />
+        {/* Articles is populated via Medium RSS Feed fetch */}
+        {/* <Articles /> */}
+        <About content={data.about.edges} />
+        {/* <Interests content={data.interests.edges} /> */}
+        {/* <Projects content={data.projects.edges} /> */}
+        {/* <Contact content={data.contact.edges} /> */}
+      </Box>
     </>
   )
 }
