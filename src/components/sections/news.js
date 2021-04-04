@@ -28,7 +28,7 @@ function NewsCard(node) {
         </Text>
         {node.frontmatter.more && (
           <Link as={GatsbyLink} to={node.frontmatter.more} fontSize="lg">
-            Mehr erfahren
+            Mehr!
           </Link>
         )}
       </Container>
@@ -42,7 +42,7 @@ export default function News() {
       query {
         allMdx(
           filter: { fileAbsolutePath: { regex: "index/news/" } }
-          limit: 6
+          limit: 4
           sort: { fields: frontmatter___date, order: DESC }
         ) {
           nodes {
@@ -61,14 +61,19 @@ export default function News() {
   console.log(news.nodes.map(node => node))
 
   return (
-    <Flex background="secondary" width="100%" mt="10rem !important">
-      <Container maxW="4xl" py="1rem">
-        <Center>
-          <Heading fontFamily="mono" color="white">
-            News:
-          </Heading>
-        </Center>
-        <SimpleGrid columns={[1, 1, 2, 2, 3]} spacing={10} my="2rem">
+    <Flex
+      id="news"
+      background="secondary"
+      shadow="inner"
+      width="100%"
+      borderTop="base"
+      pt="2rem !important"
+    >
+      <Container maxW="6xl" py="2rem">
+        <Heading as="i" fontSize="4xl" fontFamily="mono" color="white">
+          Das ist neu:
+        </Heading>
+        <SimpleGrid columns={[1, 1, 2, 3, 4]} spacing={10} my="2rem">
           {news.nodes.map(node => NewsCard(node))}
         </SimpleGrid>
       </Container>

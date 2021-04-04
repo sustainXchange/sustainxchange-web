@@ -18,6 +18,7 @@ import About from "../components/sections/about"
 import { seoTitleSuffix } from "../../config"
 import { theme } from "../styles/theme"
 import Event from "../components/sections/event"
+import Partners from "../components/sections/partners"
 import News from "../components/sections/news"
 import BackgroundImage from "gatsby-background-image"
 import heroIMG from "../../content/index/hero/george-pagan-iii.jpg"
@@ -52,17 +53,11 @@ const IndexPage = ({ data }) => {
         <Spacer />
       </Flex>
       {/* </BackgroundImage> */}
-      <Divider
-        mt="0 !important"
-        sx={{
-          borderTop: "0.5rem solid #444444",
-          opacity: 1
-        }}
-      />
       <News />
       {/* Articles is populated via Medium RSS Feed fetch */}
       {/* <Articles /> */}
       <About content={data.about.edges} />
+      <Partners />
       {/* <Interests content={data.interests.edges} /> */}
       {/* <Projects content={data.projects.edges} /> */}
       {/* <Contact content={data.contact.edges} /> */}

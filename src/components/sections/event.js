@@ -38,14 +38,14 @@ const Event = () => {
     <Box
       borderTop="base"
       borderLeft={[0, 0, 0, "base"]}
-      borderRight={[0, 0, 0, "base"]}
+      borderRight={[0, 0, 0, 0, "base"]}
       borderBottom={[0, 0, 0, "base"]}
       padding="0.5rem"
       transform={[
         "translate(0, 0)",
         "translate(0, 0)",
         "translate(0, 0)",
-        "translate(0, 30%)"
+        "translate(0, 25%)"
       ]}
       background="white"
       p="2rem"
