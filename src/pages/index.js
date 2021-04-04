@@ -17,8 +17,9 @@ import Hero from "../components/sections/hero"
 import About from "../components/sections/about"
 import { seoTitleSuffix } from "../../config"
 import { theme } from "../styles/theme"
-import Event from "../components/sections/event"
+import EventCard from "../components/eventCard"
 import Partners from "../components/sections/partners"
+import Events from "../components/sections/events"
 import News from "../components/sections/news"
 import BackgroundImage from "gatsby-background-image"
 import heroIMG from "../../content/index/hero/george-pagan-iii.jpg"
@@ -49,14 +50,13 @@ const IndexPage = ({ data }) => {
       >
         <Hero content={data.hero.edges} />
         <Spacer />
-        <Event />
+        <EventCard />
         <Spacer />
       </Flex>
       {/* </BackgroundImage> */}
       <News />
-      {/* Articles is populated via Medium RSS Feed fetch */}
-      {/* <Articles /> */}
       <About content={data.about.edges} />
+      <Events />
       <Partners />
       {/* <Interests content={data.interests.edges} /> */}
       {/* <Projects content={data.projects.edges} /> */}

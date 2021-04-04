@@ -3,7 +3,6 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import { graphql } from "gatsby"
 import { Box, Flex, Center, Heading, Container, Text } from "@chakra-ui/react"
 import BackgroundImage from "gatsby-background-image"
-import Event from "./event"
 import SocialBar from "../icons/socialBar"
 
 const Hero = ({ content }) => {

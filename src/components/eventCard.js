@@ -1,6 +1,5 @@
 import React from "react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import SXCLogo from "../../../content/assets/logo.svg"
 import {
   Box,
   Flex,
@@ -48,6 +47,7 @@ const Event = () => {
         "translate(0, 25%)"
       ]}
       background="white"
+      alignSelf={["stretch", "stretch", "stretch", "flex-end"]}
       p="2rem"
       shadow="2xl"
     >

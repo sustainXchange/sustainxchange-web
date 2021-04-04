@@ -7,7 +7,7 @@ const About = ({ content }) => {
   const { frontmatter, body } = content[0].node
 
   return (
-    <Box as="section" id="about" mt="2rem">
+    <Box as="section" id="about" my="3rem">
       <Container maxW="4xl">
         <Center m="1rem">
           <Heading as="i" fontFamily="mono">
