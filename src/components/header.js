@@ -16,8 +16,8 @@ const Header = () => {
       as="nav"
       align="center"
       justify="space-between"
-      wrap="wrap"
-      p={8}
+      p={5}
+      direction={["column", "column", "row"]}
       px={16}
       bg={["primary.500", "primary.500", "transparent", "transparent"]}
       shadow="md"

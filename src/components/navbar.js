@@ -1,17 +1,22 @@
 import React from "react"
-import { Box, Link, Text, Stack } from "@chakra-ui/react"
+import { Box, Link, Text, Stack, Icon } from "@chakra-ui/react"
+import { FaBars, FaTimes } from "react-icons/fa"
 
 export const MenuToggle = ({ toggle, isOpen }) => {
   return (
-    <Box display={{ base: "block", md: "none" }} onClick={toggle}>
-      {isOpen ? "close" : "Open"}
+    <Box display={{ base: "block", md: "none" }} mt="1rem" onClick={toggle}>
+      {isOpen ? (
+        <Icon boxSize={6} color="black" as={FaTimes} />
+      ) : (
+        <Icon boxSize={6} color="black" as={FaBars} />
+      )}
     </Box>
   )
 }
 
 const MenuItem = ({ children, to = "/", ...rest }) => {
   return (
-    <Link href={to}>
+    <Link href={to} fontSize="xl">
       <Text display="block" {...rest}>
         {children}
       </Text>

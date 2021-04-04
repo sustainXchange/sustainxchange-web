@@ -59,7 +59,7 @@ const Event = () => {
         >
           <Box>
             <Container p={0}>
-              <Text as="mono" fontFamily="mono" fontSize="3xl" color="warning">
+              <Text as="Mono" fontFamily="mono" fontSize="3xl" color="warning">
                 {eventDateFrom} bis {eventDateTo}
               </Text>
               <Heading as="h2" fontSize="5xl">

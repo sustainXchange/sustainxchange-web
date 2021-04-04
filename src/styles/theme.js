@@ -1,5 +1,4 @@
 import { extendTheme } from "@chakra-ui/react"
-import { Container } from "./Container"
 import "@fontsource/playfair-display/900.css" // Weight 500 with all styles included.
 import "@fontsource/fira-code/600.css" // Weight 500 with all styles included.
 import "@fontsource/dosis/700.css" // Weight 500 with all styles included.
@@ -13,6 +12,7 @@ export const theme = extendTheme({
   colors: {
     primary: "#247bfc",
     secondary: "#0ed9a7",
+    secondaryLight: "#79D9C1",
     warning: "#FC533D",
     backgroundLight: "#fcffea",
     black: "#444444"
@@ -26,7 +26,6 @@ export const theme = extendTheme({
         color: "primary"
       }
     },
-    Container,
     Box: {
       baseStyle: {
         color: "backgroundLight"

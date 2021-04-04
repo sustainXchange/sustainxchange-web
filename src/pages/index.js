@@ -20,6 +20,7 @@ import { theme } from "../styles/theme"
 import Event from "../components/sections/event"
 import News from "../components/sections/news"
 import BackgroundImage from "gatsby-background-image"
+import heroIMG from "../../content/index/hero/george-pagan-iii.jpg"
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.index.edges[0].node
@@ -38,12 +39,17 @@ const IndexPage = ({ data }) => {
         sx={{ width: "100%" }}
       > */}
       <Flex
-        justifyContent="space-around"
+        justifyContent="space-between"
         direction={["column", "column", "column", "row"]}
         alignSelf="stretch"
+        background={`url(${heroIMG}) no-repeat center center fixed`}
+        backgroundSize="cover"
+        zIndex="0"
       >
         <Hero content={data.hero.edges} />
+        <Spacer />
         <Event />
+        <Spacer />
       </Flex>
       {/* </BackgroundImage> */}
       <Divider
@@ -53,15 +59,13 @@ const IndexPage = ({ data }) => {
           opacity: 1
         }}
       />
-      <Box mt="10rem !important">
-        <News />
-        {/* Articles is populated via Medium RSS Feed fetch */}
-        {/* <Articles /> */}
-        <About content={data.about.edges} />
-        {/* <Interests content={data.interests.edges} /> */}
-        {/* <Projects content={data.projects.edges} /> */}
-        {/* <Contact content={data.contact.edges} /> */}
-      </Box>
+      <News />
+      {/* Articles is populated via Medium RSS Feed fetch */}
+      {/* <Articles /> */}
+      <About content={data.about.edges} />
+      {/* <Interests content={data.interests.edges} /> */}
+      {/* <Projects content={data.projects.edges} /> */}
+      {/* <Contact content={data.contact.edges} /> */}
     </>
   )
 }
