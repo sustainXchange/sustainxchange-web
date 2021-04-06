@@ -1,77 +1,77 @@
+const {
+  author,
+  siteTitle,
+  siteShortTitle,
+  siteDescription,
+  siteIcon,
+  siteUrl,
+  colors
+} = require(`./config`)
+
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
-    description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+    author: author,
+    title: siteTitle,
+    description: siteDescription,
+    siteUrl: siteUrl
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-json`,
+    `gatsby-plugin-offline`,
+    `@chakra-ui/gatsby-plugin`,
     {
-      // keep as first gatsby-source-filesystem plugin for gatsby image support
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        path: `${__dirname}/static/img`,
-        name: 'uploads',
-      },
+        name: siteTitle,
+        short_name: siteShortTitle,
+        start_url: `/`,
+        display: `minimal-ui`,
+        icon: siteIcon // This path is relative to the root of the site.
+      }
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/img`,
-        name: 'images',
-      },
-    },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
           {
-            resolve: 'gatsby-remark-relative-images',
+            resolve: `gatsby-remark-images`,
             options: {
-              name: 'uploads',
-            },
-          },
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
-              maxWidth: 2048,
-            },
-          },
-          {
-            resolve: 'gatsby-remark-copy-linked-files',
-            options: {
-              destinationDir: 'static',
-            },
-          },
-        ],
-      },
+              maxWidth: 1000,
+              quality: 80
+            }
+          }
+        ]
+      }
     },
     {
-      resolve: 'gatsby-plugin-netlify-cms',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        modulePath: `${__dirname}/src/cms/cms.js`,
-      },
+        path: `${__dirname}/content`,
+        name: `content`
+      }
     },
     {
-      resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
+      resolve: "gatsby-plugin-eslint",
       options: {
-        develop: true, // Activates purging in npm run develop
-        purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
-      },
-    }, // must be after other CSS plugins
-    'gatsby-plugin-netlify', // make sure to keep it last in the array
-  ],
+        stages: ["develop"],
+        extensions: ["js", "jsx"],
+        exclude: ["node_modules", ".cache", "public"]
+        // Any eslint-webpack-plugin options below
+      }
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/
+        }
+      }
+    }
+  ]
 }
