@@ -13,6 +13,7 @@ import { useStaticQuery, graphql, Link as GatsbyLink } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Tag } from "@chakra-ui/tag"
 import { Stat, StatHelpText } from "@chakra-ui/stat"
+import SignUp from "../signUp"
 
 function NewsCard(node) {
   console.log(node)
@@ -64,6 +65,7 @@ export default function News() {
     <Flex
       id="news"
       background="secondary"
+      flexDirection="column"
       shadow="inner"
       width="100%"
       borderTop="base"
@@ -77,6 +79,7 @@ export default function News() {
           {news.nodes.map(node => NewsCard(node))}
         </SimpleGrid>
       </Container>
+      <SignUp />
     </Flex>
   )
 }

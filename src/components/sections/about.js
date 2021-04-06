@@ -7,8 +7,8 @@ const About = ({ content }) => {
   const { frontmatter, body } = content[0].node
 
   return (
-    <Box as="section" id="about" my="3rem">
-      <Container maxW="4xl">
+    <Box as="section" id="about" my="3rem" mt="4rem">
+      <Container maxW="xl">
         <Center m="1rem">
           <Heading as="i" fontFamily="mono">
             {frontmatter.title}

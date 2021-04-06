@@ -10,7 +10,7 @@ const Team = () => {
 
   return (
     <>
-      <Container maxW="2xl">
+      <Container maxW="2xl" mt='2rem'>
         <Heading>Das sind wir:</Heading>
         <Text>
           Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod
