@@ -1,5 +1,5 @@
 ---
-title: "Denken, Austausch, Handeln"
+title: "SUSTAIN X EVENT"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor

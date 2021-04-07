@@ -13,6 +13,7 @@ import { useStaticQuery, graphql, Link as GatsbyLink } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Tag } from "@chakra-ui/tag"
 import { Stat, StatHelpText } from "@chakra-ui/stat"
+import Gallery from "../gallery"
 
 function NewsCard(node) {
   console.log(node)
@@ -55,17 +56,24 @@ export default function News() {
   )
 
   return (
-    <Flex id="news" background="secondary" shadow="inner" width="100%">
+    <Flex
+      id="news"
+      background="secondary"
+      shadow="inner"
+      width="100%"
+      direction={["column", "column", "column", "row"]}
+    >
       <Container maxW="xl" py="3rem">
         <Center>
           <Heading as="i" fontSize="4xl" fontFamily="mono" color="white">
-            SUSTAIN X EVENTS
+            {event.nodes[0].frontmatter.title}
           </Heading>
         </Center>
         <Text fontSize="lg">
           <MDXRenderer>{event.nodes[0].body}</MDXRenderer>
         </Text>
       </Container>
+      <Gallery />
     </Flex>
   )
 }

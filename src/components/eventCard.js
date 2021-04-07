@@ -14,7 +14,9 @@ import { graphql, useStaticQuery } from "gatsby"
 const Event = () => {
   const data = useStaticQuery(graphql`
     {
-      event: allMdx(filter: { fileAbsolutePath: { regex: "/index/event/" } }) {
+      event: allMdx(
+        filter: { fileAbsolutePath: { regex: "/index/event/current/" } }
+      ) {
         edges {
           node {
             body

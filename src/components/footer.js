@@ -1,19 +1,37 @@
 import React, { useContext } from "react"
 
-import Context from "../context"
 import { footerLinks } from "../../config"
-import { Flex, Link } from "@chakra-ui/react"
+import { Box, Container, Flex, Icon, Link, Text } from "@chakra-ui/react"
+import {
+  FaCreativeCommons,
+  FaCreativeCommonsNc,
+  FaCreativeCommonsBy
+} from "react-icons/fa"
 
 const Footer = () => {
   return (
-    <Flex>
-      <div className="footer-links" data-testid="footer-links">
-        {footerLinks.map(({ name, url }, key) => (
-          <Link key={key} to={url}>
-            {name}
-          </Link>
-        ))}
-      </div>
+    <Flex justifyContent="space-around" background="secondary" p="2rem">
+      <Container>
+        <Text>
+          {footerLinks.map(({ name, url }, key) => (
+            <>
+              <Link key={key} to={url} color="white">
+                {name}
+              </Link>
+              <br />
+            </>
+          ))}
+        </Text>
+      </Container>
+      <Container textAlign="right" color="white">
+        <Text>
+          sustainXchange.org <br />
+          Design und Entwicklung Jasper Anders
+        </Text>
+        <Icon as={FaCreativeCommons} />
+        <Icon as={FaCreativeCommonsNc} />
+        <Icon as={FaCreativeCommonsBy} />
+      </Container>
     </Flex>
   )
 }
