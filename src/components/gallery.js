@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql, Link as GatsbyLink } from "gatsby"
-import { Container } from "@chakra-ui/layout"
+import { AspectRatio, Box, Container, SimpleGrid } from "@chakra-ui/layout"
+import GatsbyImage from "gatsby-image"
 
 export default function Gallery() {
   const { allFile: data } = useStaticQuery(
@@ -9,9 +10,9 @@ export default function Gallery() {
         allFile(filter: { absolutePath: { regex: "/event/section/images/" } }) {
           nodes {
             childImageSharp {
-              fixed(height: 200, quality: 90) {
+              fluid(maxWidth: 500, quality: 90) {
                 originalName
-                ...GatsbyImageSharpFixed
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -20,11 +21,17 @@ export default function Gallery() {
     `
   )
 
-  const images = data.nodes
+  const images = data.nodes.filter(img => img.childImageSharp !== null)
 
   return (
-    <Container>
-      <div>{images.map(img => img.childImageSharp.fixed.originalName)}</div>
+    <Container p="0" borderRadius="xl" overflow="hidden" my="2rem" shadow="lg">
+      <SimpleGrid columns={[1, 1, 2]} spacing="0.5rem">
+        {images.map(img => (
+          <Box height="200px" overflow="hidden" key={img.originalName}>
+            <GatsbyImage fluid={img.childImageSharp.fluid} />
+          </Box>
+        ))}
+      </SimpleGrid>
     </Container>
   )
 }

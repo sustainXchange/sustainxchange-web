@@ -25,7 +25,7 @@ function Partner(node) {
 }
 
 export default function Partners() {
-  const { allMdx: partners } = useStaticQuery(
+  const { allMdx: data } = useStaticQuery(
     graphql`
       query {
         allMdx(
@@ -49,13 +49,21 @@ export default function Partners() {
     `
   )
 
+  const partners = data.nodes.filter(img => img.childImageSharp !== null)
+
   return (
     <Flex id="partners" width="100%" pt="2rem !important">
       <Container maxW="6xl" py="2rem">
         <Heading as="i" fontSize="4xl" fontFamily="mono">
           Unsere Partner
         </Heading>
-        <Flex my="2rem">{partners.nodes.map(node => Partner(node))}</Flex>
+        <Flex
+          my="2rem"
+          direction={["column", "column", "row", "row"]}
+          alignItems="center"
+        >
+          {partners.map(node => Partner(node))}
+        </Flex>
       </Container>
     </Flex>
   )

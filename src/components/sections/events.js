@@ -56,7 +56,13 @@ export default function News() {
   )
 
   return (
-    <Flex id="news" background="secondary" shadow="inner" width="100%">
+    <Flex
+      id="news"
+      background="secondary"
+      shadow="inner"
+      width="100%"
+      direction={["column", "column", "column", "row"]}
+    >
       <Container maxW="xl" py="3rem">
         <Center>
           <Heading as="i" fontSize="4xl" fontFamily="mono" color="white">

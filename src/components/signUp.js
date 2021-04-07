@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form"
 import React from "react"
-import { Container } from "@chakra-ui/layout"
+import { Container, Stack } from "@chakra-ui/layout"
 import { FormControl } from "@chakra-ui/form-control"
 import { FormLabel } from "@chakra-ui/form-control"
 import { Input } from "@chakra-ui/input"
@@ -37,7 +37,7 @@ export default function SignUp() {
       </Heading>
       <form onSubmit={handleSubmit(onSubmit)}>
         <FormControl id="email" mt="0.5rem">
-          <HStack spacing="4">
+          <Stack direction={["column", "row", "row"]} spacing="4">
             <Input
               label="email"
               register={register}
@@ -48,7 +48,7 @@ export default function SignUp() {
             <Button background="primary" color="white" type="submit">
               Anmelden
             </Button>
-          </HStack>
+          </Stack>
           <FormHelperText>
             Mit dem Anmelden stimmst du unseren{" "}
             <Link to="privacy">Datenschutzbestimmungen</Link> zu.
