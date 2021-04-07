@@ -2,9 +2,8 @@ import { extendTheme } from "@chakra-ui/react"
 import "@fontsource/playfair-display/900.css" // Weight 500 with all styles included.
 import "@fontsource/fira-code/600.css" // Weight 500 with all styles included.
 import "@fontsource/dosis/700.css" // Weight 500 with all styles included.
-import { Box } from "./Box"
 
-export const theme = extendTheme({
+const theme = extendTheme({
   fonts: {
     heading: "Dosis",
     mono: "Fira Code"
@@ -47,3 +46,5 @@ export const theme = extendTheme({
     }
   }
 })
+
+export default theme
