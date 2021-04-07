@@ -23,7 +23,16 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-transformer-json`,
     `gatsby-plugin-offline`,
-    `@chakra-ui/gatsby-plugin`,
+    {
+      resolve: "@chakra-ui/gatsby-plugin",
+      options: {
+        /**
+         * @property {boolean} [isResettingCSS=true]
+         * if false, this plugin will not use `<CSSReset />
+         */
+        isResettingCSS: true
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

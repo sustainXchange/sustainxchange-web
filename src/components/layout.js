@@ -1,31 +1,17 @@
 import React from "react"
 import Header from "./header"
 import Footer from "./footer"
-import { ChakraProvider, Flex, VStack } from "@chakra-ui/react"
-import { theme } from "../styles/theme"
-import GlobalStateProvider from "../context/provider"
+import { Flex } from "@chakra-ui/react"
 
-const Layout = ({ element }) => {
-  const globalState = {
-    // if useSplashScreen=false, we skip the intro by setting isIntroDone=true
-    isIntroDone: true,
-    // darkMode is initially disabled, a hook inside the Layout component
-    // will check the user's preferences and switch to dark mode if needed
-    darkMode: false
-  }
-
+const Layout = ({ children }) => {
   return (
-    <ChakraProvider resetCSS theme={theme}>
-      <GlobalStateProvider initialState={globalState}>
-        <Flex direction="column">
-          <Header />
-          <Flex direction="column" alignItems="center">
-            {element}
-          </Flex>
-          <Footer />
-        </Flex>
-      </GlobalStateProvider>
-    </ChakraProvider>
+    <Flex direction="column">
+      <Header />
+      <Flex direction="column" alignItems="center">
+        {children}
+      </Flex>
+      <Footer />
+    </Flex>
   )
 }
 

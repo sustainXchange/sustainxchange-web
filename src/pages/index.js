@@ -16,12 +16,10 @@ import SEO from "../components/seo"
 import Hero from "../components/sections/hero"
 import About from "../components/sections/about"
 import { seoTitleSuffix } from "../../config"
-import { theme } from "../styles/theme"
 import EventCard from "../components/eventCard"
 import Partners from "../components/sections/partners"
 import Events from "../components/sections/events"
 import News from "../components/sections/news"
-import BackgroundImage from "gatsby-background-image"
 import heroIMG from "../../content/index/hero/george-pagan-iii.jpg"
 
 const IndexPage = ({ data }) => {
@@ -29,7 +27,7 @@ const IndexPage = ({ data }) => {
   const { seoTitle, useSeoTitleSuffix } = frontmatter
 
   return (
-    <>
+    <Layout>
       <SEO
         title={
           useSeoTitleSuffix ? `${seoTitle} - ${seoTitleSuffix}` : `${seoTitle}`
@@ -61,7 +59,7 @@ const IndexPage = ({ data }) => {
       {/* <Interests content={data.interests.edges} /> */}
       {/* <Projects content={data.projects.edges} /> */}
       {/* <Contact content={data.contact.edges} /> */}
-    </>
+    </Layout>
   )
 }
 
