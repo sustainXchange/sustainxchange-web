@@ -3,14 +3,15 @@ import { graphql } from "gatsby"
 
 import { Heading, Text, Container } from "@chakra-ui/layout"
 import TeamGrid from "../components/templates/teamGrid"
+import Layout from "../components/layout"
 
 const Team = () => {
   // const { frontmatter } = data.index.edges[0].node
   // const { seoTitle, useSeoTitleSuffix } = frontmatter
 
   return (
-    <>
-      <Container maxW="2xl" mt='2rem'>
+    <Layout>
+      <Container maxW="2xl" mt="2rem">
         <Heading>Das sind wir:</Heading>
         <Text>
           Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod
@@ -23,7 +24,7 @@ const Team = () => {
         </Text>
       </Container>
       <TeamGrid />
-    </>
+    </Layout>
   )
 }
 

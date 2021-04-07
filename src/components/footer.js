@@ -10,7 +10,12 @@ import {
 
 const Footer = () => {
   return (
-    <Flex justifyContent="space-around" background="secondary" p="2rem">
+    <Flex
+      justifyContent="space-around"
+      flexDirection={["column", "row"]}
+      background="secondary"
+      p="2rem"
+    >
       <Container>
         <Text>
           {footerLinks.map(({ name, url }, key) => (
@@ -23,7 +28,7 @@ const Footer = () => {
           ))}
         </Text>
       </Container>
-      <Container textAlign="right" color="white">
+      <Container textAlign={["left", "right"]} color="white">
         <Text>
           sustainXchange.org <br />
           Design und Entwicklung Jasper Anders

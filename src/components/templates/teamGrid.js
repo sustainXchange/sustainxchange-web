@@ -10,7 +10,7 @@ const personTile = person => (
       <Box bg="tomato" height="250px"></Box>
       <Text fontFamily="mono" mt="0.5rem" mb="0.5rem">
         {person.firstName + person.lastName
-          ? person.firstName + person.lastName
+          ? person.firstName + " " + person.lastName
           : "Anonymous"}
       </Text>
       <Text>
@@ -52,7 +52,7 @@ export default function TeamGrid() {
   )
 
   return (
-    <VStack spacing={"3rem"} alignItems="flex-start">
+    <VStack spacing={"3rem"} alignItems="flex-start" mb="2rem">
       <Box>
         <Heading as="h3" mt="3rem">
           Unsere Taskforces

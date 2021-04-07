@@ -17,7 +17,7 @@ import { Stat, StatHelpText } from "@chakra-ui/stat"
 
 function Partner(node) {
   return (
-    <Box borderRadius="md" padding="5">
+    <Box borderRadius="md" padding={[0, "5"]}>
       {/* <Container boxSize={node.frontmatter.size ? node.frontmatter.size : 5}> */}
       <Img fixed={node.frontmatter.image.childImageSharp.fixed} />
     </Box>
