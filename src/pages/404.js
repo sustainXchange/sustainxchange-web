@@ -1,8 +1,7 @@
-import React from "react";
+import React from "react"
 
-import GlobalStateProvider from "../context/provider";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Layout from "../components/globals/layout"
+import SEO from "../components/globals/seo"
 
 // const StyledSection = styled.section`
 //   width: 100%;
@@ -27,23 +26,16 @@ import SEO from "../components/seo";
 // `;
 
 const NotFoundPage = () => {
-  const globalState = {
-    isIntroDone: true,
-    darkMode: false,
-  };
-
   return (
-    <GlobalStateProvider initialState={globalState}>
-      <Layout>
-        <SEO
-          title="404: Not found"
-          meta={[{ name: "robots", content: "noindex" }]}
-        />
-        <h1 data-testid="heading">NOT FOUND</h1>
-        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-      </Layout>
-    </GlobalStateProvider>
-  );
-};
+    <Layout>
+      <SEO
+        title="404: Not found"
+        meta={[{ name: "robots", content: "noindex" }]}
+      />
+      <h1 data-testid="heading">NOT FOUND</h1>
+      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    </Layout>
+  )
+}
 
-export default NotFoundPage;
+export default NotFoundPage

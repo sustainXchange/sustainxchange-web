@@ -2,22 +2,14 @@ import { useForm } from "react-hook-form"
 import React from "react"
 import { Container, Stack } from "@chakra-ui/layout"
 import { FormControl } from "@chakra-ui/form-control"
-import { FormLabel } from "@chakra-ui/form-control"
 import { Input } from "@chakra-ui/input"
 import { FormHelperText } from "@chakra-ui/form-control"
 import { Heading } from "@chakra-ui/layout"
 import { Button } from "@chakra-ui/button"
-import { Flex } from "@chakra-ui/layout"
-import { HStack } from "@chakra-ui/layout"
 import { Link } from "gatsby"
 
 export default function SignUp() {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors }
-  } = useForm()
+  const { register, handleSubmit } = useForm()
 
   const onSubmit = data => {
     console.log(JSON.stringify(data))

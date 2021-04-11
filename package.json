@@ -70,15 +70,8 @@
     "start-server-and-test": "^1.11.6"
   },
   "keywords": [
-    "gatsby",
-    "starter",
-    "mdx",
-    "PWA",
-    "netlify",
-    "portfolio",
-    "minimal",
-    "animations",
-    "dark-mode"
+    "sustainXchange",
+    "cms"
   ],
   "license": "MIT",
   "scripts": {
