@@ -27,14 +27,14 @@ import SEO from "../components/globals/seo"
 
 const NotFoundPage = () => {
   return (
-    <Layout>
+    <>
       <SEO
         title="404: Not found"
         meta={[{ name: "robots", content: "noindex" }]}
       />
       <h1 data-testid="heading">NOT FOUND</h1>
       <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    </Layout>
+    </>
   )
 }
 

@@ -38,6 +38,7 @@ export const Navigation = ({ isOpen }) => (
     >
       <MenuItem to="/">Home</MenuItem>
       <MenuItem to="/team">Team</MenuItem>
+      <MenuItem to="/resources">Ressourcen</MenuItem>
     </Stack>
   </Box>
 )

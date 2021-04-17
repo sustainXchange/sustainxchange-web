@@ -13,13 +13,13 @@ import Partners from "../components/pages/home/partners"
 import Events from "../components/pages/home/events"
 import News from "../components/pages/home/news"
 import heroIMG from "../../content/pages/home/hero/hero.jpg"
+import FAQ from "../components/pages/home/faq"
 
 const IndexPage = ({ data }) => {
   // const { seoTitle, useSeoTitleSuffix } = frontmatter
 
   return (
-    <Layout>
-      {/* <SEO /> */}
+    <>
       <Flex
         justifyContent="space-between"
         direction={["column", "column", "column", "row"]}
@@ -37,7 +37,8 @@ const IndexPage = ({ data }) => {
       <About content={data.about.edges} />
       <Events />
       <Partners />
-    </Layout>
+      <FAQ />
+    </>
   )
 }
 

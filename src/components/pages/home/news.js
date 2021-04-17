@@ -14,9 +14,14 @@ import { Stat, StatHelpText } from "@chakra-ui/stat"
 import SignUp from "../../signUp"
 
 function NewsCard(node) {
-  console.log(node)
   return (
-    <Box borderRadius="md" background="white" shadow="lg" padding="5">
+    <Box
+      key={node.frontmatter.title}
+      borderRadius="md"
+      background="white"
+      shadow="lg"
+      padding="5"
+    >
       <Container>
         <Stat>
           <StatHelpText>{node.frontmatter.date}</StatHelpText>
@@ -57,8 +62,6 @@ export default function News() {
     `
   )
 
-  console.log(news.nodes.map(node => node))
-
   return (
     <Flex
       id="news"
@@ -70,7 +73,10 @@ export default function News() {
       pt="2rem !important"
     >
       <Container maxW="6xl" py="2rem">
-        <Heading as="i" fontSize="4xl" fontFamily="mono" color="white">
+        {/* <Heading as="i" fontSize="4xl" fontFamily="mono" color="white">
+          Das ist neu:
+        </Heading> */}
+        <Heading variant="subHeading" textAlign="left">
           Das ist neu:
         </Heading>
         <SimpleGrid columns={[1, 1, 2, 3, 4]} spacing={10} my="2rem">

@@ -7,7 +7,7 @@ const Hero = ({ content }) => {
   const { subtitle, title } = frontmatter
 
   return (
-    <Box as="SectionFirst" minHeight={[0, 0, 0, "50vh", "50vh"]} id="hero">
+    <Box minHeight={[0, 0, 0, "50vh", "50vh"]} id="hero">
       <Box
         position="relative"
         height="100%"

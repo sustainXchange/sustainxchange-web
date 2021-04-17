@@ -10,41 +10,12 @@ import { seoTitleSuffix } from "../../config"
 
 import { Flex } from "@chakra-ui/react"
 
-// const StyledSection = styled.section`
-//   width: 100%;
-//   max-width: 62.5rem;
-//   margin: 0 auto;
-//   padding: 0 2.5rem;
-//   height: auto;
-//   background: ${({ theme }) => theme.colors.background};
-//   h1 {
-//     font-size: 1.5rem;
-//   }
-//   h2 {
-//     font-size: 1.25rem;
-//   }
-//   h3 {
-//     font-size: 1rem;
-//     margin-bottom: 1rem;
-//   }
-// `;
-
-// const StyledContentWrapper = styled(ContentWrapper)`
-//   && {
-//     width: 100%;
-//     max-width: 36rem;
-//     margin: 0;
-//     padding: 0;
-//     height: 100%;
-//   }
-// `;
-
 const Imprint = ({ data }) => {
   const { body, frontmatter } = data.imprint.edges[0].node
   const { title, seoTitle, useSeoTitleSuffix } = frontmatter
 
   return (
-    <Layout>
+    <>
       <SEO
         title={
           useSeoTitleSuffix ? `${seoTitle} - ${seoTitleSuffix}` : `${seoTitle}`
@@ -55,7 +26,7 @@ const Imprint = ({ data }) => {
         <h1 data-testid="heading">{title}</h1>
         <MDXRenderer>{body}</MDXRenderer>
       </Flex>
-    </Layout>
+    </>
   )
 }
 

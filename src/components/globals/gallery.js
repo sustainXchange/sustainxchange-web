@@ -13,9 +13,9 @@ export default function Gallery() {
           }
         ) {
           nodes {
+            name
             childImageSharp {
               fluid(maxWidth: 500, quality: 90) {
-                originalName
                 ...GatsbyImageSharpFluid
               }
             }
@@ -31,7 +31,7 @@ export default function Gallery() {
     <Container p="0" borderRadius="xl" overflow="hidden" my="2rem" shadow="lg">
       <SimpleGrid columns={[1, 1, 2]} spacing="0.5rem">
         {images.map(img => (
-          <Box height="200px" overflow="hidden" key={img.originalName}>
+          <Box height="200px" overflow="hidden" key={img.name}>
             <GatsbyImage fluid={img.childImageSharp.fluid} />
           </Box>
         ))}

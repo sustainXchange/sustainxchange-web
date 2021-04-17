@@ -1,7 +1,7 @@
 import React from "react"
 
 import { footerLinks } from "../../../config"
-import { Container, Flex, Icon, Link, Text } from "@chakra-ui/react"
+import { Box, Container, Flex, Icon, Link, Text } from "@chakra-ui/react"
 import {
   FaCreativeCommons,
   FaCreativeCommonsNc,
@@ -17,16 +17,14 @@ const Footer = () => {
       p="2rem"
     >
       <Container>
-        <Text>
-          {footerLinks.map(({ name, url }, key) => (
-            <>
-              <Link key={key} to={url} color="white">
-                {name}
-              </Link>
-              <br />
-            </>
-          ))}
-        </Text>
+        {footerLinks.map(({ name, url }, key) => (
+          <Box key={name}>
+            <Link to={url} color="white">
+              {name}
+            </Link>
+            <br />
+          </Box>
+        ))}
       </Container>
       <Container textAlign={["left", "right"]} color="white">
         <Text>

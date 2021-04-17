@@ -8,11 +8,7 @@ const About = ({ content }) => {
   return (
     <Box as="section" id="about" my="3rem" mt="4rem">
       <Container maxW="xl">
-        <Center m="1rem">
-          <Heading as="i" fontFamily="mono">
-            {frontmatter.title}
-          </Heading>
-        </Center>
+        <Heading variant="subHeading">{frontmatter.title}</Heading>
         <Text fontSize="lg" align="center">
           <MDXRenderer>{body}</MDXRenderer>
         </Text>

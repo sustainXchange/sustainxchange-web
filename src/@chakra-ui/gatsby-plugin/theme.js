@@ -23,6 +23,18 @@ const theme = extendTheme({
     Heading: {
       baseStyle: {
         color: "primary"
+      },
+      variants: {
+        subHeading: {
+          fontFamily: "mono",
+          fontStyle: "italic",
+          mb: "2rem",
+          textAlign: "center",
+          fontSize: "4xl"
+        },
+        blogTitle: {
+          mb: "1rem"
+        }
       }
     },
     Box: {
@@ -32,6 +44,7 @@ const theme = extendTheme({
     },
     Text: {
       baseStyle: {
+        fontSize: "lg",
         marginTop: "1rem",
         [`strong`]: {
           color: "warning"
@@ -40,6 +53,7 @@ const theme = extendTheme({
     },
     Link: {
       baseStyle: {
+        fontSize: "lg",
         color: "secondary",
         fontWeight: "bold"
       }

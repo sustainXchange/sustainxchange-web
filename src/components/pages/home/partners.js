@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 function Partner(node) {
   return (
-    <Box borderRadius="md" padding={[0, "5"]}>
+    <Box borderRadius="md" padding={[0, "5"]} key={node.frontmatter.name}>
       {/* <Container boxSize={node.frontmatter.size ? node.frontmatter.size : 5}> */}
       <Img fixed={node.frontmatter.image.childImageSharp.fixed} />
     </Box>
@@ -17,11 +17,14 @@ export default function Partners() {
     graphql`
       query {
         allMdx(
-          filter: { fileAbsolutePath: { regex: "/content/pages/home/partners/" } }
+          filter: {
+            fileAbsolutePath: { regex: "/content/pages/home/partners/" }
+          }
           sort: { fields: frontmatter___importance, order: ASC }
         ) {
           nodes {
             frontmatter {
+              name
               size
               image {
                 childImageSharp {
@@ -42,9 +45,7 @@ export default function Partners() {
   return (
     <Flex id="partners" width="100%" pt="2rem !important">
       <Container maxW="6xl" py="2rem">
-        <Heading as="i" fontSize="4xl" fontFamily="mono">
-          Unsere Partner
-        </Heading>
+        <Heading variant="subHeading">Unsere Partner</Heading>
         <Flex
           my="2rem"
           direction={["column", "column", "row", "row"]}

@@ -25,15 +25,13 @@ const Team = () => {
   `)
 
   return (
-    <Layout>
+    <>
       <Container maxW="2xl" mt="2rem">
         <Heading>{team.edges[0].node.frontmatter.title}</Heading>
-        <Text>
-          <MDXRenderer>{team.edges[0].node.body}</MDXRenderer>
-        </Text>
+        <MDXRenderer>{team.edges[0].node.body}</MDXRenderer>
       </Container>
       <TeamGrid />
-    </Layout>
+    </>
   )
 }
 

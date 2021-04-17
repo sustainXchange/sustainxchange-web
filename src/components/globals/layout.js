@@ -5,7 +5,7 @@ import { Flex } from "@chakra-ui/react"
 
 const Layout = ({ children }) => {
   return (
-    <Flex direction="column">
+    <Flex direction="column" minHeight="100vh" justifyContent="space-between">
       <Header />
       <Flex direction="column" alignItems="center">
         {children}

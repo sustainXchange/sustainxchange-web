@@ -4,12 +4,12 @@ import { useStaticQuery, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Gallery from "../../globals/gallery"
 
-export default function News() {
+export default function Event() {
   const { allMdx: event } = useStaticQuery(
     graphql`
       query {
         allMdx(
-          filter: { fileAbsolutePath: { regex: "/content/pages/home/news/" } }
+          filter: { fileAbsolutePath: { regex: "/content/pages/home/event/" } }
         ) {
           nodes {
             body
