@@ -73,13 +73,10 @@ export default function News() {
       pt="2rem !important"
     >
       <Container maxW="6xl" py="2rem">
-        {/* <Heading as="i" fontSize="4xl" fontFamily="mono" color="white">
-          Das ist neu:
-        </Heading> */}
-        <Heading variant="subHeading" textAlign="left">
+        <Heading variant="subHeading" color="white" textAlign="left">
           Das ist neu:
         </Heading>
-        <SimpleGrid columns={[1, 1, 2, 3, 4]} spacing={10} my="2rem">
+        <SimpleGrid columns={[1, 1, 2, 3, 4]} spacing={10} mt="2rem">
           {news.nodes.map(node => NewsCard(node))}
         </SimpleGrid>
       </Container>

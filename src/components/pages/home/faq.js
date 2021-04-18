@@ -45,7 +45,7 @@ export default function FAQ() {
   `)
 
   return (
-    <Flex background="secondary" width="100%" pt="2rem">
+    <Flex background="secondary" width="100%" py="2rem">
       <Container color="white" maxW="3xl">
         <Heading variant="subHeading" color="white">
           FAQs
