@@ -2,9 +2,7 @@
 title: "Das sind wir:"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor
-incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute
-iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui
-officia deserunt mollit anim id est laborum.
+Wir sind ein junges Team von 10 Gründungsmitgliedern mit der Mission Nachhaltigkeit auf eine höhere Agenda zu setzten. 
+Wir bringen Expertise aus verschiedenen Fachrichtugen mit, aus Wirtschaft, Forschung und Politik, und möchten gemeinsam mit euch ein Netzwerk für Nachhaltigkeit aufbauen! 
+Lernt uns kennen und macht mit!  
+
