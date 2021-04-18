@@ -2,13 +2,12 @@
 title: "SUSTAIN X EVENT"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor
-incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute
-iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui
-officia deserunt mollit anim id est laborum. exercitation ullamco laboris nisi
-ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate
-velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat
-cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est
-laborum.
+Globale Krisen wie der Klimawandel, Artensterben oder die COVID-19 Pandemie können nur kollektiv gelöst werden. 
+Wir haben das Ziel, Austausch über Nachhaltigkeit in der Gesellschaft zu fördern und damit Nachhaltigkeit höher auf die Agenda setzen. 
+Dieser Austausch soll sich aber nicht nur um Nachhaltigkeit drehen, er soll selbst auch nachhaltig sein. 
+Konzepte und Ideen, die wir erarbeiten sollen nicht nur in unseren Köpfen bleiben, sondern auch den Weg in eine Öffentlichkeit finden.
+Deshalb arbeiten wir ergebnisorientiert an Zukunftsthemen, d.h. wir versuchen mit konkreten Aktionen etwas zum Diskurs beizutragen. 
+Wir organisieren Konferenzen und andere interaktive Veranstaltungen, bei denen ihr selbst aktiv werdet.
+Neugierig geworden? 
+
+Schaut rein und werdet aktiv! 
