@@ -20,8 +20,6 @@ const Team = () => {
     }
   `)
 
-  console.log(data)
-
   return (
     <>
       <Container maxW="2xl" mt="2rem">
