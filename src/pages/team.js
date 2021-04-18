@@ -7,28 +7,26 @@ import Layout from "../components/globals/layout"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const Team = () => {
-  const { allMdX: team } = useStaticQuery(graphql`
+  const { allMdx: data } = useStaticQuery(graphql`
     {
-      event: allMdx(
-        filter: { fileAbsolutePath: { regex: "/content/pages/team/" } }
-      ) {
-        edges {
-          node {
-            body
-            frontmatter {
-              title
-            }
+      allMdx(filter: { fileAbsolutePath: { regex: "/content/pages/team/" } }) {
+        nodes {
+          body
+          frontmatter {
+            title
           }
         }
       }
     }
   `)
 
+  console.log(data)
+
   return (
     <>
       <Container maxW="2xl" mt="2rem">
-        <Heading>{team.edges[0].node.frontmatter.title}</Heading>
-        <MDXRenderer>{team.edges[0].node.body}</MDXRenderer>
+        <Heading>{data.nodes[0].frontmatter.title}</Heading>
+        <MDXRenderer>{data.nodes[0].body}</MDXRenderer>
       </Container>
       <TeamGrid />
     </>
