@@ -1,9 +1,9 @@
 ---
-title: "Wie man ein Kaninchen aus einem viel zu kleinen Hut zaubert"
-author: "Pert Gubbi"
-date: "16.04.2021"
+title: "Wie man einen Verein (digital) gründet"
+author: "Lukas Korn"
+date: "2021-04-18"
 abstract: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor
-incidunt ut labore et dolore magna aliqua."
+incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
 ---
 
 import vereinGrunden from "./pdf/vereinGrunden.pdf"

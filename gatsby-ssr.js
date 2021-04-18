@@ -16,7 +16,8 @@ export const wrapRootElement = ({ element }) => {
   return (
     <MDXProvider
       components={{
-        p: Text,
+        // eslint-disable-next-line react/display-name
+        p: ({ ...props }) => <Text variant="mdxText" {...props} />,
         a: Link
       }}
     >

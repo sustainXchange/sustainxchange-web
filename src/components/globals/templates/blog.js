@@ -1,6 +1,6 @@
 import { IconButton } from "@chakra-ui/button"
 import { ArrowBackIcon } from "@chakra-ui/icons"
-import { Container, Heading, Text } from "@chakra-ui/layout"
+import { AspectRatio, Container, Heading, Text } from "@chakra-ui/layout"
 import { navigate } from "gatsby-link"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import React from "react"

@@ -49,6 +49,11 @@ const theme = extendTheme({
         [`strong`]: {
           color: "warning"
         }
+      },
+      variants: {
+        mdxText: {
+          mb: "1rem"
+        }
       }
     },
     Link: {
