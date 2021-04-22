@@ -10,7 +10,7 @@ import About from "../components/pages/home/about"
 // import { seoTitleSuffix } from "../../config"
 import EventOverlay from "../components/pages/home/elements/eventOverlay"
 import Partners from "../components/pages/home/partners"
-import Events from "../components/pages/home/events"
+import Event from "../components/pages/home/event"
 import News from "../components/pages/home/news"
 import heroIMG from "../../content/pages/home/hero/hero.jpg"
 import FAQ from "../components/pages/home/faq"
@@ -35,7 +35,7 @@ const IndexPage = ({ data }) => {
       </Flex>
       <News />
       <About content={data.about.edges} />
-      <Events />
+      <Event />
       <Partners />
       <FAQ />
     </>

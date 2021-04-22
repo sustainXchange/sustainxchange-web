@@ -10,12 +10,6 @@ import HowTo from "../components/pages/resources/howTo"
 import Output from "../components/pages/resources/output"
 
 export default function Resources() {
-  // const {allMDX: data} = useStaticQuery(graphql`
-  //   {
-  //     query {}
-  //   }
-  // `)
-
   return (
     <Container maxW="2xl">
       <Flex direction="column" justifyContent="flex-start">
@@ -28,9 +22,9 @@ export default function Resources() {
           colorScheme="gray"
         >
           <TabList overflow="scroll" p="0.5rem" outline="none">
-            <Tab>sustainXassociation</Tab>
-            <Tab>sustainXhowtos</Tab>
-            <Tab>sustainXoutput</Tab>
+            <Tab>sustain X association</Tab>
+            <Tab>sustain X howTos</Tab>
+            <Tab>sustain X output</Tab>
           </TabList>
           <TabPanels>
             <TabPanel my="2rem">

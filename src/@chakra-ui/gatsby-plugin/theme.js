@@ -12,6 +12,8 @@ const theme = extendTheme({
     primary: "#247bfc",
     secondary: "#0ed9a7",
     secondaryLight: "#79D9C1",
+    // lightGradient: "rgba(14, 217, 167, 0.1)",
+    lightGradient: "rgba(36, 123, 252, 0.05)",
     warning: "#FC533D",
     backgroundLight: "#fcffea",
     black: "#444444"
@@ -22,18 +24,23 @@ const theme = extendTheme({
   components: {
     Heading: {
       baseStyle: {
-        color: "primary"
+        color: "primary",
+        my: "2rem"
       },
       variants: {
         subHeading: {
           fontFamily: "mono",
           fontStyle: "italic",
-          mb: "2rem",
           textAlign: "center",
           fontSize: "4xl"
         },
         blogTitle: {
           mb: "1rem"
+        },
+        dateHeading: {
+          fontSize: "3xl",
+          color: "warning",
+          fontFamily: "mono"
         }
       }
     },
@@ -61,6 +68,14 @@ const theme = extendTheme({
         fontSize: "lg",
         color: "secondary",
         fontWeight: "bold"
+      }
+    },
+    Table: {
+      variants: {
+        scrollTable: {
+          minWidth: "900px",
+          overflow: "scroll"
+        }
       }
     }
   }

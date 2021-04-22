@@ -11,11 +11,11 @@ const Event = () => {
       ) {
         edges {
           node {
-            body
             frontmatter {
               eventDateFrom
               eventDateTo
-              eventTitle
+              title
+              abstract
             }
           }
         }
@@ -23,9 +23,9 @@ const Event = () => {
     }
   `)
 
-  const { frontmatter, body } = data.event.edges[0].node
+  const { frontmatter } = data.event.edges[0].node
 
-  const { eventDateFrom, eventDateTo, eventTitle } = frontmatter
+  const { eventDateFrom, eventDateTo, title, abstract } = frontmatter
 
   return (
     <Box
@@ -57,7 +57,7 @@ const Event = () => {
                 {eventDateFrom} bis {eventDateTo}
               </Text>
               <Heading as="h2" fontSize="5xl">
-                {eventTitle}
+                {title}
               </Heading>
             </Container>
           </Box>
@@ -68,9 +68,7 @@ const Event = () => {
               p={0}
               mt={["2rem", "2rem", 0]}
             >
-              <Text fontSize="xl">
-                <MDXRenderer>{body}</MDXRenderer>
-              </Text>
+              <Text fontSize="xl">{abstract}</Text>
               <Link fontSize="xl">Mehr erfahren</Link>
             </Container>
           </Box>

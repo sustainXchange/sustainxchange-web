@@ -3,7 +3,7 @@ import { Container, Box, Heading, SimpleGrid, Text } from "@chakra-ui/layout"
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 
-const personTile = person => (
+const personTilte = person => (
   <Box key={person.lastName}>
     <Container maxW="2xs" p="0">
       <Box bg="tomato" height="250px"></Box>
@@ -60,7 +60,7 @@ export default function TeamGrid() {
           Vorstandsteam
         </Heading>
         <SimpleGrid columns={[1, 1, 2, 3]} spacing={10}>
-          {board.map(person => personTile(person.node))}
+          {board.map(person => personTilte(person.node))}
         </SimpleGrid>
       </Box>
       <Box>
@@ -68,7 +68,7 @@ export default function TeamGrid() {
           Sponsoring und Finanzen
         </Heading>
         <SimpleGrid columns={[1, 1, 2, 3]} spacing={10}>
-          {finance.map(person => personTile(person.node))}
+          {finance.map(person => personTilte(person.node))}
         </SimpleGrid>
       </Box>
       <Box>
@@ -76,7 +76,7 @@ export default function TeamGrid() {
           Inhalt und Speaker
         </Heading>
         <SimpleGrid columns={[1, 1, 2, 3]} spacing={10}>
-          {content.map(person => personTile(person.node))}
+          {content.map(person => personTilte(person.node))}
         </SimpleGrid>
       </Box>
       <Box>
@@ -84,7 +84,7 @@ export default function TeamGrid() {
           Planung und Marketing
         </Heading>
         <SimpleGrid columns={[1, 1, 2, 3]} spacing={10}>
-          {planning.map(person => personTile(person.node))}
+          {planning.map(person => personTilte(person.node))}
         </SimpleGrid>
       </Box>
     </VStack>

@@ -7,7 +7,13 @@ const Layout = ({ children }) => {
   return (
     <Flex direction="column" minHeight="100vh" justifyContent="space-between">
       <Header />
-      <Flex direction="column" alignItems="center" flexGrow={1}>
+      <Flex
+        direction="column"
+        alignItems="center"
+        flexGrow={1}
+        py="2rem"
+        bgGradient="linear(to-b, lightGradient, white, white,  lightGradient)"
+      >
         {children}
       </Flex>
       <Footer />
