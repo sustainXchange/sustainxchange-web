@@ -2,24 +2,7 @@ import { VStack } from "@chakra-ui/layout"
 import { Container, Box, Heading, SimpleGrid, Text } from "@chakra-ui/layout"
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
-
-const personTilte = person => (
-  <Box key={person.lastName}>
-    <Container maxW="2xs" p="0">
-      <Box bg="tomato" height="250px"></Box>
-      <Text fontFamily="mono" mt="0.5rem" mb="0.5rem">
-        {person.firstName + person.lastName
-          ? person.firstName + " " + person.lastName
-          : "Anonymous"}
-      </Text>
-      <Text>
-        {person.bio
-          ? person.bio
-          : "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua."}
-      </Text>
-    </Container>
-  </Box>
-)
+import { PersonTitle } from "../../globals/person"
 
 export default function TeamGrid() {
   const team = useStaticQuery(graphql`
@@ -60,7 +43,9 @@ export default function TeamGrid() {
           Vorstandsteam
         </Heading>
         <SimpleGrid columns={[1, 1, 2, 3]} spacing={10}>
-          {board.map(person => personTilte(person.node))}
+          {board.map(person => (
+            <PersonTitle key={person.lastName} {...person} />
+          ))}
         </SimpleGrid>
       </Box>
       <Box>
@@ -68,7 +53,9 @@ export default function TeamGrid() {
           Sponsoring und Finanzen
         </Heading>
         <SimpleGrid columns={[1, 1, 2, 3]} spacing={10}>
-          {finance.map(person => personTilte(person.node))}
+          {finance.map(person => (
+            <PersonTitle key={person.lastName} {...person} />
+          ))}
         </SimpleGrid>
       </Box>
       <Box>
@@ -76,7 +63,9 @@ export default function TeamGrid() {
           Inhalt und Speaker
         </Heading>
         <SimpleGrid columns={[1, 1, 2, 3]} spacing={10}>
-          {content.map(person => personTilte(person.node))}
+          {content.map(person => (
+            <PersonTitle key={person.lastName} {...person} />
+          ))}
         </SimpleGrid>
       </Box>
       <Box>
@@ -84,7 +73,9 @@ export default function TeamGrid() {
           Planung und Marketing
         </Heading>
         <SimpleGrid columns={[1, 1, 2, 3]} spacing={10}>
-          {planning.map(person => personTilte(person.node))}
+          {planning.map(person => (
+            <PersonTitle key={person.lastName} {...person} />
+          ))}
         </SimpleGrid>
       </Box>
     </VStack>

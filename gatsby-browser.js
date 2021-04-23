@@ -10,18 +10,13 @@ import {
   Link,
   Text,
   Table,
-  Thead,
   Tbody,
-  Tfoot,
   Tr,
   Th,
   Td,
-  TableCaption,
   Container,
   Heading,
-  Box,
   Center,
-  List,
   UnorderedList,
   ListItem
 } from "@chakra-ui/react"

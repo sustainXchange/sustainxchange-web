@@ -5,8 +5,7 @@ title: "SUSTAIN X EVENT"
 abstract: "Hello, dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt
 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
 exercitation ullamco laboris nisi. Du kannst dich noch schnell bis zum
-30.07. anmelden!
-"
+30.07. anmelden!"
 ---
 
 Hello, dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt

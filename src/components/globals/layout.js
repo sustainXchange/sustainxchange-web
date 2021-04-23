@@ -11,7 +11,6 @@ const Layout = ({ children }) => {
         direction="column"
         alignItems="center"
         flexGrow={1}
-        py="2rem"
         bgGradient="linear(to-b, lightGradient, white, white,  lightGradient)"
       >
         {children}
