@@ -6,9 +6,7 @@ abstract: "***Changing the player or changing the game?*** Interesse bekommen? D
 **30.07.** anmelden!"
 ---
 
-Hello, dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt
-ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-exercitation ullamco laboris nisi. Du kannst dich noch schnell bis zum
+***Changing the player or changing the game?*** Wir diskturieren politische, technische und soziale Auswirkungen XXXX. Du kannst dich noch schnell bis zum
 **30.07.** anmelden!
 
 ## Output
