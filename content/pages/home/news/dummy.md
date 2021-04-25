@@ -1,7 +1,7 @@
 ---
-title: "Dummy News"
+title: "Vergange Events"
 date: "2021-04-04"
 more: ""
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor.
+Seid ihr neugierig was euch erwartet? Wir fassen vergangen Events kurz für euch zusammen. 
