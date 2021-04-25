@@ -2,15 +2,11 @@
 eventDateFrom: "20.03.21"
 eventDateTo: "20.03.21"
 title: "SUSTAIN X EVENT"
-abstract: "Hello, dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt
-ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-exercitation ullamco laboris nisi. Du kannst dich noch schnell bis zum
+abstract: "Changing the player or changing the game? Interesse bekommen? Du kannst dich noch bis zum
 30.07. anmelden!"
 ---
 
-Hello, dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt
-ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-exercitation ullamco laboris nisi. Du kannst dich noch schnell bis zum
+***Changing the player or changing the game?*** Wir diskturieren politische, technische und soziale Auswirkungen XXXX. Du kannst dich noch bis zum
 **30.07.** anmelden!
 
 ## Output
