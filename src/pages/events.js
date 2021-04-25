@@ -87,9 +87,9 @@ export default function Events() {
         <Heading as="h2" textAlign="center">
           Unsere Speaker
         </Heading>
-        <SimpleGrid columns={[1, 1, 2, 3]} spacing={10}>
+        <SimpleGrid columns={[1, 1, 2, 3]} spacing={10} mb="4rem">
           {speaker.map(person => (
-            <PersonTitle key={person.lastName} {...person} />
+            <PersonTitle key={person.lastName} person={person} />
           ))}
         </SimpleGrid>
       </Container>

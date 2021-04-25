@@ -1,5 +1,5 @@
 import { VStack } from "@chakra-ui/layout"
-import { Container, Box, Heading, SimpleGrid, Text } from "@chakra-ui/layout"
+import { Box, Heading, SimpleGrid } from "@chakra-ui/layout"
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import { PersonTitle } from "../../globals/person"
@@ -44,7 +44,7 @@ export default function TeamGrid() {
         </Heading>
         <SimpleGrid columns={[1, 1, 2, 3]} spacing={10}>
           {board.map(person => (
-            <PersonTitle key={person.lastName} {...person} />
+            <PersonTitle key={person.node.lastName} person={person.node} />
           ))}
         </SimpleGrid>
       </Box>
@@ -54,7 +54,7 @@ export default function TeamGrid() {
         </Heading>
         <SimpleGrid columns={[1, 1, 2, 3]} spacing={10}>
           {finance.map(person => (
-            <PersonTitle key={person.lastName} {...person} />
+            <PersonTitle key={person.node.lastName} person={person.node} />
           ))}
         </SimpleGrid>
       </Box>
@@ -64,7 +64,7 @@ export default function TeamGrid() {
         </Heading>
         <SimpleGrid columns={[1, 1, 2, 3]} spacing={10}>
           {content.map(person => (
-            <PersonTitle key={person.lastName} {...person} />
+            <PersonTitle key={person.node.lastName} person={person.node} />
           ))}
         </SimpleGrid>
       </Box>
@@ -74,7 +74,7 @@ export default function TeamGrid() {
         </Heading>
         <SimpleGrid columns={[1, 1, 2, 3]} spacing={10}>
           {planning.map(person => (
-            <PersonTitle key={person.lastName} {...person} />
+            <PersonTitle key={person.node.lastName} person={person.node} />
           ))}
         </SimpleGrid>
       </Box>

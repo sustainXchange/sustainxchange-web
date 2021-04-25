@@ -1,7 +1,7 @@
 import React from "react"
 import { Box, Container, Text } from "@chakra-ui/layout"
 
-export const PersonTitle = person => (
+export const PersonTitle = ({ person }) => (
   <Container maxW="2xs" p="0">
     <Box bg="tomato" height="250px"></Box>
     <Text fontFamily="mono" mt="0.5rem" mb="0.5rem">

@@ -7,7 +7,6 @@ import React from "react"
 import Layout from "../layout"
 
 export default function Blog({ pageContext }) {
-  console.log(pageContext)
   const { frontmatter, body } = pageContext.post
   const { author, title } = frontmatter
 
