@@ -2,11 +2,11 @@
 eventDateFrom: "20.03.21"
 eventDateTo: "20.03.21"
 title: "SUSTAIN X EVENT"
-abstract: "Changing the player or changing the game? Interesse bekommen? Du kannst dich noch schnell bis zum
+abstract: "Changing the player or changing the game? Interesse bekommen? Du kannst dich noch bis zum
 30.07. anmelden!"
 ---
 
-***Changing the player or changing the game?*** Wir diskturieren politische, technische und soziale Auswirkungen XXXX. Du kannst dich noch schnell bis zum
+***Changing the player or changing the game?*** Wir diskturieren politische, technische und soziale Auswirkungen XXXX. Du kannst dich noch bis zum
 **30.07.** anmelden!
 
 ## Output
