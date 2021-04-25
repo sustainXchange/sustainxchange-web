@@ -9,9 +9,7 @@ const About = ({ content }) => {
     <Box as="section" id="about" my="3rem" mt="4rem">
       <Container maxW="xl">
         <Heading variant="subHeading">{frontmatter.title}</Heading>
-        <Text fontSize="lg" align="center">
-          <MDXRenderer>{body}</MDXRenderer>
-        </Text>
+        <MDXRenderer>{body}</MDXRenderer>
       </Container>
       {/* <Box
           display={["none", "none", "block"]}

@@ -14,7 +14,6 @@ import {
   Tr,
   Th,
   Td,
-  Container,
   Heading,
   Center,
   UnorderedList,
@@ -30,15 +29,9 @@ export const wrapRootElement = ({ element }) => {
   return (
     <MDXProvider
       components={{
-        p: ({ ...props }) => (
-          <Container maxW="2xl">
-            <Text variant="mdxText" {...props} />
-          </Container>
-        ),
+        p: ({ ...props }) => <Text variant="mdxText" {...props} />,
         ul: ({ ...props }) => (
-          <Container maxW="xl">
-            <UnorderedList fontSize="lg" variant="mdxText" {...props} />
-          </Container>
+          <UnorderedList pl="1rem" fontSize="lg" variant="mdxText" {...props} />
         ),
         li: ListItem,
         table: ({ ...props }) => (

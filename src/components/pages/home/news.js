@@ -27,7 +27,7 @@ function NewsCard(node) {
           <StatHelpText>{node.frontmatter.date}</StatHelpText>
         </Stat>
         <Heading m="0">{node.frontmatter.title}</Heading>
-        <MDXRenderer m="0">{node.body}</MDXRenderer>
+        <MDXRenderer color="red">{node.body}</MDXRenderer>
         {node.frontmatter.more && (
           <Link as={GatsbyLink} to={node.frontmatter.more} fontSize="lg">
             Mehr!

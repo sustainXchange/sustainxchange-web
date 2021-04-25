@@ -11,6 +11,7 @@ import SXCLogo from "../../content/globals/assets/logo.svg"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import React from "react"
 import { PersonTitle } from "../components/globals/person"
+import MdxTextWrapper from "../components/globals/mdxTextWrapper"
 
 const speaker = [
   {
@@ -83,7 +84,7 @@ export default function Events() {
           {eventDateFrom} bis {eventDateTo}
         </Heading>
         <Heading textAlign="center">{title}</Heading>
-        <MDXRenderer>{body}</MDXRenderer>
+        <MdxTextWrapper>{body}</MdxTextWrapper>
         <Heading as="h2" textAlign="center">
           Unsere Speaker
         </Heading>

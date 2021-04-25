@@ -2,8 +2,6 @@ import { Heading, Text } from "@chakra-ui/layout"
 import { Flex } from "@chakra-ui/layout"
 import { Container } from "@chakra-ui/layout"
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/tabs"
-import { graphql, useStaticQuery } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 import React from "react"
 import Blog from "../components/pages/resources/association"
 import HowTo from "../components/pages/resources/howTo"
@@ -21,7 +19,7 @@ export default function Resources() {
           orientation="horizontal"
           colorScheme="gray"
         >
-          <TabList overflow="scroll" p="0.5rem" outline="none">
+          <TabList overflowX="auto" p="0.5rem" outline="none">
             <Tab>sustain X association</Tab>
             <Tab>sustain X howTos</Tab>
             <Tab>sustain X output</Tab>

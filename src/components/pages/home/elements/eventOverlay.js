@@ -1,5 +1,4 @@
 import React from "react"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Box, Flex, Text, Heading, Container, Link } from "@chakra-ui/react"
 import { graphql, useStaticQuery } from "gatsby"
 

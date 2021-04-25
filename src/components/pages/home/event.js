@@ -29,7 +29,7 @@ export default function Event() {
       shadow="inner"
       width="100%"
       direction={["column", "column", "column", "row"]}
-      alignItems='center'
+      alignItems="center"
     >
       <Container maxW="xl" py="3rem">
         <Center>
@@ -37,9 +37,7 @@ export default function Event() {
             {event.nodes[0].frontmatter.title}
           </Heading>
         </Center>
-        <Text fontSize="lg">
-          <MDXRenderer>{event.nodes[0].body}</MDXRenderer>
-        </Text>
+        <MDXRenderer>{event.nodes[0].body}</MDXRenderer>
       </Container>
       <Gallery />
     </Flex>
