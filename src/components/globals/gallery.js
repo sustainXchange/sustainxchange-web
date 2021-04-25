@@ -28,14 +28,16 @@ export default function Gallery() {
   const images = data.nodes.filter(img => img.childImageSharp !== null)
 
   return (
-    <Container p="0" borderRadius="xl" overflow="hidden" my="2rem" shadow="lg">
-      <SimpleGrid columns={[1, 1, 2]} spacing="0.5rem">
-        {images.map(img => (
-          <Box height="200px" overflow="hidden" key={img.name}>
-            <GatsbyImage fluid={img.childImageSharp.fluid} />
-          </Box>
-        ))}
-      </SimpleGrid>
+    <Container maxW="4xl">
+      <Box p="0" borderRadius="xl" overflow="hidden" my="2rem" shadow="lg">
+        <SimpleGrid columns={[1, 1, 2]} spacing="0.5rem">
+          {images.map(img => (
+            <Box height="100%" overflow="hidden" key={img.name}>
+              <GatsbyImage fluid={img.childImageSharp.fluid} />
+            </Box>
+          ))}
+        </SimpleGrid>
+      </Box>
     </Container>
   )
 }

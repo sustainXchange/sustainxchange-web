@@ -29,6 +29,7 @@ export default function Event() {
       shadow="inner"
       width="100%"
       direction={["column", "column", "column", "row"]}
+      alignItems='center'
     >
       <Container maxW="xl" py="3rem">
         <Center>

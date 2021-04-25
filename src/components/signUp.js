@@ -24,7 +24,7 @@ export default function SignUp() {
       alignSelf="flex-start"
       transform="translate(0, 20%)"
     >
-      <Heading fontSize="2xl" color="warning" fontFamily="mono">
+      <Heading fontSize="2xl" m="0" color="warning" fontFamily="mono">
         Bleib auf dem neusten Stand!
       </Heading>
       <form onSubmit={handleSubmit(onSubmit)}>
