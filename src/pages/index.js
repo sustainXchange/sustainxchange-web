@@ -57,9 +57,7 @@ export const pageQuery = graphql`
         node {
           body
           frontmatter {
-            greetings
             title
-            subtitlePrefix
             subtitle
             image {
               childImageSharp {
