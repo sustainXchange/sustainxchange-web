@@ -4,7 +4,6 @@ import {
   Flex,
   Heading,
   SimpleGrid,
-  Text,
   Link
 } from "@chakra-ui/layout"
 import React from "react"

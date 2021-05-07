@@ -78,22 +78,25 @@ export default function Events() {
   const { title, eventDateFrom, eventDateTo } = frontmatter
 
   return (
-    <Box py="2rem">
-      <Container maxW="4xl">
-        <Heading as="h2" variant="dateHeading" textAlign="center">
-          {eventDateFrom} bis {eventDateTo}
-        </Heading>
-        <Heading textAlign="center">{title}</Heading>
-        <MdxTextWrapper>{body}</MdxTextWrapper>
-        <Heading as="h2" textAlign="center">
-          Unsere Speaker
-        </Heading>
-        <SimpleGrid columns={[1, 1, 2, 3]} spacing={10} mb="4rem">
-          {speaker.map(person => (
-            <PersonTitle key={person.lastName} person={person} />
-          ))}
-        </SimpleGrid>
-      </Container>
-    </Box>
+    <>
+      <SEO title="sustainXchange - Events" />
+
+        <Container maxW="4xl">
+          <Heading as="h2" variant="dateHeading" textAlign="center">
+            {eventDateFrom} bis {eventDateTo}
+          </Heading>
+          <Heading textAlign="center">{title}</Heading>
+          <MdxTextWrapper>{body}</MdxTextWrapper>
+          <Heading as="h2" textAlign="center">
+            Unsere Speaker
+          </Heading>
+          <SimpleGrid columns={[1, 1, 2, 3]} spacing={10} mb="4rem">
+            {speaker.map(person => (
+              <PersonTitle key={person.lastName} person={person} />
+            ))}
+          </SimpleGrid>
+        </Container>
+      </Box>
+    </>
   )
 }

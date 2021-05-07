@@ -14,12 +14,12 @@ import Event from "../components/pages/home/event"
 import News from "../components/pages/home/news"
 import heroIMG from "../../content/pages/home/hero/hero.jpg"
 import FAQ from "../components/pages/home/faq"
+import SEO from "../components/globals/seo"
 
 const IndexPage = ({ data }) => {
-  // const { seoTitle, useSeoTitleSuffix } = frontmatter
-
   return (
     <>
+      <SEO title="sustainXchange" />
       <Flex
         justifyContent="space-between"
         direction={["column", "column", "column", "row"]}

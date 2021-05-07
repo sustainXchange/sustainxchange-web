@@ -11,18 +11,6 @@ const About = ({ content }) => {
         <Heading variant="subHeading">{frontmatter.title}</Heading>
         <MDXRenderer>{body}</MDXRenderer>
       </Container>
-      {/* <Box
-          display={["none", "none", "block"]}
-          overflow="hidden"
-          boxSize="sm"
-          boxShadow="dark-lg"
-          borderRadius="10px"
-        >
-          <Img
-            className="about-author"
-            fluid={frontmatter.image.childImageSharp.fluid}
-          />
-        </Box> */}
     </Box>
   )
 }
