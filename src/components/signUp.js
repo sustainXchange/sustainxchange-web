@@ -11,9 +11,7 @@ import { Link } from "gatsby"
 export default function SignUp() {
   const { register, handleSubmit } = useForm()
 
-  const onSubmit = data => {
-    console.log(JSON.stringify(data))
-  }
+  const onSubmit = data => {}
 
   return (
     <Container

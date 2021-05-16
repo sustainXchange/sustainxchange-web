@@ -9,6 +9,7 @@ import {
 import { useStaticQuery, graphql } from "gatsby"
 import SXCLogo from "../../content/globals/assets/logo.svg"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import SEO from "../components/globals/seo"
 import React from "react"
 import { PersonTitle } from "../components/globals/person"
 import MdxTextWrapper from "../components/globals/mdxTextWrapper"
@@ -81,22 +82,21 @@ export default function Events() {
     <>
       <SEO title="sustainXchange - Events" />
 
-        <Container maxW="4xl">
-          <Heading as="h2" variant="dateHeading" textAlign="center">
-            {eventDateFrom} bis {eventDateTo}
-          </Heading>
-          <Heading textAlign="center">{title}</Heading>
-          <MdxTextWrapper>{body}</MdxTextWrapper>
-          <Heading as="h2" textAlign="center">
-            Unsere Speaker
-          </Heading>
-          <SimpleGrid columns={[1, 1, 2, 3]} spacing={10} mb="4rem">
-            {speaker.map(person => (
-              <PersonTitle key={person.lastName} person={person} />
-            ))}
-          </SimpleGrid>
-        </Container>
-      </Box>
+      <Container maxW="4xl">
+        <Heading as="h2" variant="dateHeading" textAlign="center">
+          {eventDateFrom} bis {eventDateTo}
+        </Heading>
+        <Heading textAlign="center">{title}</Heading>
+        <MdxTextWrapper>{body}</MdxTextWrapper>
+        <Heading as="h2" textAlign="center">
+          Unsere Speaker
+        </Heading>
+        <SimpleGrid columns={[1, 1, 2, 3]} spacing={10} mb="4rem">
+          {speaker.map(person => (
+            <PersonTitle key={person.lastName} person={person} />
+          ))}
+        </SimpleGrid>
+      </Container>
     </>
   )
 }
