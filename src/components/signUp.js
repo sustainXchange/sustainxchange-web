@@ -7,11 +7,34 @@ import { FormHelperText } from "@chakra-ui/form-control"
 import { Heading } from "@chakra-ui/layout"
 import { Button } from "@chakra-ui/button"
 import { Link } from "gatsby"
+import axios from "axios"
 
 export default function SignUp() {
   const { register, handleSubmit } = useForm()
 
-  const onSubmit = data => {}
+  const onSubmit = data => {
+    const options = {
+      url: "https://api.sendgrid.com/v3/mail/send ",
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${process.env.SENDGRID_API_KEY}`,
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      data: {
+        personalizations: [{ to: [{ email: "test@example.com" }] }],
+        from: { email: "test@example.com" },
+        subject: "Sending with SendGrid is Fun",
+        content: [
+          {
+            type: "text/plain",
+            value: "and easy to do anywhere, even with cURL"
+          }
+        ]
+      }
+    }
+
+    axios(options).then(response => {console.log(response)})
+  }
 
   return (
     <Container
