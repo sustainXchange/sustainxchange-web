@@ -21,9 +21,11 @@ export default function SignUp() {
         "Content-Type": "application/json;charset=UTF-8"
       },
       data: {
-        personalizations: [{ to: [{ email: "test@example.com" }] }],
-        from: { email: "test@example.com" },
-        subject: "Sending with SendGrid is Fun",
+        personalizations: [
+          { to: [{ email: "jasper.anders@sustainxchange.org" }] }
+        ],
+        from: { email: "noreply@sustainxchange.org" },
+        subject: `${data.email}`,
         content: [
           {
             type: "text/plain",
@@ -33,7 +35,9 @@ export default function SignUp() {
       }
     }
 
-    axios(options).then(response => {console.log(response)})
+    axios(options).then(response => {
+      console.log(response)
+    })
   }
 
   return (
