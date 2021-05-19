@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form"
-import React from "react"
+import React, { useState } from "react"
 import { Container, Stack } from "@chakra-ui/layout"
 import { FormControl } from "@chakra-ui/form-control"
 import { Input } from "@chakra-ui/input"
@@ -11,33 +11,33 @@ import axios from "axios"
 
 export default function SignUp() {
   const { register, handleSubmit } = useForm()
+  const [allowLogin, setAllowLogin] = useState(true)
+  const [singUpError, setSingUpError] = useState(false)
 
-  const onSubmit = data => {
+  const onSubmit = (data, e) => {
+    console.log(data)
     const options = {
-      url: "https://api.sendgrid.com/v3/mail/send ",
+      url: "https://api.sendinblue.com/v3/contacts",
       method: "POST",
       headers: {
-        Authorization: `Bearer ${process.env.SENDGRID_API_KEY}`,
-        "Content-Type": "application/json;charset=UTF-8"
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        "api-key":
+          "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"
       },
-      data: {
-        personalizations: [
-          { to: [{ email: "jasper.anders@sustainxchange.org" }] }
-        ],
-        from: { email: "noreply@sustainxchange.org" },
-        subject: `${data.email}`,
-        content: [
-          {
-            type: "text/plain",
-            value: "and easy to do anywhere, even with cURL"
-          }
-        ]
-      }
+      data: { updateEnabled: true, email: data.email }
     }
 
-    axios(options).then(response => {
-      console.log(response)
-    })
+    axios(options)
+      .then(response => {
+        console.log(response)
+        setAllowLogin(false)
+        setSingUpError(false)
+        e.target.reset()
+      })
+      .catch(() => {
+        setSingUpError(true)
+      })
   }
 
   return (
@@ -57,19 +57,36 @@ export default function SignUp() {
           <Stack direction={["column", "row", "row"]} spacing="4">
             <Input
               label="email"
-              register={register}
+              {...register("email")}
               required
               placeholder="greta@beispiel.de"
               type="email"
             />
-            <Button background="primary" color="white" type="submit">
-              Anmelden
+            <Button
+              background="primary"
+              disabled={!allowLogin}
+              color="white"
+              type="submit"
+            >
+              {"Anmelden"}
             </Button>
           </Stack>
-          <FormHelperText>
-            Mit dem Anmelden stimmst du unseren{" "}
-            <Link to="privacy">Datenschutzbestimmungen</Link> zu.
-          </FormHelperText>
+          {allowLogin ? (
+            <FormHelperText>
+              Mit dem Anmelden stimmst du unseren{" "}
+              <Link to="privacy">Datenschutzbestimmungen</Link> zu.
+            </FormHelperText>
+          ) : (
+            <FormHelperText color="secondary">
+              Danke für deine Anmeldung
+            </FormHelperText>
+          )}
+          {singUpError && (
+            <FormHelperText color="warning">
+              Ups! Da ist bei uns etwas schief gelaufen, versuche es später noch
+              einmal.
+            </FormHelperText>
+          )}
         </FormControl>
       </form>
     </Container>

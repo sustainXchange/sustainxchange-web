@@ -16,7 +16,7 @@ Wir wollen, den Austausch über Nachhaltigkeit nachhaltig gestalten. Ideen, die
 wir mit euch entwickeln, sollen nicht in der Schublade landen, sondern allen zur
 Verfügung stehen.
 
-Deshalb erarbeitet ihr mit euren Teams einen ganz **konkreten Output.** Das kann
+<!-- Deshalb erarbeitet ihr mit euren Teams einen ganz **konkreten Output.** Das kann
 z.B. sein:
 
 - Einen (Code) Prototypen in Form einer
@@ -28,7 +28,7 @@ z.B. sein:
 - Eine Lernressource
 - Oder Lifestyle Ideen wie
   - Rezepte
-  - oder Kunst
+  - oder Kunst -->
 
 ## Ablauf
 
@@ -55,9 +55,8 @@ z.B. sein:
 | 18.00   |       Begrüßung       | Hero Vortag mit Podiumsdiskussion |                |
 | 18.30   | Gruppen Kennenlernen  | Hero Vortag mit Podiumsdiskussion |                |
 | 19.00   |    Impulsvorträge     |            Worksprint             |                |
-| 19.30   |                       |                \|                 |                |
+| 19.30   |          \|           |                \|                 |                |
 | 20.00   |    Impulsvorträge     |            Worksprint             |                |
 | 20.30   |     Brainstorming     |                \|                 |                |
 | 21.00   | Good Night Networking |       Good Night Networking       |                |
-|         |                       |                \|                 |                |
-| 21.30   |                       |                \|                 |                |
+| 21.30   |          \|           |                \|                 |                |
