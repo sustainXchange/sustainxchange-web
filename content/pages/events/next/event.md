@@ -1,13 +1,14 @@
 ---
-eventDateFrom: "20.03.21"
-eventDateTo: "20.03.21"
+eventDateFrom: "27.08.21"
+eventDateTo: "29.08.21"
 title: "SUSTAIN X EVENT"
 abstract: "Changing the player or changing the game? Interesse bekommen? Du kannst dich noch bis zum
 30.07. anmelden!"
 ---
 
-***Changing the player or changing the game?*** Wir diskturieren politische, technische und soziale Auswirkungen XXXX. Du kannst dich noch bis zum
-**30.07.** anmelden!
+**_Changing the player or changing the game?_** Wir diskturieren politische,
+technische und soziale Auswirkungen XXXX. Du kannst dich noch bis zum **30.07.**
+anmelden!
 
 ## Output
 
@@ -31,16 +32,32 @@ z.B. sein:
 
 ## Ablauf
 
-| Wann? | Freitag                    | Samstag                                     | Sonntag                       |
-| ----- | -------------------------- | ------------------------------------------- | ----------------------------- |
-| 09:00 |                            | Prozess Input: Wie generiere ich eine Idee? | Prozess-Input                 |
-| 10:30 |                            | Check in Hour mit Mentorinnen               | Check in Hour mit Mentorinnen |
-| 12:00 |                            | Hero Vortrag                                | _Work Sprint_                 |
-| 13:00 |                            | Gemeinsames Mittagessen                     | Mittagessen / _Work Sprint_   |
-| 14:00 |                            | _Work Sprint_                               | _Work Sprint_                 |
-| 16:00 | sustainXchange Begrüßung   | Gemeinsames Workout / Programm              | Ergebnis Pitch                |
-| 17:30 | Gruppen lernen sich kennen | Hero Vortrag mit Podiums Diskussion         | Virtueller Apéro              |
-| 18:00 | Impuls Vorträge            | _Work Sprint_                               |                               |
-| 18:30 | Impuls Vorträge            | _Work Sprint_                               |                               |
-| 19:00 | Gruppen Brainstorm         | _Work Sprint_                               |                               |
-| 20:00 | Good Night Networking      | Good Night Networking                       |                               |
+| Uhrzeit |        Freitag        |              Samstag              |    Sonntag     |
+| ------- | :-------------------: | :-------------------------------: | :------------: |
+| 09.00   |                       |           Prozess Input           | Prozess Input  |
+| 09.30   |                       |            Worksprint             |   Worksprint   |
+| 10.00   |                       |          Check-In-Hours           | Check-In-Hours |
+| 10.30   |                       |                \|                 |       \|       |
+| 11.00   |                       |                \|                 |       \|       |
+| 11.30   |                       |          Check-In Hours           | Check-In-Hours |
+| 12.00   |                       |           Hero Vortrag            |   Worksprint   |
+| 12.30   |                       |           Hero Vortrag            |       \|       |
+| 13.00   |                       |       Mittagessen mit allen       |       \|       |
+| 13.30   |                       |       Mittagessen mit allen       |       \|       |
+| 14.00   |                       |            Worksprint             |       \|       |
+| 14.30   |                       |                \|                 |       \|       |
+| 15.00   |                       |                \|                 |       \|       |
+| 15.30   |                       |            Worksprint             |   Worksprint   |
+| 16.00   |                       |          Yoga mit Amray           |    Pitches     |
+| 16.30   |                       |                \|                 |       \|       |
+| 17.00   |                       |                \|                 |    Pitches     |
+| 17.30   |                       |          Yoga mit Amray           |     Apéro      |
+| 18.00   |       Begrüßung       | Hero Vortag mit Podiumsdiskussion |                |
+| 18.30   | Gruppen Kennenlernen  | Hero Vortag mit Podiumsdiskussion |                |
+| 19.00   |    Impulsvorträge     |            Worksprint             |                |
+| 19.30   |                       |                \|                 |                |
+| 20.00   |    Impulsvorträge     |            Worksprint             |                |
+| 20.30   |     Brainstorming     |                \|                 |                |
+| 21.00   | Good Night Networking |       Good Night Networking       |                |
+|         |                       |                \|                 |                |
+| 21.30   |                       |                \|                 |                |

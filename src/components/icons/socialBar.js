@@ -22,13 +22,16 @@ export default function SocialBar({ vertical }) {
     <Center>
       {makeStack(
         <>
-          <Link>
+          <Link isExternal href="https://github.com/sustainxchange">
             <Icon boxSize={size} color="white" as={FaGithub} />
           </Link>
-          <Link>
+          <Link
+            isExternal
+            href="https://www.linkedin.com/company/sustainxchange/about/"
+          >
             <Icon boxSize={size} color="white" as={FaLinkedin} />
           </Link>
-          <Link>
+          <Link href="mailto:hello@sustainxchange.org">
             <Icon boxSize={size} color="white" as={FaAt} />
           </Link>
         </>
