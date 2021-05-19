@@ -23,7 +23,7 @@ export default function SignUp() {
         Accept: "application/json",
         "Content-Type": "application/json",
         "api-key":
-          ""
+        process.env.SENDINBLUE_API
       },
       data: { updateEnabled: true, email: data.email }
     }
