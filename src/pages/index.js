@@ -36,7 +36,7 @@ const IndexPage = ({ data }) => {
       <News />
       <About content={data.about.edges} />
       <Event />
-      <Partners />
+      {/* <Partners /> */}
       <FAQ />
     </>
   )

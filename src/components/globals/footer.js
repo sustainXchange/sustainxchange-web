@@ -2,6 +2,7 @@ import React from "react"
 
 import { footerLinks } from "../../../config"
 import { Box, Container, Flex, Icon, Link, Text } from "@chakra-ui/react"
+import { Link as GLink } from "gatsby"
 import {
   FaCreativeCommons,
   FaCreativeCommonsNc,
@@ -19,7 +20,7 @@ const Footer = () => {
       <Container>
         {footerLinks.map(({ name, url }, key) => (
           <Box key={name}>
-            <Link to={url} color="white">
+            <Link as={GLink} to={url} color="white">
               {name}
             </Link>
             <br />

@@ -17,9 +17,8 @@ function Item(data) {
     <AccordionItem fontSize="xl" key={data.frontmatter.title}>
       <AccordionButton>
         <Flex textAlign="left" justifyContent="space-between" width="100%">
-          <Heading color="white" fontSize="2xl">
-            {data.frontmatter.title}
-          </Heading>
+          {/* <Heading color="white" fontSize="2xl"> */}
+          <Heading fontSize="2xl">{data.frontmatter.title}</Heading>
           <AccordionIcon boxSize="8" ml="0.25rem" />
         </Flex>
       </AccordionButton>
@@ -45,11 +44,12 @@ export default function FAQ() {
   `)
 
   return (
-    <Flex background="secondary" width="100%" py="2rem">
-      <Container color="white" maxW="3xl">
-        <Heading variant="subHeading" color="white">
-          FAQs
-        </Heading>
+    // <Flex background="secondary" width="100%" py="2rem">
+    <Flex width="100%" py="2rem">
+      {/* <Container color="white" maxW="3xl"> */}
+      <Container maxW="3xl">
+        {/* <Heading variant="subHeading" color="white"> */}
+        <Heading variant="subHeading">FAQs</Heading>
         <Accordion allowMultiple>
           {data.nodes.map(node => Item(node))}
         </Accordion>

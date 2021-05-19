@@ -1,10 +1,8 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-import Layout from "../components/globals/layout"
 import SEO from "../components/globals/seo"
 import { seoTitleSuffix } from "../../config"
 
@@ -23,7 +21,7 @@ const Imprint = ({ data }) => {
         meta={[{ name: "robots", content: "noindex" }]}
       />
       <Flex id={title}>
-        <Container maxW="xl" m="2rem">
+        <Container>
           <MDXRenderer>{body}</MDXRenderer>
         </Container>
       </Flex>
@@ -35,7 +33,7 @@ export default Imprint
 
 export const pageQuery = graphql`
   {
-    imprint: allMdx(filter: { fileAbsolutePath: { regex: "/imprint/" } }) {
+    imprint: allMdx(filter: { fileAbsolutePath: { regex: "/privacy/" } }) {
       edges {
         node {
           body

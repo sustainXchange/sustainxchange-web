@@ -15,15 +15,13 @@ export default function SignUp() {
   const [singUpError, setSingUpError] = useState(false)
 
   const onSubmit = (data, e) => {
-    console.log(data)
     const options = {
       url: "https://api.sendinblue.com/v3/contacts",
       method: "POST",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
-        "api-key":
-        process.env.SENDINBLUE_API
+        "api-key": `${process.env.GATSBY_SENDINBLUE_API}`
       },
       data: { updateEnabled: true, email: data.email }
     }
