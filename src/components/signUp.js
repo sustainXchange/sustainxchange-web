@@ -23,7 +23,7 @@ export default function SignUp() {
         Accept: "application/json",
         "Content-Type": "application/json",
         "api-key":
-          "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"
+          ""
       },
       data: { updateEnabled: true, email: data.email }
     }
