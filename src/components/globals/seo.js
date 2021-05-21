@@ -37,7 +37,7 @@ const SEO = ({ description, image, url, isBlogPost, datePublished, title }) => {
         <meta property="og:url" content={url} />
         {isBlogPost ? <meta property="og:type" content="article" /> : null}
         <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
+        <meta property="og:description" content={site.description} />
         {image && <meta property="og:image" content={image} />}
       </Helmet>
       <SchemaOrg
