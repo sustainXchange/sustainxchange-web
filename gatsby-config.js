@@ -23,6 +23,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-transformer-json`,
     `gatsby-plugin-offline`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: "@chakra-ui/gatsby-plugin",
       options: {
