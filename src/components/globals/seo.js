@@ -1,58 +1,35 @@
 import React from "react"
-import PropTypes from "prop-types"
 import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
-import SchemaOrg from "./schema-org"
 
-const SEO = ({ description, image, url, isBlogPost, datePublished, title }) => {
-  let { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-            siteUrl
-          }
-        }
-      }
-    `
-  )
+const SEO_DATA = {
+  description:
+    "Wir sind ein junges, motiviertes Team mit dem Ziel, übergreifenden Austausch zur Nachhaltigkeit in der Gesellschaft zu fördern.",
+  title: "sustainXchange",
+  url: "https://sustainxchange.org/",
+  author: "sustainXchange",
+  keywords: [
+    "Nachhaltigkeit",
+    "Event",
+    "sustain",
+    "Xchange",
+    "sustainX",
+    "change"
+  ]
+}
 
-  site = site.siteMetadata
-
+const SEO = () => {
   return (
-    <>
-      <Helmet>
-        {/* General tags */}
-        <title>{title ? title : site.title}</title>
-        <meta
-          name="description"
-          content={description ? description : site.description}
-        />
-        {image && <meta name="image" content={image} />}
+    <Helmet>
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={SEO_DATA.url} />
+      <meta property="og:description" content={SEO_DATA.description} />
 
-        {/* OpenGraph tags */}
-        <meta property="og:url" content={url} />
-        {isBlogPost ? <meta property="og:type" content="article" /> : null}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={site.description} />
-        {image && <meta property="og:image" content={image} />}
-      </Helmet>
-      <SchemaOrg
-        isBlogPost={isBlogPost}
-        url={url}
-        title={title}
-        image={image ? image : undefined}
-        description={description}
-        datePublished={datePublished}
-        canonicalUrl={site.siteUrl}
-        author={site.author}
-        organization={site.organization}
-        defaultTitle={site.title}
-      />
-    </>
+      <meta name="description" content={SEO_DATA.description} />
+      <meta name="keywords" content={SEO_DATA.keywords.join(", ")} />
+      <meta name="author" content={SEO_DATA.author} />
+      <title>{SEO_DATA.title}</title>
+      <html lang="de" />
+    </Helmet>
   )
 }
 
