@@ -12,7 +12,9 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import SEO from "../components/globals/seo"
 import React from "react"
 import { PersonTitle } from "../components/globals/person"
+import SignUp from "../components/signUp"
 import MdxTextWrapper from "../components/globals/mdxTextWrapper"
+import { MDXProvider } from "@mdx-js/react"
 
 const speaker = [
   {
@@ -79,24 +81,24 @@ export default function Events() {
   const { title, eventDateFrom, eventDateTo } = frontmatter
 
   return (
-    <>
+    <MDXProvider components={{ SignUp }}>
       <SEO title="sustainXchange - Events" />
 
-      <Container maxW="4xl">
+      <Container maxW="4xl" mb="4rem">
         <Heading as="h2" variant="dateHeading" textAlign="center">
           {eventDateFrom} bis {eventDateTo}
         </Heading>
         <Heading textAlign="center">{title}</Heading>
         <MdxTextWrapper>{body}</MdxTextWrapper>
-        <Heading as="h2" textAlign="center">
+        {/* <Heading as="h2" textAlign="center">
           Unsere Speaker
-        </Heading>
-        <SimpleGrid columns={[1, 1, 2, 3]} spacing={10} mb="4rem">
+        </Heading> */}
+        {/* <SimpleGrid columns={[1, 1, 2, 3]} spacing={10} mb="4rem">
           {speaker.map(person => (
             <PersonTitle key={person.lastName} person={person} />
           ))}
-        </SimpleGrid>
+        </SimpleGrid> */}
       </Container>
-    </>
+    </MDXProvider>
   )
 }

@@ -9,7 +9,7 @@ import { Button } from "@chakra-ui/button"
 import { Link } from "gatsby"
 import axios from "axios"
 
-export default function SignUp() {
+export default function SignUp({ noTranslate, ...props }) {
   const { register, handleSubmit } = useForm()
   const [allowLogin, setAllowLogin] = useState(true)
   const [singUpError, setSingUpError] = useState(false)
@@ -45,7 +45,8 @@ export default function SignUp() {
       padding="2rem"
       boxShadow="lg"
       alignSelf="flex-start"
-      transform="translate(0, 20%)"
+      transform={noTranslate ? "" : "translate(0, 20%)"}
+      {...props}
     >
       <Heading fontSize="2xl" m="0" color="warning" fontFamily="mono">
         Bleib auf dem neusten Stand!

@@ -2,7 +2,9 @@
 eventDateFrom: "27.08.21"
 eventDateTo: "29.08.21"
 title: "SUSTAIN X EVENT"
-abstract: "Changing the player or changing the game? Interesse bekommen? "
+abstract: "Changing the player or changing the game? Wie können wir dem Klimawandel
+begegnen? Reicht es aus unser individuelles Verhalten anzupassen oder müssen wir
+etwas systemisch verändern? "
 ---
 
 **_Changing the player or changing the game?_** Wie können wir dem Klimawandel
@@ -78,6 +80,8 @@ Dir gefällt was wir vorhaben? Dann mach mit!
 
 Die Anmeldung ist leider noch nicht eröffnet, du kannst dich aber schon auf
 unsere Mailing-Liste setzten, wir informieren dich wenn es los geht.
+
+<SignUp noTranslate mb="2rem"/>
 
 ## Noch Fragen?
 

@@ -3,6 +3,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Gallery from "../../globals/gallery"
+import SignUp from "../../signUp"
 
 export default function Event() {
   const { allMdx: event } = useStaticQuery(

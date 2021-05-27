@@ -1,6 +1,6 @@
 import React from "react"
 import { Box, Flex, Text, Heading, Container, Link } from "@chakra-ui/react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link as GLink } from "gatsby"
 
 const Event = () => {
   const data = useStaticQuery(graphql`
@@ -68,7 +68,9 @@ const Event = () => {
               mt={["2rem", "2rem", 0]}
             >
               <Text fontSize="xl">{abstract}</Text>
-              <Link fontSize="xl">Mehr erfahren</Link>
+              <Link as={GLink} to="/events" fontSize="xl">
+                Mehr erfahren
+              </Link>
             </Container>
           </Box>
         </Flex>
