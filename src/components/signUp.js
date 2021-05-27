@@ -23,7 +23,7 @@ export default function SignUp() {
         "Content-Type": "application/json",
         "api-key": `${process.env.GATSBY_SENDINBLUE_API}`
       },
-      data: { updateEnabled: true, email: data.email }
+      data: { updateEnabled: true, email: data.email, listIds: [5] }
     }
 
     axios(options)

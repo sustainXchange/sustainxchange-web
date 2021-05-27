@@ -2,35 +2,46 @@
 eventDateFrom: "27.08.21"
 eventDateTo: "29.08.21"
 title: "SUSTAIN X EVENT"
-abstract: "Changing the player or changing the game? Interesse bekommen? Du kannst dich noch bis zum
-30.07. anmelden!"
+abstract: "Changing the player or changing the game? Interesse bekommen? "
 ---
 
-**_Changing the player or changing the game?_** Wir diskturieren politische,
-technische und soziale Auswirkungen XXXX. Du kannst dich noch bis zum **30.07.**
-anmelden!
+**_Changing the player or changing the game?_** Wie können wir dem Klimawandel
+begegnen? Reicht es aus unser individuelles Verhalten anzupassen oder müssen wir
+etwas systemisch verändern? Am Wochenende vom **27.07.21** bis zum **29.07.21**
+wollen wir eine aktiven Teil zu der öffentlichen Debatte um dieses Thema
+beitragen. Deshalb wollen wir mit euch Outputorientiert arbeiten. Ziel ist es,
+dass ihr in eurem Team am Ende des Wochenendes eure Gedanken und Ideen in etwas
+Handfestes gegossen habt. Was ihr macht, hängt von euch ab! Wir schlagen eine
+Bandbreite an Formaten vor und stellen euch zu jedem Ressourcen zur Verfügung.
+Diese helfen euch bei der Erstellung und geben euch einen Eindruck, was möglich
+ist. Zu den möglichen Outputformaten gehören unter anderem:
 
-## Output
+- **Text**, also z.B. ein Artikel oder ein Blogpost
+- **Code**, das könnte z.B. ein interaktives Modell, eine API, eine Datenbank
+  oder ein Stück Software sein
+- **Gesetzlicher Output**, hier fallen Dinge, wie Petitionen, Gesetztesentwürfe
+  oder Stellungsnahmen zu Gesetzen drunter
+- **Community Projekt**, du hast eine Idee, wie man große Gruppen mobilisieren
+  kann? Dann los!
+- **Kunst-Projekt**
 
-Wir wollen, den Austausch über Nachhaltigkeit nachhaltig gestalten. Ideen, die
-wir mit euch entwickeln, sollen nicht in der Schublade landen, sondern allen zur
-Verfügung stehen.
+Wir wissen, dass all diese Dinge sehr viel mehr Zeit in Anspruch nehmen können,
+als ein einziges Wochenende. Das Ziel ist also nicht Perfektion, sondern eine
+einigermaßen runde Ausarbeitung einer Idee. Wir wollen, dass die Möglichkeit
+besteht, dass ihr eure Ideen weiter verfolgt, oder dass dies auch andere machen
+können. So hoffen wir einen Nachhaltigen Diskurs zu fördern.
 
-<!-- Deshalb erarbeitet ihr mit euren Teams einen ganz **konkreten Output.** Das kann
-z.B. sein:
+## Vortragende und Mentor\*innen
 
-- Einen (Code) Prototypen in Form einer
-  - Software
-  - Api
-- Eine Geschäftsidee
-- Ein Gesetzesänderung oder -entwurf
-- Eine Petition
-- Eine Lernressource
-- Oder Lifestyle Ideen wie
-  - Rezepte
-  - oder Kunst -->
+Damit ihr nicht komplett auf euch alleine gestellt seid, werden wir von Mentoren
+und Vortragenden unterstützt, die euch Ideen und Feedback füttern. Ihr könnt
+euch also auf ein paar spannende Vorträge freuen. Außerdem sind wir sicher, dass
+ihr mit Hilfe der Mentor\*innen etwas fantastisches auf die Beine stellen könnt.
 
 ## Ablauf
+
+Damit ihr schon mal eine Vorstellung davon habt, was euch genau erwartet findet
+ihr hier den Ablaufplan des Events:
 
 | Uhrzeit |        Freitag        |              Samstag              |    Sonntag     |
 | ------- | :-------------------: | :-------------------------------: | :------------: |
@@ -60,3 +71,14 @@ z.B. sein:
 | 20.30   |     Brainstorming     |                \|                 |                |
 | 21.00   | Good Night Networking |       Good Night Networking       |                |
 | 21.30   |          \|           |                \|                 |                |
+
+## Anmelden
+
+Dir gefällt was wir vorhaben? Dann mach mit!
+
+Die Anmeldung ist leider noch nicht eröffnet, du kannst dich aber schon auf
+unsere Mailing-Liste setzten, wir informieren dich wenn es los geht.
+
+## Noch Fragen?
+
+Du hast Fragen? Dann schreib uns eine Email an: hello@sustainxchange.org!

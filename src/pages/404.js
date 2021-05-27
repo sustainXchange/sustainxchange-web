@@ -1,6 +1,5 @@
 import React from "react"
 
-import Layout from "../components/globals/layout"
 import SEO from "../components/globals/seo"
 
 // const StyledSection = styled.section`
