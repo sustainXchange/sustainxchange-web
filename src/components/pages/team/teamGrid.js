@@ -5,9 +5,9 @@ import React from "react"
 import { PersonTitle } from "../../globals/person"
 
 export default function TeamGrid() {
-  const team = useStaticQuery(graphql`
-    {
-      allTeamJson {
+  let team = useStaticQuery(graphql`
+    query {
+      teamData: allTeamJson {
         edges {
           node {
             firstName
@@ -17,21 +17,41 @@ export default function TeamGrid() {
           }
         }
       }
+      teamImg: allFile(
+        filter: {
+          absolutePath: { regex: "/content/pages/team/members/images/" }
+        }
+      ) {
+        nodes {
+          name
+          childImageSharp {
+            fluid(maxWidth: 500, quality: 90) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
     }
   `)
 
-  const board = team.allTeamJson.edges.filter(
-    ele => ele.node.taskforce === "board"
-  )
-  const finance = team.allTeamJson.edges.filter(
-    ele => ele.node.taskforce === "finance"
-  )
-  const content = team.allTeamJson.edges.filter(
-    ele => ele.node.taskforce === "content"
-  )
-  const planning = team.allTeamJson.edges.filter(
-    ele => ele.node.taskforce === "planning"
-  )
+  team = team.teamData.edges.map(element => {
+    element.node.img =
+      team.teamImg.nodes[
+        team.teamImg.nodes.findIndex(node => {
+          return (
+            node.name ===
+            `${element.node.firstName}-${element.node.lastName}`.toLowerCase()
+          )
+        })
+      ]
+    return element
+  })
+
+  console.log(team)
+  const board = team.filter(ele => ele.node.taskforce === "board")
+  const finance = team.filter(ele => ele.node.taskforce === "finance")
+  const content = team.filter(ele => ele.node.taskforce === "content")
+  const planning = team.filter(ele => ele.node.taskforce === "planning")
 
   return (
     <VStack spacing={"3rem"} alignItems="flex-start" mb="2rem">
