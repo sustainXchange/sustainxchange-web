@@ -14,7 +14,7 @@ const theme = extendTheme({
     secondaryLight: "#79D9C1",
     // lightGradient: "rgba(14, 217, 167, 0.1)",
     lightGradient: "rgba(36, 123, 252, 0.05)",
-    warning: "#FC533D",
+    warning: "#fc533d",
     backgroundLight: "#fcffea",
     black: "#444444"
   },
