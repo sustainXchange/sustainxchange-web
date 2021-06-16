@@ -1,22 +1,28 @@
 ---
 eventDateFrom: "27.08.21"
 eventDateTo: "29.08.21"
-title: "SUSTAIN X EVENT"
-abstract: "Changing the player or changing the game? Wie können wir dem Klimawandel
-begegnen? Reicht es aus unser individuelles Verhalten anzupassen oder müssen wir
-etwas systemisch verändern? "
+title: "Changing the Player or Changing the Game?"
+abstract:
+  "Wir wollen mit euch das Spannungsverhältnis zwischen Individuum und
+  Gesellschaft untersuchen. Welche Akteure müssen zur Einhaltung der Pariser
+  Klimaziele an welchen Stellen Verantwortung übernehmen? Wie viel tatsächlicher
+  Wandel steckt in politischen und technologischen Narrativen und wo liegen hier
+  blinde Flecken?"
 ---
 
-**_Changing the player or changing the game?_** Wie können wir dem Klimawandel
-begegnen? Reicht es aus unser individuelles Verhalten anzupassen oder müssen wir
-etwas systemisch verändern? Am Wochenende vom **27.07.21** bis zum **29.07.21**
-wollen wir eine aktiven Teil zu der öffentlichen Debatte um dieses Thema
-beitragen. Deshalb wollen wir mit euch Outputorientiert arbeiten. Ziel ist es,
-dass ihr in eurem Team am Ende des Wochenendes eure Gedanken und Ideen in etwas
-Handfestes gegossen habt. Was ihr macht, hängt von euch ab! Wir schlagen eine
-Bandbreite an Formaten vor und stellen euch zu jedem Ressourcen zur Verfügung.
-Diese helfen euch bei der Erstellung und geben euch einen Eindruck, was möglich
-ist. Zu den möglichen Outputformaten gehören unter anderem:
+**_Changing the player or changing the game?_** Wir wollen mit euch das
+Spannungsverhältnis zwischen Individuum und Gesellschaft untersuchen. Welche
+Akteure müssen zur Einhaltung der Pariser Klimaziele an welchen Stellen
+Verantwortung übernehmen? Wie viel tatsächlicher Wandel steckt in politischen
+und technologischen Narrativen und wo liegen hier blinde Flecken? Am Wochenende
+vom **27.07.21** bis zum **29.07.21** wollen wir eine aktiven Teil zu der
+öffentlichen Debatte um dieses Thema beitragen. Deshalb wollen wir mit euch
+Outputorientiert arbeiten. Ziel ist es, dass ihr in eurem Team am Ende des
+Wochenendes eure Gedanken und Ideen in etwas Handfestes gegossen habt. Was ihr
+macht, hängt von euch ab! Wir schlagen eine Bandbreite an Formaten vor und
+stellen euch zu jedem Ressourcen zur Verfügung. Diese helfen euch bei der
+Erstellung und geben euch einen Eindruck, was möglich ist. Zu den möglichen
+Outputformaten gehören unter anderem:
 
 - **Text**, also z.B. ein Artikel oder ein Blogpost
 - **Code**, das könnte z.B. ein interaktives Modell, eine API, eine Datenbank
