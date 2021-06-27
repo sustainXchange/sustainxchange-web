@@ -1,7 +1,7 @@
 ---
-title: "Wie man einen Verein in 16 Minuten gründet"
+title: "Wie man einen Verein in 15 Minuten gründet"
 author: "Lukas Korn"
-date: "2021-04-18"
+date: "2021-06-27"
 abstract:
   "Ihr wollt vielleicht auch einen Verein gründen, wisst aber nicht so recht
   wie? Wir haben für euch die wichtigsten Punkte aufgeschrieben."
