@@ -1,6 +1,6 @@
 ---
-eventDateFrom: "27.08.21"
-eventDateTo: "29.08.21"
+eventDateFrom: "05.11.21"
+eventDateTo: "07.11.21"
 title: "Changing the Player or Changing the Game?"
 abstract:
   "Wir wollen mit euch das Spannungsverhältnis zwischen Individuum und
