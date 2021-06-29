@@ -15,7 +15,7 @@ Spannungsverhältnis zwischen Individuum und Gesellschaft untersuchen. Welche
 Akteure müssen zur Einhaltung der Pariser Klimaziele an welchen Stellen
 Verantwortung übernehmen? Wie viel tatsächlicher Wandel steckt in politischen
 und technologischen Narrativen und wo liegen hier blinde Flecken? Am Wochenende
-vom **27.07.21** bis zum **29.07.21** wollen wir eine aktiven Teil zu der
+vom **05.11.21** bis zum **07.11.21** wollen wir eine aktiven Teil zu der
 öffentlichen Debatte um dieses Thema beitragen. Deshalb wollen wir mit euch
 Outputorientiert arbeiten. Ziel ist es, dass ihr in eurem Team am Ende des
 Wochenendes eure Gedanken und Ideen in etwas Handfestes gegossen habt. Was ihr
