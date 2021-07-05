@@ -1,18 +1,18 @@
-import { useForm } from "react-hook-form"
-import React, { useState } from "react"
-import { Container, Stack } from "@chakra-ui/layout"
-import { FormControl } from "@chakra-ui/form-control"
-import { Input } from "@chakra-ui/input"
-import { FormHelperText } from "@chakra-ui/form-control"
-import { Heading } from "@chakra-ui/layout"
-import { Button } from "@chakra-ui/button"
-import { Link } from "gatsby"
-import axios from "axios"
+import { useForm } from "react-hook-form";
+import React, { useState } from "react";
+import { Container, Stack } from "@chakra-ui/layout";
+import { FormControl } from "@chakra-ui/form-control";
+import { Input } from "@chakra-ui/input";
+import { FormHelperText } from "@chakra-ui/form-control";
+import { Heading } from "@chakra-ui/layout";
+import { Button } from "@chakra-ui/button";
+import { LocalizedLink as Link } from "gatsby-theme-i18n";
+import axios from "axios";
 
 export default function SignUp({ noTranslate, ...props }) {
-  const { register, handleSubmit } = useForm()
-  const [allowLogin, setAllowLogin] = useState(true)
-  const [singUpError, setSingUpError] = useState(false)
+  const { register, handleSubmit } = useForm();
+  const [allowLogin, setAllowLogin] = useState(true);
+  const [singUpError, setSingUpError] = useState(false);
 
   const onSubmit = (data, e) => {
     const options = {
@@ -24,19 +24,19 @@ export default function SignUp({ noTranslate, ...props }) {
         "api-key": `${process.env.GATSBY_SENDINBLUE_API}`
       },
       data: { updateEnabled: true, email: data.email, listIds: [5] }
-    }
+    };
 
     axios(options)
       .then(response => {
-        console.log(response)
-        setAllowLogin(false)
-        setSingUpError(false)
-        e.target.reset()
+        console.log(response);
+        setAllowLogin(false);
+        setSingUpError(false);
+        e.target.reset();
       })
       .catch(() => {
-        setSingUpError(true)
-      })
-  }
+        setSingUpError(true);
+      });
+  };
 
   return (
     <Container
@@ -89,5 +89,5 @@ export default function SignUp({ noTranslate, ...props }) {
         </FormControl>
       </form>
     </Container>
-  )
+  );
 }

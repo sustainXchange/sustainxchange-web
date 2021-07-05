@@ -1,15 +1,16 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { LocalizedLink as Link } from "gatsby-theme-i18n";
+
 // import Helmet from "react-helmet";
 
-import Logo from "./logo"
-import { Flex } from "@chakra-ui/react"
-import { MenuToggle, Navigation } from "./navbar"
+import Logo from "./logo";
+import { Flex } from "@chakra-ui/react";
+import { MenuToggle, Navigation } from "./navbar";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = React.useState(false)
+  const [isOpen, setIsOpen] = React.useState(false);
 
-  const toggle = () => setIsOpen(!isOpen)
+  const toggle = () => setIsOpen(!isOpen);
 
   return (
     <Flex
@@ -29,7 +30,7 @@ const Header = () => {
       <MenuToggle toggle={toggle} isOpen={isOpen} />
       <Navigation isOpen={isOpen} />
     </Flex>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

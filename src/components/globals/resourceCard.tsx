@@ -1,28 +1,41 @@
-import React from "react"
-import { ChevronRightIcon } from "@chakra-ui/icons"
-import { Box, Container, Flex, Heading, Text } from "@chakra-ui/layout"
-import { StatHelpText } from "@chakra-ui/stat"
-import { Link } from "gatsby"
-import { render } from "react-dom"
+import React from "react";
+import { ChevronRightIcon } from "@chakra-ui/icons";
+import { Box, Container, Flex, Heading, Text, Link } from "@chakra-ui/layout";
+import { StatHelpText } from "@chakra-ui/stat";
+import { LocalizedLink as GLink } from "gatsby-theme-i18n";
 
 function LinkWrapper({ isExternal, url, component, ...props }) {
   return (
     <>
       {isExternal ? (
-        <a href={url} {...props} target="_blank" rel="noopener noreferrer">
+        <Link
+          href={url}
+          style={{ textDecoration: "none" }}
+          {...props}
+          target="_blank"
+          color="black"
+          rel="noopener noreferrer"
+        >
           {component}
-        </a>
+        </Link>
       ) : (
-        <Link width="100%" to={url} {...props}>
+        <Link
+          as={GLink}
+          width="100%"
+          to={url}
+          style={{ textDecoration: "none" }}
+          color={"black"}
+          {...props}
+        >
           {component}
         </Link>
       )}
     </>
-  )
+  );
 }
 
 export function ResourceCard({ node }) {
-  const { abstract, title, author, date, urlOnlyResource } = node.frontmatter
+  const { abstract, title, author, date, urlOnlyResource } = node.frontmatter;
 
   return (
     <>
@@ -45,7 +58,7 @@ export function ResourceCard({ node }) {
             >
               <Container>
                 <Heading fontSize="3xl">{title}</Heading>
-                <StatHelpText mt="0.5rem">
+                <StatHelpText mt="0.5rem" color="lightgrey">
                   {date} - von {author}
                 </StatHelpText>
                 <Text>{abstract}</Text>
@@ -56,5 +69,5 @@ export function ResourceCard({ node }) {
         />
       </Box>
     </>
-  )
+  );
 }

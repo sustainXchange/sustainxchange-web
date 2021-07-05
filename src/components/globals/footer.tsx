@@ -1,13 +1,14 @@
-import React from "react"
+import React from "react";
 
-import { footerLinks } from "../../../config"
-import { Box, Container, Flex, Icon, Link, Text } from "@chakra-ui/react"
-import { Link as GLink } from "gatsby"
+import { footerLinks } from "../../../config";
+import { Box, Container, Flex, Icon, Link, Text } from "@chakra-ui/react";
+import { LocalizedLink as GLink } from "gatsby-theme-i18n";
+
 import {
   FaCreativeCommons,
   FaCreativeCommonsNc,
   FaCreativeCommonsBy
-} from "react-icons/fa"
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -37,7 +38,7 @@ const Footer = () => {
         <Icon as={FaCreativeCommonsBy} />
       </Container>
     </Flex>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

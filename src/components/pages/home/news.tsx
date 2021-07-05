@@ -5,12 +5,14 @@ import {
   Heading,
   SimpleGrid,
   Link
-} from "@chakra-ui/layout"
-import React from "react"
-import { useStaticQuery, graphql, Link as GatsbyLink } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { Stat, StatHelpText } from "@chakra-ui/stat"
-import SignUp from "../../signUp"
+} from "@chakra-ui/layout";
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import { LocalizedLink as GLink, useLocalization } from "gatsby-theme-i18n";
+import { MDXRenderer } from "gatsby-plugin-mdx";
+import { Stat, StatHelpText } from "@chakra-ui/stat";
+import SignUp from "../../signUp";
+import { getIntlNodes } from "../../../../i18n/intlQueries";
 
 function NewsCard(node) {
   return (
@@ -28,16 +30,18 @@ function NewsCard(node) {
         <Heading m="0">{node.frontmatter.title}</Heading>
         <MDXRenderer color="red">{node.body}</MDXRenderer>
         {node.frontmatter.more && (
-          <Link as={GatsbyLink} to={node.frontmatter.more} fontSize="lg">
+          <Link as={GLink} to={node.frontmatter.more} fontSize="lg">
             Mehr!
           </Link>
         )}
       </Container>
     </Box>
-  )
+  );
 }
 
 export default function News() {
+  const { locale } = useLocalization();
+
   const { allMdx: news } = useStaticQuery(
     graphql`
       query {
@@ -53,11 +57,16 @@ export default function News() {
               title
               more
             }
+            fields {
+              locale
+            }
           }
         }
       }
     `
-  )
+  );
+
+  const nodes = getIntlNodes(news, locale);
 
   return (
     <Flex
@@ -74,10 +83,10 @@ export default function News() {
           Das ist neu:
         </Heading>
         <SimpleGrid columns={[1, 1, 2, 3, 4]} spacing={10} mt="2rem">
-          {news.nodes.map(node => NewsCard(node))}
+          {nodes.map(node => NewsCard(node))}
         </SimpleGrid>
       </Container>
       <SignUp />
     </Flex>
-  )
+  );
 }

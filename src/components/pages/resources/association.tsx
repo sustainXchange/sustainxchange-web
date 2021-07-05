@@ -1,9 +1,12 @@
-import { Heading, StackDivider, VStack } from "@chakra-ui/layout"
-import { useStaticQuery, graphql } from "gatsby"
-import React from "react"
-import { ResourceCard } from "../../globals/resourceCard"
+import { Heading, StackDivider, VStack } from "@chakra-ui/layout";
+import { useStaticQuery, graphql } from "gatsby";
+import { useLocalization } from "gatsby-theme-i18n";
+import React from "react";
+import { ResourceCard } from "../../globals/resourceCard";
 
 export default function Association() {
+  const { locale } = useLocalization();
+
   const { allMdx: data } = useStaticQuery(graphql`
     {
       allMdx(
@@ -23,7 +26,10 @@ export default function Association() {
         }
       }
     }
-  `)
+  `);
+
+  
+
   return (
     <VStack divider={<StackDivider borderColor="gray.200" />} spacing="8">
       {data.nodes.length ? (
@@ -34,5 +40,5 @@ export default function Association() {
         </Heading>
       )}
     </VStack>
-  )
+  );
 }

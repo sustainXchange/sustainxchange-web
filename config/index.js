@@ -8,7 +8,7 @@ module.exports = {
   siteLanguage: "de",
   siteIcon: "content/globals/assets/favicon.png", // Relative to gatsby-config file
   seoTitleSuffix: "sustainXchange", // SEO title syntax will be e.g. "Imprint - {seoTitleSuffix}"
-
+  defaultLanguage: "de",
   //-- NAVIGATION SETTINGS -----
 
   footerLinks: [
@@ -21,4 +21,4 @@ module.exports = {
       url: "/imprint"
     }
   ]
-}
+};

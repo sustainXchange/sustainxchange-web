@@ -1,6 +1,8 @@
-import React from "react"
-import { Box, Link, Text, Stack, Icon } from "@chakra-ui/react"
-import { FaBars, FaTimes } from "react-icons/fa"
+import React from "react";
+import { Box, Link, Text, Stack, Icon } from "@chakra-ui/react";
+import { LocalizedLink as GLink } from "gatsby-theme-i18n";
+
+import { FaBars, FaTimes } from "react-icons/fa";
 
 export const MenuToggle = ({ toggle, isOpen }) => {
   return (
@@ -11,18 +13,18 @@ export const MenuToggle = ({ toggle, isOpen }) => {
         <Icon boxSize={6} color="black" as={FaBars} />
       )}
     </Box>
-  )
-}
+  );
+};
 
 const MenuItem = ({ children, to = "/", ...rest }) => {
   return (
-    <Link href={to} fontSize="xl">
+    <Link as={GLink} to={to} fontSize="xl">
       <Text display="block" {...rest}>
         {children}
       </Text>
     </Link>
-  )
-}
+  );
+};
 
 export const Navigation = ({ isOpen }) => (
   <Box
@@ -42,4 +44,4 @@ export const Navigation = ({ isOpen }) => (
       <MenuItem to="/events">Events</MenuItem>
     </Stack>
   </Box>
-)
+);

@@ -5,6 +5,7 @@ const {
   siteDescription,
   siteIcon,
   siteUrl,
+  defaultLanguage,
   colors
 } = require(`./config`);
 
@@ -88,6 +89,13 @@ module.exports = {
         isTSX: true, // defaults to false
         jsxPragma: `jsx`, // defaults to "React"
         allExtensions: true // defaults to false
+      }
+    },
+    {
+      resolve: `gatsby-theme-i18n`,
+      options: {
+        defaultLang: `${defaultLanguage}`,
+        configPath: require.resolve(`./i18n/config.json`)
       }
     }
   ]

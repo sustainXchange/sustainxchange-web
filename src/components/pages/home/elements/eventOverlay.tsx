@@ -1,30 +1,37 @@
-import React from "react"
-import { Box, Flex, Text, Heading, Container, Link } from "@chakra-ui/react"
-import { graphql, useStaticQuery, Link as GLink } from "gatsby"
+import React from "react";
+import { Box, Flex, Text, Heading, Container, Link } from "@chakra-ui/react";
+import { graphql, useStaticQuery } from "gatsby";
+import { LocalizedLink as GLink, useLocalization } from "gatsby-theme-i18n";
+import { getIntlNodes } from "../../../../../i18n/intlQueries";
 
-const Event = () => {
-  const data = useStaticQuery(graphql`
-    {
-      event: allMdx(
+const EventOverlay = () => {
+  const { locale } = useLocalization();
+
+  const { allMdx: query } = useStaticQuery(graphql`
+    query {
+      allMdx(
         filter: { fileAbsolutePath: { regex: "/content/pages/events/next/" } }
       ) {
-        edges {
-          node {
-            frontmatter {
-              eventDateFrom
-              eventDateTo
-              title
-              abstract
-            }
+        nodes {
+          frontmatter {
+            eventDateFrom
+            eventDateTo
+            title
+            abstract
+          }
+          fields {
+            locale
           }
         }
       }
     }
-  `)
+  `);
 
-  const { frontmatter } = data.event.edges[0].node
+  const nodes = getIntlNodes(query, locale);
 
-  const { eventDateFrom, eventDateTo, title, abstract } = frontmatter
+  const { frontmatter } = nodes[0];
+
+  const { eventDateFrom, eventDateTo, title, abstract } = frontmatter;
 
   return (
     <Box
@@ -76,7 +83,7 @@ const Event = () => {
         </Flex>
       </Container>
     </Box>
-  )
-}
+  );
+};
 
-export default Event
+export default EventOverlay;

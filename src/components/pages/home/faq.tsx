@@ -1,17 +1,19 @@
-import { AccordionItem } from "@chakra-ui/accordion"
-import { AccordionButton } from "@chakra-ui/accordion"
-import { AccordionPanel } from "@chakra-ui/accordion"
-import { AccordionIcon } from "@chakra-ui/accordion"
-import { Accordion } from "@chakra-ui/accordion"
-import { Box, Flex, Text } from "@chakra-ui/layout"
-import { Heading } from "@chakra-ui/layout"
-import { Container } from "@chakra-ui/layout"
-import { graphql, useStaticQuery } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import React from "react"
+import { AccordionItem } from "@chakra-ui/accordion";
+import { AccordionButton } from "@chakra-ui/accordion";
+import { AccordionPanel } from "@chakra-ui/accordion";
+import { AccordionIcon } from "@chakra-ui/accordion";
+import { Accordion } from "@chakra-ui/accordion";
+import { Box, Flex, Text } from "@chakra-ui/layout";
+import { Heading } from "@chakra-ui/layout";
+import { Container } from "@chakra-ui/layout";
+import { graphql, useStaticQuery } from "gatsby";
+import { MDXRenderer } from "gatsby-plugin-mdx";
+import { useLocalization } from "gatsby-theme-i18n";
+import React from "react";
+import { getIntlNodes } from "../../../../i18n/intlQueries";
 
 function Item(data) {
-  const { body } = data
+  const { body } = data;
 
   return (
     <AccordionItem fontSize="xl" key={data.frontmatter.title}>
@@ -26,11 +28,13 @@ function Item(data) {
         <MDXRenderer>{body}</MDXRenderer>
       </AccordionPanel>
     </AccordionItem>
-  )
+  );
 }
 
 export default function FAQ() {
-  const { allMdx: data } = useStaticQuery(graphql`
+  const { locale } = useLocalization();
+
+  const { allMdx: query } = useStaticQuery(graphql`
     query MyQuery {
       allMdx(filter: { fileAbsolutePath: { regex: "/pages/home/faq/" } }) {
         nodes {
@@ -38,10 +42,15 @@ export default function FAQ() {
           frontmatter {
             title
           }
+          fields {
+            locale
+          }
         }
       }
     }
-  `)
+  `);
+
+  const nodes = getIntlNodes(query, locale);
 
   return (
     // <Flex background="secondary" width="100%" py="2rem">
@@ -50,10 +59,8 @@ export default function FAQ() {
       <Container maxW="3xl">
         {/* <Heading variant="subHeading" color="white"> */}
         <Heading variant="subHeading">FAQs</Heading>
-        <Accordion allowMultiple>
-          {data.nodes.map(node => Item(node))}
-        </Accordion>
+        <Accordion allowMultiple>{nodes.map(node => Item(node))}</Accordion>
       </Container>
     </Flex>
-  )
+  );
 }

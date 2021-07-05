@@ -1,8 +1,8 @@
-import { VStack } from "@chakra-ui/layout"
-import { Box, Heading, SimpleGrid } from "@chakra-ui/layout"
-import { graphql, useStaticQuery } from "gatsby"
-import React from "react"
-import { PersonTitle } from "../../globals/person"
+import { VStack } from "@chakra-ui/layout";
+import { Box, Heading, SimpleGrid } from "@chakra-ui/layout";
+import { graphql, useStaticQuery } from "gatsby";
+import React from "react";
+import { PersonTitle } from "../../globals/person";
 
 export default function TeamGrid() {
   let team = useStaticQuery(graphql`
@@ -32,7 +32,7 @@ export default function TeamGrid() {
         }
       }
     }
-  `)
+  `);
 
   team = team.teamData.edges.map(element => {
     element.node.img =
@@ -41,17 +41,16 @@ export default function TeamGrid() {
           return (
             node.name ===
             `${element.node.firstName}-${element.node.lastName}`.toLowerCase()
-          )
+          );
         })
-      ]
-    return element
-  })
+      ];
+    return element;
+  });
 
-  console.log(team)
-  const board = team.filter(ele => ele.node.taskforce === "board")
-  const finance = team.filter(ele => ele.node.taskforce === "finance")
-  const content = team.filter(ele => ele.node.taskforce === "content")
-  const planning = team.filter(ele => ele.node.taskforce === "planning")
+  const board = team.filter(ele => ele.node.taskforce === "board");
+  const finance = team.filter(ele => ele.node.taskforce === "finance");
+  const content = team.filter(ele => ele.node.taskforce === "content");
+  const planning = team.filter(ele => ele.node.taskforce === "planning");
 
   return (
     <VStack spacing={"3rem"} alignItems="flex-start" mb="2rem">
@@ -99,5 +98,5 @@ export default function TeamGrid() {
         </SimpleGrid>
       </Box>
     </VStack>
-  )
+  );
 }

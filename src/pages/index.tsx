@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { graphql } from "gatsby";
 import IndexPage from "../components/wrapper/IndexPage";
+import { useLocalization } from "gatsby-theme-i18n";
 
 const Index = ({ data }) => {
+  const { locale } = useLocalization();
+  useEffect(() => {
+    console.log(locale);
+  });
   return <IndexPage hero={data.hero.edges} about={data.about.edges} />;
 };
 
