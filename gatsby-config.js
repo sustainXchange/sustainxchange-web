@@ -6,7 +6,7 @@ const {
   siteIcon,
   siteUrl,
   colors
-} = require(`./config`)
+} = require(`./config`);
 
 module.exports = {
   siteMetadata: {
@@ -91,4 +91,4 @@ module.exports = {
       }
     }
   ]
-}
+};

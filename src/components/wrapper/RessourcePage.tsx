@@ -1,13 +1,13 @@
-import { Heading, Text } from "@chakra-ui/layout"
-import { Flex } from "@chakra-ui/layout"
-import { Container } from "@chakra-ui/layout"
-import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/tabs"
-import React from "react"
-import Blog from "../components/pages/resources/association"
-import HowTo from "../components/pages/resources/howTo"
-import Output from "../components/pages/resources/output"
+import React, { FC } from "react";
+import { Heading, Text } from "@chakra-ui/layout";
+import { Flex } from "@chakra-ui/layout";
+import { Container } from "@chakra-ui/layout";
+import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/tabs";
+import Blog from "../pages/resources/association";
+import HowTo from "../pages/resources/howTo";
+import Output from "../pages/resources/output";
 
-export default function Resources() {
+const ResourcesPage: FC<{ language?: string }> = ({ language }) => {
   return (
     <Container maxW="2xl">
       <Flex direction="column" justifyContent="flex-start">
@@ -38,5 +38,7 @@ export default function Resources() {
         </Tabs>
       </Flex>
     </Container>
-  )
-}
+  );
+};
+
+export default ResourcesPage;

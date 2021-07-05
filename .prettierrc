@@ -1,5 +1,5 @@
 {
-  "semi": false,
+  "semi": true,
   "proseWrap": "always",
   "endOfLine": "lf"
 }

@@ -1,5 +1,5 @@
-import React from "react"
-import Helmet from "react-helmet"
+import React, { FC } from "react";
+import Helmet from "react-helmet";
 
 const SEO_DATA = {
   description:
@@ -15,9 +15,9 @@ const SEO_DATA = {
     "sustainX",
     "change"
   ]
-}
+};
 
-const SEO = ({ title }) => {
+const SEO: FC<{ title: string; meta?: any }> = ({ title, meta }) => {
   return (
     <Helmet>
       <meta property="og:type" content="website" />
@@ -30,7 +30,7 @@ const SEO = ({ title }) => {
       <title>{SEO_DATA.title}</title>
       <html lang="de" />
     </Helmet>
-  )
-}
+  );
+};
 
-export default SEO
+export default SEO;

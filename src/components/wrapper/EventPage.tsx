@@ -1,14 +1,11 @@
-import {
-  Container,
-  Heading,
-} from "@chakra-ui/layout"
+import { Container, Heading } from "@chakra-ui/layout"
 import SEO from "../globals/seo"
 import React from "react"
 import SignUp from "../signUp"
 import MdxTextWrapper from "../globals/mdxTextWrapper"
 import { MDXProvider } from "@mdx-js/react"
 
-export default function EventPageWrapper({eventDateFrom, eventDateTo, title, body}) {
+export default function EventPage({ eventDateFrom, eventDateTo, title, body }) {
   return (
     <MDXProvider components={{ SignUp }}>
       <SEO title="sustainXchange - Events" />
@@ -31,4 +28,3 @@ export default function EventPageWrapper({eventDateFrom, eventDateTo, title, bod
     </MDXProvider>
   )
 }
-
