@@ -14,47 +14,8 @@ import React from "react"
 import { PersonTitle } from "../components/globals/person"
 import SignUp from "../components/signUp"
 import MdxTextWrapper from "../components/globals/mdxTextWrapper"
+import EventPageWrapper from "../components/wrapper/EventPageWrapper"
 import { MDXProvider } from "@mdx-js/react"
-
-const speaker = [
-  {
-    firstName: "Erika",
-    lastName: "Hendriks",
-    taskforce: "board",
-    bio:
-      "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit",
-    Position: "Fellow"
-    // Arbeitgeber: "McKinsey & Company",
-    // personalSDG: "SDG 12",
-    // LinkedIn: "",
-    // "weitere Websites": ""
-  },
-  {
-    firstName: "Astrid",
-    lastName: "Bimmer",
-    taskforce: "planning",
-    bio:
-      "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.",
-    Position: "Referent",
-    Arbeitgeber:
-      "Hessisches Ministerium für Umwelt, Klimaschutz, Landwirtschaft und Verbraucherschutz",
-    personalSDG: "SDG4",
-    LinkedIn: "",
-    "weitere Websites": ""
-  },
-  {
-    firstName: "Erika",
-    lastName: "Hendriks",
-    taskforce: "board",
-    bio:
-      "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit",
-    Position: "Fellow"
-    // Arbeitgeber: "McKinsey & Company",
-    // personalSDG: "SDG 12",
-    // LinkedIn: "",
-    // "weitere Websites": ""
-  }
-]
 
 export default function Events() {
   const { allMdx: event } = useStaticQuery(
@@ -83,7 +44,7 @@ export default function Events() {
   return (
     <MDXProvider components={{ SignUp }}>
       <SEO title="sustainXchange - Events" />
-
+      <EventPageWrapper  />
       <Container maxW="4xl" mb="4rem">
         <Heading as="h2" variant="dateHeading" textAlign="center">
           {eventDateFrom} bis {eventDateTo}

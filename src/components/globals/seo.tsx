@@ -17,7 +17,7 @@ const SEO_DATA = {
   ]
 }
 
-const SEO = () => {
+const SEO = ({ title }) => {
   return (
     <Helmet>
       <meta property="og:type" content="website" />
