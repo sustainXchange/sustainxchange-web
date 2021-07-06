@@ -1,14 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { graphql } from "gatsby";
 import IndexPage from "../components/wrapper/IndexPage";
 import { useLocalization } from "gatsby-theme-i18n";
+import { getIntlNodes } from "../../i18n/intlQueries";
+import Layout from "../components/globals/layout";
 
 const Index = ({ data }) => {
   const { locale } = useLocalization();
-  useEffect(() => {
-    console.log(locale);
-  });
-  return <IndexPage hero={data.hero.edges} about={data.about.edges} />;
+  console.log("locale is", locale);
+
+  return (
+    <IndexPage
+      hero={getIntlNodes(data.hero, locale)}
+      about={getIntlNodes(data.about, locale)}
+    />
+  );
 };
 
 export default Index;
@@ -18,17 +24,18 @@ export const pageQuery = graphql`
     hero: allMdx(
       filter: { fileAbsolutePath: { regex: "/content/pages/home/hero/" } }
     ) {
-      edges {
-        node {
-          body
-          frontmatter {
-            title
-            subtitle
-            image {
-              childImageSharp {
-                fluid(maxWidth: 400, quality: 90) {
-                  ...GatsbyImageSharpFluid
-                }
+      nodes {
+        body
+        fields {
+          locale
+        }
+        frontmatter {
+          title
+          subtitle
+          image {
+            childImageSharp {
+              fluid(maxWidth: 400, quality: 90) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -38,16 +45,17 @@ export const pageQuery = graphql`
     about: allMdx(
       filter: { fileAbsolutePath: { regex: "/content/pages/home/about/" } }
     ) {
-      edges {
-        node {
-          body
-          frontmatter {
-            title
-            image {
-              childImageSharp {
-                fluid(maxWidth: 400, quality: 90) {
-                  ...GatsbyImageSharpFluid
-                }
+      nodes {
+        body
+        fields {
+          locale
+        }
+        frontmatter {
+          title
+          image {
+            childImageSharp {
+              fluid(maxWidth: 400, quality: 90) {
+                ...GatsbyImageSharpFluid
               }
             }
           }

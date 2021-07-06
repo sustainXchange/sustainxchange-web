@@ -2,9 +2,14 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import ImprintPage from "../components/wrapper/ImprintPage";
+import { getIntlNodes } from "../../i18n/intlQueries";
+import { useLocalization } from "gatsby-theme-i18n";
 
 const Imprint = ({ data }) => {
-  const { body, frontmatter } = data.imprint.edges[0].node;
+  const { locale } = useLocalization();
+
+  const nodes = getIntlNodes(data.allMdx, locale);
+  const { body, frontmatter } = nodes[0];
   const { title, seoTitle, useSeoTitleSuffix } = frontmatter;
 
   return (
@@ -19,17 +24,18 @@ const Imprint = ({ data }) => {
 export default Imprint;
 
 export const pageQuery = graphql`
-  {
-    imprint: allMdx(filter: { fileAbsolutePath: { regex: "/imprint/" } }) {
-      edges {
-        node {
-          body
-          frontmatter {
-            title
-            seoTitle
-            useSeoTitleSuffix
-            useSplashScreen
-          }
+  query {
+    allMdx(filter: { fileAbsolutePath: { regex: "/imprint/" } }) {
+      nodes {
+        body
+        frontmatter {
+          title
+          seoTitle
+          useSeoTitleSuffix
+          useSplashScreen
+        }
+        fields {
+          locale
         }
       }
     }

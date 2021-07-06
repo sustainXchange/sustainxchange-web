@@ -1,10 +1,10 @@
-import React from "react"
-import { Box, Heading, Container, Text } from "@chakra-ui/react"
-import SocialBar from "../../icons/socialBar"
+import React from "react";
+import { Box, Heading, Container, Text } from "@chakra-ui/react";
+import SocialBar from "../../icons/socialBar";
 
-const Hero = ({ content }) => {
-  const { frontmatter } = content[0].node
-  const { subtitle, title } = frontmatter
+const Hero = ({ nodes }) => {
+  const { frontmatter } = nodes[0];
+  const { subtitle, title } = frontmatter;
 
   return (
     <Box minHeight={[0, 0, 0, "50vh", "50vh"]} id="hero">
@@ -47,7 +47,7 @@ const Hero = ({ content }) => {
         </Container>
       </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

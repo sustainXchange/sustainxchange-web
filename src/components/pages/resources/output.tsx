@@ -1,9 +1,13 @@
-import { Heading, StackDivider, VStack } from "@chakra-ui/layout"
-import { useStaticQuery, graphql } from "gatsby"
-import React from "react"
-import { ResourceCard } from "../../globals/resourceCard"
+import { Heading, StackDivider, VStack } from "@chakra-ui/layout";
+import { useStaticQuery, graphql } from "gatsby";
+import { useLocalization } from "gatsby-theme-i18n";
+import React from "react";
+import { getIntlNodes } from "../../../../i18n/intlQueries";
+import { ResourceCard } from "../../globals/resourceCard";
 
 export default function Output() {
+  const { locale } = useLocalization();
+
   const { allMdx: data } = useStaticQuery(graphql`
     {
       allMdx(
@@ -20,19 +24,25 @@ export default function Output() {
             date
             abstract
           }
+          fields {
+            locale
+          }
         }
       }
     }
-  `)
+  `);
+
+  const nodes = getIntlNodes(data, locale);
+
   return (
     <VStack divider={<StackDivider borderColor="gray.200" />} spacing="8">
-      {data.nodes.length ? (
-        data.nodes.map(node => <ResourceCard key={node.slug} node={node} />)
+      {nodes.length ? (
+        nodes.map(node => <ResourceCard key={node.slug} node={node} />)
       ) : (
         <Heading fontSize="2xl" fontFamily="mono" color="gray.500">
           Hier gibt es noch nichts zu sehen.
         </Heading>
       )}
     </VStack>
-  )
+  );
 }

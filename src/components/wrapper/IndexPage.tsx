@@ -1,4 +1,4 @@
-import React, {FC} from "react";
+import React, { FC } from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
@@ -25,13 +25,13 @@ const IndexPage: FC<{ hero: any; about: any }> = ({ hero, about }) => {
         backgroundSize="cover"
         zIndex="0"
       >
-        <Hero content={hero} />
+        <Hero nodes={hero} />
         <Spacer />
         <EventOverlay />
         <Spacer />
       </Flex>
       <News />
-      <About content={about} />
+      <About nodes={about} />
       <Event />
       {/* <Partners /> */}
       <FAQ />

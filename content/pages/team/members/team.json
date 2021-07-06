@@ -3,109 +3,90 @@
     "firstName": "Amray",
     "lastName": "Schwabe",
     "taskforce": "board",
-    "bio": "Amray ist Gründungsmitglied und Stellvertretende Vorsitzende von sustainXchange. Amray arbeitet als Fellow bei McKinsey & Company, ist Informatikerin und engagiert sich für zukunftsfähige Landwirtschaft. Ihr Lieblings-SDG ist SDG 12 - Responsible Consumption and Production.",
-    "Position": "Fellow",
-    "Arbeitgeber": "McKinsey & Company",
-    "personalSDG": "SDG 12",
-    "LinkedIn": "",
-    "weitere Websites": ""
+    "bio": {
+      "de": "Amray ist Gründungsmitglied und Stellvertretende Vorsitzende von sustainXchange. Amray arbeitet als Fellow bei McKinsey & Company, ist Informatikerin und engagiert sich für zukunftsfähige Landwirtschaft. Ihr Lieblings-SDG ist SDG 12 - Responsible Consumption and Production.",
+      "en": ""
+    }
   },
   {
     "firstName": "Christopher",
     "lastName": "Pridat",
     "taskforce": "planning",
-    "bio": "Christopher ist Gründungsmitglied von sustainXchange und für eine reibungslose Planung zuständig. Christopher arbeitet als Referent im Hessischen Ministerium für Umwelt, Klimaschutz, Landwirtschaft und Verbraucherschutz und interessiert sich insbesondere für SDG 4 - Quality Education.",
-    "Position": "Referent",
-    "Arbeitgeber": "Hessisches Ministerium für Umwelt, Klimaschutz, Landwirtschaft und Verbraucherschutz",
-    "personalSDG": "SDG4",
-    "LinkedIn": "",
-    "weitere Websites": ""
+    "bio": {
+      "de": "Christopher ist Gründungsmitglied von sustainXchange und für eine reibungslose Planung zuständig. Christopher arbeitet als Referent im Hessischen Ministerium für Umwelt, Klimaschutz, Landwirtschaft und Verbraucherschutz und interessiert sich insbesondere für SDG 4 - Quality Education.",
+      "en": ""
+    }
   },
   {
     "firstName": "Constantin",
     "lastName": "Lindenmeyer",
     "taskforce": "board",
-    "bio": "Constantin ist Gründungsmitglied und Vorsitzender von sustainXchange. Constantin ist Leiter für Business Development und Strategie bei Goldbeck Solar. Für Constantin steht SDG 7 - Affordable and Clean Energy als Katalysator vieler anderer SDGs ganz weit vorne.",
-    "Position": "Head of Business Development & Strategy",
-    "Arbeitgeber": "Goldbeck solar",
-    "personalSDG": "SDG7 - der Zugang zu erneuerbare und günstiger bzw. erschwinglicher Energie muss ein Anrecht Aller sein. Nur so kann eine nachhaltige Entwicklung weltweit erfolgen. Alle 17 SDGs sind unglaublich wichtig, das Erreichen von SDG7 kann als Katalysator für viele Weitere dienen.",
-    "LinkedIn": "https://www.linkedin.com/in/constantin-lindenmeyer-b4691110a/",
-    "weitere Websites": "https://www.researchgate.net/profile/Constantin_Lindenmeyer"
+    "bio": {
+      "de": "Constantin ist Gründungsmitglied und Vorsitzender von sustainXchange. Constantin ist Leiter für Business Development und Strategie bei Goldbeck Solar. Für Constantin steht SDG 7 - Affordable and Clean Energy als Katalysator vieler anderer SDGs ganz weit vorne.",
+      "en": ""
+    }
   },
   {
     "firstName": "Jana",
     "lastName": "Birner",
     "taskforce": "content",
-    "bio": "Jana ist Gründungsmitglied von sustainXchange und für spannende Inhalte und die Kommunikation mit unseren Dozierenden zuständig. Jana arbeitet beim UNHCR im Bereich Flucht und Klimawandel und brennt für SDG 13 - Climate Action.",
-    "Position": "Fellow",
-    "Arbeitgeber": "UNHCR",
-    "personalSDG": "SDG13 - Climate action",
-    "LinkedIn": "https://www.linkedin.com/in/janabirner",
-    "weitere Websites": ""
+    "bio": {
+      "de": "Jana ist Gründungsmitglied von sustainXchange und für spannende Inhalte und die Kommunikation mit unseren Dozierenden zuständig. Jana arbeitet beim UNHCR im Bereich Flucht und Klimawandel und brennt für SDG 13 - Climate Action.",
+      "en": ""
+    }
   },
   {
     "firstName": "Jana",
     "lastName": "Weber",
     "taskforce": "finance",
-    "bio": "Jana ist Gründungsmitglied von sustainXchange und für Finanzen verantwortlich. Jana promoviert in Cambridge im Chemieingenieurwesen zum Thema nachhaltige chemische Produktion und ist Mitbegründerin von Chemical Data Intelligence Pte. Ltd. in Singapore. Neben ihres technischen Schwerpunkts steht Jana für SDG - 5 Gender Equality ein.",
-    "Position": "Doktorandin, Co-founder",
-    "Arbeitgeber": "University of Cambridge, CDI (Chemical Data Intelligence) Pte. Ltd.",
-    "personalSDG": "",
-    "LinkedIn": "https://www.linkedin.com/in/jana-marie-weber-a260081b0/",
-    "weitere Websites": ""
+    "bio": {
+      "de": "Jana ist Gründungsmitglied von sustainXchange und für Finanzen verantwortlich. Jana promoviert in Cambridge im Chemieingenieurwesen zum Thema nachhaltige chemische Produktion und ist Mitbegründerin von Chemical Data Intelligence Pte. Ltd. in Singapore. Neben ihres technischen Schwerpunkts steht Jana für SDG - 5 Gender Equality ein.",
+      "en": ""
+    }
   },
   {
     "firstName": "Jasper",
     "lastName": "Anders",
     "taskforce": "board",
-    "bio": "Jasper ist Gründungsmitglied und Stellvertretender Vorsitzender von sustainXchange. Jasper steckt hinter jeglicher IT und kümmert sich um die Technik bei Meetings und Events. Er setzt sich für (digitale) Infrastruktur, also für SDG 9 ein.",
-    "Position": "",
-    "Arbeitgeber": "",
-    "personalSDG": "",
-    "LinkedIn": "",
-    "weitere Websites": ""
+    "bio": {
+      "de": "Jasper ist Gründungsmitglied und Stellvertretender Vorsitzender von sustainXchange. Jasper steckt hinter jeglicher IT und kümmert sich um die Technik bei Meetings und Events. Er setzt sich für (digitale) Infrastruktur, also für SDG 9 ein.",
+      "en": "Jasper is a founding member and vice chair of sustainXchange. Jasper takes care of the technology at meetings and events. He is committed to (digital) infrastructure, i.e. SDG 9."
+    }
   },
   {
     "firstName": "Lukas",
     "lastName": "Korn",
     "taskforce": "planning",
-    "bio": "Lukas ist Gründungsmitglied, Kassenprüfer und verantwortlich für die Planung bei sustainXchange. Lukas ist Jurist und promoviert in Gießen auf dem Gebiet des Verfassungsrechts. Na klar, Lukas Lieblings-SDG ist SDG 16 - Peace, Justice and Strong Institutions.",
-    "Position": "Wissenschaftlicher Mitarbeiter",
-    "Arbeitgeber": "Justus-Liebig-Universität Gießen",
-    "personalSDG": "SDG16 - Peace, justice and strong institutions",
-    "LinkedIn": "https://www.linkedin.com/in/lukas-paul-korn-82749861/",
-    "weitere Websites": ""
+    "bio": {
+      "de": "Lukas ist Gründungsmitglied, Kassenprüfer und verantwortlich für die Planung bei sustainXchange. Lukas ist Jurist und promoviert in Gießen auf dem Gebiet des Verfassungsrechts. Na klar, Lukas Lieblings-SDG ist SDG 16 - Peace, Justice and Strong Institutions.",
+      "en": ""
+    }
   },
   {
     "firstName": "Maren",
     "lastName": "Preuss",
     "taskforce": "content",
-    "bio": "Maren ist Gründungsmitglied von sustainXchange. Bei sustainXchange ist Maren für neue Inhalte und die Kommunikation mit unseren Dozierenden zuständig. Maren hat Energiepolitik studiert und berät bei Aurora Energy Research Firmen und öffentliche Institutionen zu Strommarkthemen wie zum Kohleausstieg. SDG 7 - Clean and Affordable Energy ist Marens Leidenschaft.",
-    "Position": "",
-    "Arbeitgeber": "",
-    "personalSDG": "",
-    "LinkedIn": "",
-    "weitere Websites": ""
+    "bio": {
+      "de": "Maren ist Gründungsmitglied von sustainXchange. Bei sustainXchange ist Maren für neue Inhalte und die Kommunikation mit unseren Dozierenden zuständig. Maren hat Energiepolitik studiert und berät bei Aurora Energy Research Firmen und öffentliche Institutionen zu Strommarkthemen wie zum Kohleausstieg. SDG 7 - Clean and Affordable Energy ist Marens Leidenschaft.",
+      "en": ""
+    }
   },
   {
     "firstName": "Peter",
     "lastName": "Manshausen",
     "taskforce": "content",
-    "bio": "Peter ist Gründungsmitglied von sustainXchange. Neben der Arbeit an spannenden Inhalten für unsere Events, ist Peter Physiker und promoviert in Oxford über anthropogene Effekte auf unser Klima. Sein favorisiertes SDG ist SDG 15 - Life on Land.",
-    "Arbeitgeber": "Doktorand",
-    "personalSDG": "University of Oxford",
-    "LinkedIn": "",
-    "weitere Websites": ""
+    "bio": {
+      "de": "Peter ist Gründungsmitglied von sustainXchange. Neben der Arbeit an spannenden Inhalten für unsere Events, ist Peter Physiker und promoviert in Oxford über anthropogene Effekte auf unser Klima. Sein favorisiertes SDG ist SDG 15 - Life on Land.",
+      "en": ""
+    }
   },
   {
     "firstName": "Tim",
     "lastName": "Deisemann",
     "taskforce": "finance",
-    "bio": "Tim ist Gründungsmitglied von sustainXchange und studiert Entwicklungsökonomik an der University of Oxford. Im Rahmen seiner Masterarbeit erforscht er den Einfluss des Informationstechnologie-Booms auf lokale Arbeitsmärkte in Indien. Er brennt für SDG 11 - nachhaltige Entwicklung in Städte und Gemeinden.",
-    "Position": "",
-    "Arbeitgeber": "",
-    "personalSDG": "",
-    "LinkedIn": "",
-    "weitere Websites": ""
+    "bio": {
+      "de": "Tim ist Gründungsmitglied von sustainXchange und studiert Entwicklungsökonomik an der University of Oxford. Im Rahmen seiner Masterarbeit erforscht er den Einfluss des Informationstechnologie-Booms auf lokale Arbeitsmärkte in Indien. Er brennt für SDG 11 - nachhaltige Entwicklung in Städte und Gemeinden.",
+      "en": ""
+    }
   }
 ]

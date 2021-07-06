@@ -20,9 +20,14 @@ import {
   ListItem
 } from "@chakra-ui/react";
 import Layout from "./src/components/globals/layout";
+import { LocaleProvider } from "gatsby-theme-i18n";
 
 export const wrapPageElement = ({ element, props }) => {
-  return <Layout {...props}>{element}</Layout>;
+  return (
+    <LocaleProvider pageContext={props.pageContext}>
+      <Layout {...props}>{element}</Layout>
+    </LocaleProvider>
+  );
 };
 
 export const wrapRootElement = ({ element }) => {

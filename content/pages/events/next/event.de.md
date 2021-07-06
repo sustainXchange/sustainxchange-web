@@ -20,15 +20,15 @@ vom **05.11.21** bis zum **07.11.21** wollen wir eine aktiven Teil zu der
 outputorientiert arbeiten. Ziel ist es, dass ihr in eurem Team am Ende des
 Wochenendes eure Gedanken und Ideen in etwas Handfestes gegossen habt. Was ihr
 macht, hängt von euch ab! Wir schlagen eine Bandbreite an Formaten vor und
-stellen euch jeweils unterstützende Ressourcen zur Verfügung. Diese helfen euch bei der
-Entwicklung und geben euch einen Eindruck, was möglich ist. Zu den potentiellen
-Outputformaten gehören unter anderem:
+stellen euch jeweils unterstützende Ressourcen zur Verfügung. Diese helfen euch
+bei der Entwicklung und geben euch einen Eindruck, was möglich ist. Zu den
+potentiellen Outputformaten gehören unter anderem:
 
 - **Text**, also z.B. ein Artikel oder ein Blogpost
 - **Code**, das könnte z.B. ein interaktives Modell, eine API, eine Datenbank
   oder ein Stück Software sein
-- **Gesetzlicher Output**, darunter fallen Beiträge wie Petitionen, Gesetzesentwürfe
-  oder Stellungsnahmen zu Gesetzen
+- **Gesetzlicher Output**, darunter fallen Beiträge wie Petitionen,
+  Gesetzesentwürfe oder Stellungsnahmen zu Gesetzen
 - **Community Projekt**, du hast eine Idee, wie man große Gruppen mobilisieren
   kann? Dann los!
 - **Kunst-Projekt**
@@ -53,7 +53,7 @@ ihr hier den Ablaufplan des Events:
 
 | Uhrzeit |        Freitag        |              Samstag              |    Sonntag     |
 | ------- | :-------------------: | :-------------------------------: | :------------: |
-| 09.00   |                       |           Prozessinput           | Prozessinput  |
+| 09.00   |                       |           Prozessinput            |  Prozessinput  |
 | 09.30   |                       |            Worksprint             |   Worksprint   |
 | 10.00   |                       |          Check-In-Hours           | Check-In-Hours |
 | 10.30   |                       |                \|                 |       \|       |
@@ -75,8 +75,8 @@ ihr hier den Ablaufplan des Events:
 | 18.30   | Gruppen Kennenlernen  | Hero Vortag mit Podiumsdiskussion |                |
 | 19.00   |    Impulsvorträge     |            Worksprint             |                |
 | 19.30   |          \|           |                \|                 |                |
-| 20.00   |    Impulsvorträge     |            Worksprint             |                |
-| 20.30   |     Brainstorming     |                \|                 |                |
+| 20.00   |    Impulsvorträge     |                \|                 |                |
+| 20.30   |     Brainstorming     |            Worksprint             |                |
 | 21.00   | Good Night Networking |       Good Night Networking       |                |
 | 21.30   |          \|           |                \|                 |                |
 
@@ -85,7 +85,7 @@ ihr hier den Ablaufplan des Events:
 Dir gefällt was wir vorhaben? Dann mach mit!
 
 Die Anmeldung ist leider noch nicht eröffnet, du kannst dich aber schon auf
-unsere Mailing-Liste setzen, wir informieren dich wenn es los geht.
+unsere Mailing-Liste setzen. Wir informieren dich, wenn es los geht!
 
 <SignUp noTranslate mb="2rem"/>
 

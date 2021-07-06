@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Link, Text, Stack, Icon } from "@chakra-ui/react";
 import { LocalizedLink as GLink } from "gatsby-theme-i18n";
+import { useLocation } from "@reach/router";
 
 import { FaBars, FaTimes } from "react-icons/fa";
 
@@ -16,9 +17,9 @@ export const MenuToggle = ({ toggle, isOpen }) => {
   );
 };
 
-const MenuItem = ({ children, to = "/", ...rest }) => {
+const MenuItem = ({ children, to = "/", color = "secondary", ...rest }) => {
   return (
-    <Link as={GLink} to={to} fontSize="xl">
+    <Link as={GLink} to={to} fontSize="xl" color={color} {...rest}>
       <Text display="block" {...rest}>
         {children}
       </Text>
@@ -26,22 +27,39 @@ const MenuItem = ({ children, to = "/", ...rest }) => {
   );
 };
 
-export const Navigation = ({ isOpen }) => (
-  <Box
-    display={{ base: isOpen ? "block" : "none", md: "block" }}
-    flexBasis={{ base: "100%", md: "auto" }}
-  >
-    <Stack
-      spacing={8}
-      align="center"
-      justify={["center", "space-between", "flex-end", "flex-end"]}
-      direction={["column", "row", "row", "row"]}
-      pt={[4, 4, 0, 0]}
+export const Navigation = ({ isOpen }) => {
+  const location = useLocation();
+  return (
+    <Box
+      display={{ base: isOpen ? "block" : "none", md: "block" }}
+      flexBasis={{ base: "100%", md: "auto" }}
     >
-      <MenuItem to="/">Home</MenuItem>
-      <MenuItem to="/team">Team</MenuItem>
-      <MenuItem to="/resources">Ressourcen</MenuItem>
-      <MenuItem to="/events">Events</MenuItem>
-    </Stack>
-  </Box>
-);
+      <Stack
+        spacing={8}
+        align="center"
+        justify={["center", "space-between", "flex-end", "flex-end"]}
+        direction={["column", "row", "row", "row"]}
+        pt={[4, 4, 0, 0]}
+      >
+        <MenuItem to="/">Home</MenuItem>
+        <MenuItem to="/team">Team</MenuItem>
+        <MenuItem to="/resources">Ressourcen</MenuItem>
+        <MenuItem to="/events">Events</MenuItem>
+        <MenuItem
+          to={location.pathname.replace(/(de\/)|(en\/)/g, "")}
+          color={location.pathname.includes("en") ? "black" : "gray"}
+          language="en"
+        >
+          EN
+        </MenuItem>
+        <MenuItem
+          to={location.pathname.replace(/(de\/)|(en\/)/g, "")}
+          color={location.pathname.includes("de") ? "black" : "gray"}
+          language="de"
+        >
+          DE
+        </MenuItem>
+      </Stack>
+    </Box>
+  );
+};

@@ -9,7 +9,6 @@ import { MenuToggle, Navigation } from "./navbar";
 
 const Header = () => {
   const [isOpen, setIsOpen] = React.useState(false);
-
   const toggle = () => setIsOpen(!isOpen);
 
   return (
@@ -18,7 +17,7 @@ const Header = () => {
       align="center"
       justify="space-between"
       p={5}
-      direction={["column", "column", "row"]}
+      direction={["column", "column", "column", "row"]}
       px={16}
       bg={["primary.500", "primary.500", "transparent", "transparent"]}
       shadow="md"

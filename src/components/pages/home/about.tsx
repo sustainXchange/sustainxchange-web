@@ -1,9 +1,9 @@
-import React from "react"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { Container, Box, Heading, Text, Center } from "@chakra-ui/react"
+import React from "react";
+import { MDXRenderer } from "gatsby-plugin-mdx";
+import { Container, Box, Heading, Text, Center } from "@chakra-ui/react";
 
-const About = ({ content }) => {
-  const { frontmatter, body } = content[0].node
+const About = ({ nodes }) => {
+  const { frontmatter, body } = nodes[0];
 
   return (
     <Box as="section" id="about" my="3rem" mt="4rem">
@@ -12,7 +12,7 @@ const About = ({ content }) => {
         <MDXRenderer>{body}</MDXRenderer>
       </Container>
     </Box>
-  )
-}
+  );
+};
 
-export default About
+export default About;
