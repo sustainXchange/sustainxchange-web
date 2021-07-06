@@ -8,11 +8,13 @@ import { Heading } from "@chakra-ui/layout";
 import { Button } from "@chakra-ui/button";
 import { LocalizedLink as Link } from "gatsby-theme-i18n";
 import axios from "axios";
+import { useIntl } from "react-intl";
 
 export default function SignUp({ noTranslate, ...props }) {
   const { register, handleSubmit } = useForm();
   const [allowLogin, setAllowLogin] = useState(true);
   const [singUpError, setSingUpError] = useState(false);
+  const intl = useIntl();
 
   const onSubmit = (data, e) => {
     const options = {
@@ -49,7 +51,7 @@ export default function SignUp({ noTranslate, ...props }) {
       {...props}
     >
       <Heading fontSize="2xl" m="0" color="warning" fontFamily="mono">
-        Bleib auf dem neusten Stand!
+        {intl.formatMessage({ id: "upToDate" })}
       </Heading>
       <form onSubmit={handleSubmit(onSubmit)}>
         <FormControl id="email" mt="0.5rem">
@@ -72,18 +74,18 @@ export default function SignUp({ noTranslate, ...props }) {
           </Stack>
           {allowLogin ? (
             <FormHelperText>
-              Mit dem Anmelden stimmst du unseren{" "}
-              <Link to="privacy">Datenschutzbestimmungen</Link> zu.
+              <Link to="privacy">
+                {intl.formatMessage({ id: "acceptPrivacyStatement" })}
+              </Link>
             </FormHelperText>
           ) : (
             <FormHelperText color="secondary">
-              Danke für deine Anmeldung
+              {intl.formatMessage({ id: "emailSuccess" })}
             </FormHelperText>
           )}
           {singUpError && (
             <FormHelperText color="warning">
-              Ups! Da ist bei uns etwas schief gelaufen, versuche es später noch
-              einmal.
+              {intl.formatMessage({ id: "emailFailed" })}
             </FormHelperText>
           )}
         </FormControl>

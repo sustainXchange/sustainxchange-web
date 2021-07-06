@@ -31,7 +31,7 @@ const Footer = () => {
       <Container textAlign={["left", "right"]} color="white">
         <Text>
           sustainXchange.org <br />
-          Design und Entwicklung von Jasper Anders
+          Designed & Developed by Jasper Anders
         </Text>
         <Icon as={FaCreativeCommons} />
         <Icon as={FaCreativeCommonsNc} />

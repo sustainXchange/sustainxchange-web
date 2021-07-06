@@ -6,13 +6,16 @@ import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/tabs";
 import Blog from "../pages/resources/association";
 import HowTo from "../pages/resources/howTo";
 import Output from "../pages/resources/output";
+import { useIntl } from "react-intl";
 
 const ResourcesPage: FC<{ language?: string }> = ({ language }) => {
+  const intl = useIntl();
+
   return (
     <Container maxW="2xl">
       <Flex direction="column" justifyContent="flex-start">
         <Heading variant="subHeading" my="2rem">
-          Ressourcen
+          {intl.formatMessage({ id: "resources" })}
         </Heading>
         <Tabs
           variant="soft-rounded"

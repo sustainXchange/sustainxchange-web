@@ -4,10 +4,12 @@ import { graphql, useStaticQuery } from "gatsby";
 import { useLocalization } from "gatsby-theme-i18n";
 import React, { useEffect, useState } from "react";
 import { PersonTitle } from "../../globals/person";
+import { useIntl } from "react-intl";
 
 export default function TeamGrid() {
   const { locale, defaultLang } = useLocalization();
   const [team, setTeam] = useState([]);
+  const intl = useIntl();
 
   let teamQuery = useStaticQuery(graphql`
     query {
@@ -54,16 +56,8 @@ export default function TeamGrid() {
         ];
       return element;
     });
-
-    // omit non current languages
-    tmpTeam = tmpTeam.map(edge => {
-      edge.node.bio = edge.node.bio[locale]
-        ? edge.node.bio[locale]
-        : edge.node.bio[defaultLang];
-      return edge;
-    });
     setTeam([...tmpTeam]);
-  }, []);
+  }, [locale]);
 
   const board = team.filter(ele => ele.node.taskforce === "board");
   const finance = team.filter(ele => ele.node.taskforce === "finance");
@@ -75,44 +69,60 @@ export default function TeamGrid() {
     <VStack spacing={"3rem"} alignItems="flex-start" mb="2rem">
       <Box>
         <Heading as="h3" mt="3rem">
-          Unsere Taskforces
+          {intl.formatMessage({ id: "ourTaskforces" })}
         </Heading>
         <Heading as="h4" size="lg" mb="2rem" mt="1rem">
-          Vorstandsteam
+          {intl.formatMessage({ id: "board" })}
         </Heading>
         <SimpleGrid columns={[1, 1, 2, 3]} spacing={10}>
           {board.map(person => (
-            <PersonTitle key={person.node.lastName} person={person.node} />
+            <PersonTitle
+              lang={locale}
+              key={person.node.lastName}
+              person={person.node}
+            />
           ))}
         </SimpleGrid>
       </Box>
       <Box>
         <Heading as="h4" size="lg" mb="2rem" mt="2rem">
-          Sponsoring und Finanzen
+          {intl.formatMessage({ id: "finance" })}
         </Heading>
         <SimpleGrid columns={[1, 1, 2, 3]} spacing={10}>
           {finance.map(person => (
-            <PersonTitle key={person.node.lastName} person={person.node} />
+            <PersonTitle
+              lang={locale}
+              key={person.node.lastName}
+              person={person.node}
+            />
           ))}
         </SimpleGrid>
       </Box>
       <Box>
         <Heading as="h4" size="lg" mb="2rem" mt="2rem">
-          Inhalt und Speaker
+          {intl.formatMessage({ id: "speaker" })}
         </Heading>
         <SimpleGrid columns={[1, 1, 2, 3]} spacing={10}>
           {content.map(person => (
-            <PersonTitle key={person.node.lastName} person={person.node} />
+            <PersonTitle
+              lang={locale}
+              key={person.node.lastName}
+              person={person.node}
+            />
           ))}
         </SimpleGrid>
       </Box>
       <Box>
         <Heading as="h4" size="lg" mb="2rem" mt="2rem">
-          Planung und Marketing
+          {intl.formatMessage({ id: "planningPR" })}
         </Heading>
         <SimpleGrid columns={[1, 1, 2, 3]} spacing={10}>
           {planning.map(person => (
-            <PersonTitle key={person.node.lastName} person={person.node} />
+            <PersonTitle
+              lang={locale}
+              key={person.node.lastName}
+              person={person.node}
+            />
           ))}
         </SimpleGrid>
       </Box>

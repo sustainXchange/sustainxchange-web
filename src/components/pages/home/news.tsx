@@ -13,6 +13,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import { Stat, StatHelpText } from "@chakra-ui/stat";
 import SignUp from "../../signUp";
 import { getIntlNodes } from "../../../../i18n/intlQueries";
+import { useIntl } from "react-intl";
 
 function NewsCard(node) {
   return (
@@ -41,6 +42,7 @@ function NewsCard(node) {
 
 export default function News() {
   const { locale } = useLocalization();
+  const intl = useIntl();
 
   const { allMdx: news } = useStaticQuery(
     graphql`
@@ -80,7 +82,7 @@ export default function News() {
     >
       <Container maxW="6xl" py="2rem">
         <Heading variant="subHeading" color="white" textAlign="left">
-          Das ist neu:
+          {intl.formatMessage({ id: "news" })}:
         </Heading>
         <SimpleGrid columns={[1, 1, 2, 3, 4]} spacing={10} mt="2rem">
           {nodes.map(node => NewsCard(node))}

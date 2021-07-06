@@ -2,10 +2,12 @@ import React from "react";
 import { Box, Flex, Text, Heading, Container, Link } from "@chakra-ui/react";
 import { graphql, useStaticQuery } from "gatsby";
 import { LocalizedLink as GLink, useLocalization } from "gatsby-theme-i18n";
+import { useIntl } from "react-intl";
 import { getIntlNodes } from "../../../../../i18n/intlQueries";
 
 const EventOverlay = () => {
   const { locale } = useLocalization();
+  const intl = useIntl();
 
   const { allMdx: query } = useStaticQuery(graphql`
     query {
@@ -60,7 +62,8 @@ const EventOverlay = () => {
           <Box>
             <Container p={0}>
               <Text as="Mono" fontFamily="mono" fontSize="3xl" color="warning">
-                {eventDateFrom} bis {eventDateTo}
+                {eventDateFrom} {intl.formatMessage({ id: "to" })}
+                {eventDateTo}
               </Text>
               <Heading as="h2" fontSize="5xl">
                 {title}
@@ -76,7 +79,7 @@ const EventOverlay = () => {
             >
               <Text fontSize="xl">{abstract}</Text>
               <Link as={GLink} to="/events" fontSize="xl">
-                Mehr erfahren
+                {intl.formatMessage({ id: "learnMore" })}
               </Link>
             </Container>
           </Box>

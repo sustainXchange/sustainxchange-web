@@ -98,6 +98,12 @@ module.exports = {
         configPath: require.resolve(`./i18n/config.json`),
         prefixDefault: true
       }
+    },
+    {
+      resolve: `gatsby-theme-i18n-react-intl`,
+      options: {
+        defaultLocale: `./i18n/react-intl/de.json`
+      }
     }
   ]
 };

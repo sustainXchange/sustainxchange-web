@@ -13,11 +13,11 @@ module.exports = {
 
   footerLinks: [
     {
-      name: "Datenschutzerklärung",
+      name: "Privacy Statement",
       url: "/privacy"
     },
     {
-      name: "Impressum",
+      name: "Imprint",
       url: "/imprint"
     }
   ]

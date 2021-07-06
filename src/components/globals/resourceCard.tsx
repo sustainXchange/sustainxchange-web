@@ -3,6 +3,7 @@ import { ChevronRightIcon } from "@chakra-ui/icons";
 import { Box, Container, Flex, Heading, Text, Link } from "@chakra-ui/layout";
 import { StatHelpText } from "@chakra-ui/stat";
 import { LocalizedLink as GLink } from "gatsby-theme-i18n";
+import { useIntl } from "react-intl";
 
 function LinkWrapper({ isExternal, url, component, ...props }) {
   return (
@@ -35,6 +36,8 @@ function LinkWrapper({ isExternal, url, component, ...props }) {
 }
 
 export function ResourceCard({ node }) {
+  const intl = useIntl();
+
   const { abstract, title, author, date, urlOnlyResource } = node.frontmatter;
 
   return (
@@ -59,7 +62,8 @@ export function ResourceCard({ node }) {
               <Container>
                 <Heading fontSize="3xl">{title}</Heading>
                 <StatHelpText mt="0.5rem" color="lightgrey">
-                  {date} - von {author}
+                  {date} - {intl.formatMessage({ id: "by" })}
+                  {author}
                 </StatHelpText>
                 <Text>{abstract}</Text>
               </Container>

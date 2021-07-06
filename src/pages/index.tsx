@@ -7,7 +7,6 @@ import Layout from "../components/globals/layout";
 
 const Index = ({ data }) => {
   const { locale } = useLocalization();
-  console.log("locale is", locale);
 
   return (
     <IndexPage

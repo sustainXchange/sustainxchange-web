@@ -1,8 +1,8 @@
-import React from "react"
-import { AspectRatio, Box, Container, Text } from "@chakra-ui/layout"
-import GatsbyImage from "gatsby-image"
+import React from "react";
+import { AspectRatio, Box, Container, Text } from "@chakra-ui/layout";
+import GatsbyImage from "gatsby-image";
 
-export const PersonTitle = ({ person }) => (
+export const PersonTitle = ({ person, lang }) => (
   <Container maxW="2xs" p="0">
     <AspectRatio ratio={1}>
       <Box overflow="hidden" background="warning">
@@ -20,9 +20,9 @@ export const PersonTitle = ({ person }) => (
         : "Anonymous"}
     </Text>
     <Text>
-      {person.bio
-        ? person.bio
+      {person.bio[lang]
+        ? person.bio[lang]
         : "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua."}
     </Text>
   </Container>
-)
+);

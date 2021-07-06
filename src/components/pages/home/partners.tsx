@@ -1,7 +1,9 @@
-import { Box, Container, Flex, Heading } from "@chakra-ui/layout"
-import Img from "gatsby-image"
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { Box, Container, Flex, Heading } from "@chakra-ui/layout";
+import Img from "gatsby-image";
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import { useIntl } from "react-intl";
+
 
 function Partner(node) {
   return (
@@ -9,10 +11,12 @@ function Partner(node) {
       {/* <Container boxSize={node.frontmatter.size ? node.frontmatter.size : 5}> */}
       <Img fixed={node.frontmatter.image.childImageSharp.fixed} />
     </Box>
-  )
+  );
 }
 
 export default function Partners() {
+  const intl = useIntl();
+
   const { allMdx: data } = useStaticQuery(
     graphql`
       query {
@@ -38,14 +42,16 @@ export default function Partners() {
         }
       }
     `
-  )
+  );
 
-  const partners = data.nodes.filter(img => img.childImageSharp !== null)
+  const partners = data.nodes.filter(img => img.childImageSharp !== null);
 
   return (
     <Flex id="partners" width="100%" pt="2rem !important">
       <Container maxW="6xl" py="2rem">
-        <Heading variant="subHeading">Unsere Partner</Heading>
+        <Heading variant="subHeading">
+          {intl.formatMessage({ id: "partners" })}
+        </Heading>
         <Flex
           my="2rem"
           direction={["column", "column", "row", "row"]}
@@ -55,5 +61,5 @@ export default function Partners() {
         </Flex>
       </Container>
     </Flex>
-  )
+  );
 }
