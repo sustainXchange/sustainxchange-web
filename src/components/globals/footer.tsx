@@ -19,7 +19,7 @@ const Footer = () => {
       p="2rem"
     >
       <Container>
-        {footerLinks.map(({ name, url }, key) => (
+        {footerLinks.map(({ name, url }) => (
           <Box key={name}>
             <Link as={GLink} to={url} color="white">
               {name}

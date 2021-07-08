@@ -3,9 +3,7 @@ import { navigate } from "gatsby";
 
 const NotFoundPage = () => {
   useEffect(() => {
-    console.log("we are here");
-
-    navigate("/de/");
+    navigate("/en/");
   }, []);
   return <div>We are working on it</div>;
 };

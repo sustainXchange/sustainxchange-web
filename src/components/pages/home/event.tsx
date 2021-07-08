@@ -1,4 +1,4 @@
-import { Center, Container, Flex, Heading, Text } from "@chakra-ui/layout";
+import { Center, Container, Flex, Heading } from "@chakra-ui/layout";
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
@@ -6,7 +6,7 @@ import Gallery from "../../globals/gallery";
 import { useLocalization } from "gatsby-theme-i18n";
 import { getIntlNodes } from "../../../../i18n/intlQueries";
 
-export default function Event({ title, body }) {
+export default function Event() {
   const { locale } = useLocalization();
 
   const { allMdx: query } = useStaticQuery(

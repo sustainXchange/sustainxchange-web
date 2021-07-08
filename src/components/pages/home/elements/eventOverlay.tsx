@@ -62,8 +62,7 @@ const EventOverlay = () => {
           <Box>
             <Container p={0}>
               <Text as="Mono" fontFamily="mono" fontSize="3xl" color="warning">
-                {eventDateFrom} {intl.formatMessage({ id: "to" })}
-                {eventDateTo}
+                {eventDateFrom} {intl.formatMessage({ id: "to" })} {eventDateTo}
               </Text>
               <Heading as="h2" fontSize="5xl">
                 {title}

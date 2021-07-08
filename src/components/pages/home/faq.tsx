@@ -3,7 +3,7 @@ import { AccordionButton } from "@chakra-ui/accordion";
 import { AccordionPanel } from "@chakra-ui/accordion";
 import { AccordionIcon } from "@chakra-ui/accordion";
 import { Accordion } from "@chakra-ui/accordion";
-import { Box, Flex, Text } from "@chakra-ui/layout";
+import { Flex } from "@chakra-ui/layout";
 import { Heading } from "@chakra-ui/layout";
 import { Container } from "@chakra-ui/layout";
 import { graphql, useStaticQuery } from "gatsby";

@@ -7,17 +7,6 @@ import { useLocation } from "@reach/router";
 
 const Index = ({ data }) => {
   const { locale } = useLocalization();
-  const location = useLocation();
-
-  useEffect(() => {
-    if (
-      !location.pathname.includes("/de") ||
-      !location.pathname.includes("/en")
-    ) {
-      navigate("/de/");
-    }
-  }, []);
-
   return (
     <IndexPage
       hero={getIntlNodes(data.hero, locale)}

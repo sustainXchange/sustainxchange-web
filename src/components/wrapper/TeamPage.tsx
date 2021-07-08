@@ -4,11 +4,7 @@ import TeamGrid from "../pages/team/teamGrid";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import SEO from "../globals/seo";
 
-const TeamPage: FC<{ title: string; body: any; seo?: any }> = ({
-  title,
-  body,
-  seo
-}) => {
+const TeamPage: FC<{ title: string; body: any }> = ({ title, body }) => {
   return (
     <>
       <SEO

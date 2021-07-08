@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Heading, Text } from "@chakra-ui/layout";
+import { Heading } from "@chakra-ui/layout";
 import { Flex } from "@chakra-ui/layout";
 import { Container } from "@chakra-ui/layout";
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/tabs";
@@ -8,7 +8,7 @@ import HowTo from "../pages/resources/howTo";
 import Output from "../pages/resources/output";
 import { useIntl } from "react-intl";
 
-const ResourcesPage: FC<{ language?: string }> = ({ language }) => {
+const ResourcesPage = () => {
   const intl = useIntl();
 
   return (

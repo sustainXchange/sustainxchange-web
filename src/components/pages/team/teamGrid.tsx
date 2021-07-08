@@ -7,7 +7,7 @@ import { PersonTitle } from "../../globals/person";
 import { useIntl } from "react-intl";
 
 export default function TeamGrid() {
-  const { locale, defaultLang } = useLocalization();
+  const { locale } = useLocalization();
   const [team, setTeam] = useState([]);
   const intl = useIntl();
 

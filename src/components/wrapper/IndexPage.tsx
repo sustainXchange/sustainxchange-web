@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
 import { Flex, Spacer } from "@chakra-ui/react";

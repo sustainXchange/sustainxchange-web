@@ -1,6 +1,6 @@
 import React from "react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import { Container, Box, Heading, Text, Center } from "@chakra-ui/react";
+import { Container, Box, Heading } from "@chakra-ui/react";
 
 const About = ({ nodes }) => {
   const { frontmatter, body } = nodes[0];

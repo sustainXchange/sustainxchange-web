@@ -1,14 +1,13 @@
-import { IconButton } from "@chakra-ui/button"
-import { ArrowBackIcon } from "@chakra-ui/icons"
-import { AspectRatio, Container, Heading, Text } from "@chakra-ui/layout"
-import { navigate } from "gatsby-link"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import React from "react"
-import Layout from "../layout"
+import { IconButton } from "@chakra-ui/button";
+import { ArrowBackIcon } from "@chakra-ui/icons";
+import { Container, Heading } from "@chakra-ui/layout";
+import { navigate } from "gatsby-link";
+import { MDXRenderer } from "gatsby-plugin-mdx";
+import React from "react";
 
 export default function Blog({ pageContext }) {
-  const { frontmatter, body } = pageContext.post
-  const { author, title } = frontmatter
+  const { frontmatter, body } = pageContext.post;
+  const { author, title } = frontmatter;
 
   return (
     <Container my="4rem" maxW="2xl">
@@ -21,5 +20,5 @@ export default function Blog({ pageContext }) {
       <Heading variant="blogTitle">{title}</Heading>
       <MDXRenderer>{body}</MDXRenderer>
     </Container>
-  )
+  );
 }
