@@ -1,9 +1,13 @@
-import { useEffect } from "react";
-import { navigate } from "@reach/router";
+import React, { useEffect } from "react";
+import { navigate } from "gatsby";
 
-export default () => {
+const NotFoundPage = () => {
   useEffect(() => {
+    console.log("we are here");
+
     navigate("/de/");
   }, []);
-  return null;
+  return <div>We are working on it</div>;
 };
+
+export default NotFoundPage;

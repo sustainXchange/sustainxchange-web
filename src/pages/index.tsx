@@ -1,12 +1,22 @@
-import React, { useEffect, useState } from "react";
-import { graphql } from "gatsby";
+import React, { useEffect } from "react";
+import { graphql, navigate } from "gatsby";
 import IndexPage from "../components/wrapper/IndexPage";
 import { useLocalization } from "gatsby-theme-i18n";
 import { getIntlNodes } from "../../i18n/intlQueries";
-import Layout from "../components/globals/layout";
+import { useLocation } from "@reach/router";
 
 const Index = ({ data }) => {
   const { locale } = useLocalization();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (
+      !location.pathname.includes("/de") ||
+      !location.pathname.includes("/en")
+    ) {
+      navigate("/de/");
+    }
+  }, []);
 
   return (
     <IndexPage
