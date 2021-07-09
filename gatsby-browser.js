@@ -4,8 +4,8 @@
  *
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
-import React from "react"
-import { MDXProvider } from "@mdx-js/react"
+import React from "react";
+import { MDXProvider } from "@mdx-js/react";
 import {
   Link,
   Text,
@@ -18,12 +18,17 @@ import {
   Center,
   UnorderedList,
   ListItem
-} from "@chakra-ui/react"
-import Layout from "./src/components/globals/layout"
+} from "@chakra-ui/react";
+import Layout from "./src/components/globals/layout";
+import { LocaleProvider } from "gatsby-theme-i18n";
 
 export const wrapPageElement = ({ element, props }) => {
-  return <Layout {...props}>{element}</Layout>
-}
+  return (
+    <LocaleProvider pageContext={props.pageContext}>
+      <Layout {...props}>{element}</Layout>
+    </LocaleProvider>
+  );
+};
 
 export const wrapRootElement = ({ element }) => {
   return (
@@ -55,5 +60,5 @@ export const wrapRootElement = ({ element }) => {
     >
       {element}
     </MDXProvider>
-  )
-}
+  );
+};

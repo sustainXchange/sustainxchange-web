@@ -1,10 +1,10 @@
-const path = require(`path`)
+const path = require(`path`);
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions;
 
   // Define a template for blog post
-  const blogPost = path.resolve(`./src/components/globals/templates/blog.js`)
+  const blogPost = path.resolve(`./src/components/globals/templates/blog.tsx`);
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
@@ -22,17 +22,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         }
       }
     `
-  )
+  );
 
   if (result.errors) {
     reporter.panicOnBuild(
       `There was an error loading your blog posts`,
       result.errors
-    )
-    return
+    );
+    return;
   }
 
-  const posts = result.data.allMdx.nodes
+  const posts = result.data.allMdx.nodes;
 
   // Create blog posts pages
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
@@ -46,19 +46,28 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         context: {
           post
         }
-      })
-    })
+      });
+    });
   }
-}
+
+  // create redirect form / to /de/
+
+  createRedirect({
+    fromPath: "/",
+    isPermanent: false,
+    redirectInBrowser: true,
+    toPath: "/de/"
+  });
+};
 
 exports.onCreateNode = ({ node, actions }) => {
-  const { createNodeField } = actions
+  const { createNodeField } = actions;
   if (node.internal.mediaType === "text/markdown") {
-    const slug = `${node.relativeDirectory}/${node.name}`
+    const slug = `${node.relativeDirectory}/${node.name}`;
     createNodeField({
       node,
       name: `slug`,
       value: slug
-    })
+    });
   }
-}
+};
