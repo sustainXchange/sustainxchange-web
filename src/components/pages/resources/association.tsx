@@ -4,9 +4,11 @@ import { useLocalization } from "gatsby-theme-i18n";
 import React from "react";
 import { getIntlNodes } from "../../../../i18n/intlQueries";
 import { ResourceCard } from "../../globals/resourceCard";
+import { useIntl } from "react-intl";
 
 export default function Association() {
   const { locale } = useLocalization();
+  const intl = useIntl();
 
   const { allMdx: data } = useStaticQuery(graphql`
     {
@@ -32,15 +34,15 @@ export default function Association() {
     }
   `);
 
-  const nodes = getIntlNodes(data, locale);
+  const nodes = getIntlNodes(data, locale, true);
 
   return (
     <VStack divider={<StackDivider borderColor="gray.200" />} spacing="8">
       {nodes.length ? (
-        nodes.map(node => <ResourceCard key={node.slug} node={node} />)
+        nodes.map((node) => <ResourceCard key={node.slug} node={node} />)
       ) : (
         <Heading fontSize="2xl" fontFamily="mono" color="gray.500">
-          Hier gibt es noch nichts zu sehen.
+          {intl.formatMessage({ id: "nothingToSee" })}
         </Heading>
       )}
     </VStack>
