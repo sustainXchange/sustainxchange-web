@@ -23,13 +23,13 @@ export default function SignUp({ noTranslate, ...props }) {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
-        "api-key": `${process.env.GATSBY_SENDINBLUE_API}`
+        "api-key": `${process.env.GATSBY_SENDINBLUE_API}`,
       },
-      data: { updateEnabled: true, email: data.email, listIds: [5] }
+      data: { updateEnabled: true, email: data.email, listIds: [5] },
     };
 
     axios(options)
-      .then(response => {
+      .then((response) => {
         console.log(response);
         setAllowLogin(false);
         setSingUpError(false);
@@ -69,7 +69,7 @@ export default function SignUp({ noTranslate, ...props }) {
               color="white"
               type="submit"
             >
-              {"Anmelden"}
+              {intl.formatMessage({ id: "subscribe" })}
             </Button>
           </Stack>
           {allowLogin ? (
