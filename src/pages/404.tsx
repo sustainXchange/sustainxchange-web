@@ -8,7 +8,7 @@ const NotFoundPage = () => {
   }, []);
   return (
     <Container>
-      <Heading>We are redirecting you.</Heading>;
+      <Heading>We are redirecting you.</Heading>
     </Container>
   );
 };

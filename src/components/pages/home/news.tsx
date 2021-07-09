@@ -4,7 +4,7 @@ import {
   Flex,
   Heading,
   SimpleGrid,
-  Link
+  Link,
 } from "@chakra-ui/layout";
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
@@ -49,7 +49,7 @@ export default function News() {
       query {
         allMdx(
           filter: { fileAbsolutePath: { regex: "/content/pages/home/news/" } }
-          limit: 4
+          limit: 8
           sort: { fields: frontmatter___date, order: DESC }
         ) {
           nodes {
@@ -85,7 +85,7 @@ export default function News() {
           {intl.formatMessage({ id: "news" })}:
         </Heading>
         <SimpleGrid columns={[1, 1, 2, 3, 4]} spacing={10} mt="2rem">
-          {nodes.map(node => NewsCard(node))}
+          {nodes.map((node) => NewsCard(node))}
         </SimpleGrid>
       </Container>
       <SignUp />
