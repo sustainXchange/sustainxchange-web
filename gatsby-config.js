@@ -6,7 +6,7 @@ const {
   siteIcon,
   siteUrl,
   defaultLanguage,
-  colors
+  colors,
 } = require(`./config`);
 
 module.exports = {
@@ -14,7 +14,7 @@ module.exports = {
     author: author,
     title: siteTitle,
     description: siteDescription,
-    siteUrl: siteUrl
+    siteUrl: siteUrl,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -31,8 +31,8 @@ module.exports = {
          * @property {boolean} [isResettingCSS=true]
          * if false, this plugin will not use `<CSSReset />
          */
-        isResettingCSS: true
-      }
+        isResettingCSS: true,
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -41,8 +41,8 @@ module.exports = {
         short_name: siteShortTitle,
         start_url: `/`,
         display: `minimal-ui`,
-        icon: siteIcon // This path is relative to the root of the site.
-      }
+        icon: siteIcon, // This path is relative to the root of the site.
+      },
     },
     {
       resolve: `gatsby-plugin-mdx`,
@@ -53,57 +53,58 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1000,
-              quality: 80
-            }
-          }
-        ]
-      }
+              quality: 80,
+            },
+          },
+        ],
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content`,
-        name: `content`
-      }
+        name: `content`,
+      },
     },
     {
       resolve: "gatsby-plugin-eslint",
       options: {
         stages: ["develop"],
         extensions: ["js", "jsx"],
-        exclude: ["node_modules", ".cache", "public"]
+        exclude: ["node_modules", ".cache", "public"],
         // Any eslint-webpack-plugin options below
-      }
+      },
     },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /assets/
-        }
-      }
+          include: /assets/,
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-typescript`,
       options: {
         isTSX: true, // defaults to false
         jsxPragma: `jsx`, // defaults to "React"
-        allExtensions: true // defaults to false
-      }
+        allExtensions: true, // defaults to false
+      },
     },
     {
       resolve: `gatsby-theme-i18n`,
       options: {
         defaultLang: `${defaultLanguage}`,
         configPath: require.resolve(`./i18n/config.json`),
-        prefixDefault: true
-      }
+        prefixDefault: true,
+      },
     },
     {
       resolve: `gatsby-theme-i18n-react-intl`,
       options: {
-        defaultLocale: `./i18n/react-intl/de.json`
-      }
-    }
-  ]
+        defaultLocale: `./i18n/react-intl/de.json`,
+      },
+    },
+    `gatsby-plugin-remove-serviceworker`,
+  ],
 };
