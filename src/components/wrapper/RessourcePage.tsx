@@ -28,7 +28,7 @@ const ResourcesPage = () => {
             <Tab>sustain X output</Tab>
           </TabList>
           <TabPanels>
-            <TabPanel my="2rem">
+            <TabPanel>
               <Blog />
             </TabPanel>
             <TabPanel>
