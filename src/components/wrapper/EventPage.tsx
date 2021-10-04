@@ -15,7 +15,9 @@ export default function EventPage({ eventDateFrom, eventDateTo, title, body }) {
 
       <Container maxW="4xl" mb="4rem">
         <Heading as="h2" variant="dateHeading" textAlign="center">
-          {eventDateFrom} {intl.formatMessage({ id: "to" })} {eventDateTo}
+          {eventDateFrom &&
+          {eventDateFrom}} 
+          {eventDateTo && `${intl.formatMessage({ id: "to" })} ${eventDateTo}`}
         </Heading>
         <Heading textAlign="center">{title}</Heading>
         <MdxTextWrapper>{body}</MdxTextWrapper>

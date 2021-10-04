@@ -26,7 +26,7 @@ const IndexPage: FC<{ hero: any; about: any }> = ({ hero, about }) => {
       >
         <Hero nodes={hero} />
         <Spacer />
-        <EventOverlay />
+        {/* <EventOverlay /> */}
         <Spacer />
       </Flex>
       <News />
