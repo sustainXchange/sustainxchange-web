@@ -1,4 +1,4 @@
-# sustainxchange-web
+# sustainXchange.org
 
 This is the sourc code for sustainXchange.org.
 
